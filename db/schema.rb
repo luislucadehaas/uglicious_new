@@ -10,10 +10,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_16_101911) do
+ActiveRecord::Schema.define(version: 2019_07_16_102540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "delivery_date"
+    t.string "status"
+    t.bigint "product_id"
+    t.bigint "user_id"
+    t.integer "price_in_cents"
+    t.string "address"
+    t.string "delivery_option"
+    t.integer "quantity_in_kg"
+    t.float "longitude"
+    t.float "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_bookings_on_product_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "farms", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "photo"
+    t.bigint "user_id"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_farms_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "photo"
+    t.integer "price_in_cents"
+    t.bigint "category_id"
+    t.integer "quantity_in_kg"
+    t.integer "min_quantity_to_order"
+    t.date "available_from"
+    t.date "available_until"
+    t.bigint "farm_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["farm_id"], name: "index_products_on_farm_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating_score"
+    t.text "content"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +89,10 @@ ActiveRecord::Schema.define(version: 2019_07_16_101911) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "products"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "farms", "users"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "farms"
+  add_foreign_key "reviews", "bookings"
 end
