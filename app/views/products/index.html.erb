@@ -1,0 +1,38 @@
+<div class="textform">
+<h2 class="rock">Rock these <strong class= "bold-text"><%= @products.count %></strong> Wigs</h2>
+
+</div>
+<div class="search">
+
+<%= simple_form_for :search, url: products_path, method: :get do |f| %>
+        <div class="search-form-control form-group">
+           <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+            <button name="button" type="submit" class="btn btn-flat">
+           <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      <% end %>
+</div>
+
+
+<div class="container" id="card-container">
+  <div class="cards-all">
+    <div class="row">
+            <% @products.each do |product| %>
+      <div class="col-sm-6 col-xs-6 col-md-4 column" >
+         <%= link_to product_path(product) do %>
+        <div class="card-trip">
+          <img src="<%= product.photo%>">
+            <div class="card-trip-infos">
+              <div>
+                <h2 class="wig-title"><%=product.title.truncate(20)%></h2>
+              <!-- <p><%=wig.color.truncate(20)%></p> -->
+            </div>
+           <h2 class="card-trip-pricing"><%=product.price%>€</h2>
+          </div>
+        </div>
+      </div>
+     <% end %>
+     <% end %>
+    </div>
+  </div>
