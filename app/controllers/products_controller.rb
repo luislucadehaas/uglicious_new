@@ -19,15 +19,21 @@ class ProductsController < ApplicationController
     end
   end
 
-  def update
+  def edit
+    @product = Product.find(params[:id])
   end
 
-  def edit
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_params)
+    redirect_to dashboard_farmer_path
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to dashboard_farmer_path
   end
-
 
   private
 

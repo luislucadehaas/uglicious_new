@@ -1,4 +1,5 @@
 class Farm < ApplicationRecord
-  belongs_to :user
   mount_uploader :photo, PhotoUploader
+  belongs_to :user
+  has_many :products
 end
