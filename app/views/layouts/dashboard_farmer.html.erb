@@ -1,0 +1,19 @@
+<h1>farmers dashboard</h1>
+<% raise %>
+  <% if @current_user.products.empty? %>
+    <p>Offer your first product!</p>
+  <% else %>
+      <% @current_user.products.each do |prod| %>
+      <%= link_to products_path(product) do %>
+    <div class="card-request">
+     <img src="<%= prod.photo %>">
+       <div class="card-request-infos">
+    <h2><%= prod.title %></h2>
+    <p><%= prod.description %></p>
+    <p><%= prod.price %>€</p>
+   </div>
+      </div>
+<% end %>
+  <% end %>
+<% end %>
+  <%= link_to "Offer a new Product", new_product_path, class: "btn btn-primary" %>
