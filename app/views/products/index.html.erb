@@ -6,12 +6,49 @@
     height: 100vh;">
     <div class="text-for-filter">
     <h4>Filter by</h4>
-    <br>
     <div>
-      <h6>Categorie</h6>
-      <input type="checkbox" value=""class="">
-    <!--   <p><%#= @products.category.name %></p> -->
+      <h6>Categories</h6>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Vegetables
+  </button>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+     <p>Cucumber</p>
+      <p>Tomatoes</p>
+      <p>Broccoli & Cauliflower</p>
+      <p>Peppers</p>
+      <p>Carrots & Celery</p>
+      <p>Squash</p>
+      <p>Corn & Eggplants</p>
+      <p>Potatoes</p>
+  </div>
+</div>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Fruits
+  </button>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+     <p>Grapes & Cherries</p>
+      <p>Berries</p>
+      <p>Stone Fruits</p>
+      <p>Apple & Pears</p>
+  </div>
+</div>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Greens
+  </button>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+     <p>Kale & Spinach</p>
+      <p>Lettuce & Chicoree</p>
+      <p>Greens</p>
+  </div>
+</div>
+
+      <h6>Herb</h6>
+      <h6>Garlic & Onion</h6>
     </div>
+
 </div>
 
   </div>
@@ -35,11 +72,12 @@
       <div class="col-sm-6 col-xs-6 col-md-4 column" >
          <%= link_to product_path(product) do %>
         <div class="card-trip">
-          <img src="<%= product.photo.file.filename%>">
+
+          <%= cl_image_tag product.photo %>
             <div class="card-trip-infos">
               <div>
-                <h2 class="wig-title"><%=product.title.truncate(20)%></h2>
-              <p><%=product.farm.name.truncate(20)%> · <%=product.subgroup.name%> <br> <%=product.quantity_in_kg%> Kg available</p>
+                <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
+              <p><%=product.farm.name.truncate(30)%> · <%=product.subgroup.name%> <br> <%=product.quantity_in_kg%> Kg available</p>
             </div>
            <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
           </div>
