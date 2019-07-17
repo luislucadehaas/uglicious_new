@@ -31,14 +31,14 @@
   <div class="aboverow">
     <div class="row">
             <% @products.each do |product| %>
-      <div class="col-sm-6 col-xs-6 col-md-3 column" >
+      <div class="col-sm-6 col-xs-6 col-md-4 column" >
          <%= link_to product_path(product) do %>
         <div class="card-trip">
           <img src="<%= product.photo%>">
             <div class="card-trip-infos">
               <div>
                 <h2 class="wig-title"><%=product.title.truncate(20)%></h2>
-              <p><%=product.farm.name.truncate(20)%> · <%=product.category.name%> <br> <%=product.quantity_in_kg%> Kg available</p>
+              <p><%=product.farm.name.truncate(20)%> · <%=product.subgroup.name%> <br> <%=product.quantity_in_kg%> Kg available</p>
             </div>
            <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
           </div>
