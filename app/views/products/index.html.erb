@@ -3,28 +3,38 @@
 <div id="card-container">
   <div class="card-filter" style="width: 300px;
     height: 100vh;">
-    <p>hallo</p>
+    <div class="text-for-filter">
+    <h4>Filter by</h4>
+    <br>
+    <div>
+      <h6>Categorie</h6>
+      <input type="checkbox" value=""class="">
+    <!--   <p><%#= @products.category.name %></p> -->
+    </div>
+</div>
 
   </div>
-  <div class="search">
-
-<%= simple_form_for :search, url: products_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-           <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-            <button name="button" type="submit" class="btn btn-flat">
-           <i class="fas fa-search"></i> Search
-          </button>
-        </div>
-      <% end %>
   <div class="cards-all">
+    <div class="white">
+      <div class="search">
 
-</div>
+  <%= simple_form_for :search, url: products_path, method: :get do |f| %>
+          <div class="search-form-control form-group">
+             <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+              <button name="button" type="submit" class="btn btn-flat">
+             <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        <% end %>
+  </div>
+  </div>
+  <div class="aboverow">
     <div class="row">
             <% @products.each do |product| %>
-      <div class="col-sm-6 col-xs-6 col-md-4 column" >
+      <div class="col-sm-6 col-xs-6 col-md-3 column" >
          <%= link_to product_path(product) do %>
         <div class="card-trip">
-          <img src="<#%= product.photo%>">
+          <img src="<%= product.photo%>">
             <div class="card-trip-infos">
               <div>
                 <h2 class="wig-title"><%=product.title.truncate(20)%></h2>
@@ -37,6 +47,7 @@
      <% end %>
      <% end %>
     </div>
+  </div>
   </div>
 
  </div>

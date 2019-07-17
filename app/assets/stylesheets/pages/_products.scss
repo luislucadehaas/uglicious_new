@@ -1,5 +1,6 @@
 .search-form-control {
-  position: relative; //relative
+  position: relative;
+   z-index: 1000;//relative
 }
 
 .search-form-control .btn {
@@ -7,12 +8,25 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
+
+}
+.white {
+  background-color:white;
+    position:sticky;
+  top: 0;
+  z-index: 1000;
+
+
 }
 
 .header {
   margin-top: 20px;
   margin-left: 200px;
   margin-bottom: 20px;
+}
+.aboverow {
+  padding-right:50px;
+  padding-left: 30px;
 }
 
 #map {
@@ -34,19 +48,24 @@
 #card-container {
   display: flex;
   margin: 0 auto;
-  padding-right:50px;
 
 }
 .cards-all {
   flex: 1;
-  padding-left: 50px;
+
 }
 .search {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  bottom: 10px;
   justify-content: flex-end;
-  position:sticky;
-  top: 0;
+
+}
+.text-for-filter {
+  padding:20px;
+  padding-left:60px;
 }
 
 .search-form-control .form-control {
@@ -65,12 +84,12 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #465BA0;
+  background: $orange;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #3C4E89;
+  background: #cc7000;
   color: white;
 }
 
@@ -106,7 +125,7 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -122,8 +141,8 @@
 
 .card-trip:hover {
   border-bottom: solid;
-  border-width: 5px;
-  border-color: #FC5B55;
+  border-width: 4px;
+  border-color: $orange;
   margin-top: -5px;
   transition: ease 0.2s;
   box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
