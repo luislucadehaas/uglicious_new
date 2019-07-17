@@ -1,8 +1,18 @@
 class ProductsController < ApplicationController
-  def index
-  end
 
-  def show
+
+  def index
+    if params[:search].present? && params["search"]["query"] == ""
+      @products = Product.all
+    elsif params[:search].present?
+      sql_query = " \
+      products.title @@ :search \
+      OR products.description @@ :search \
+      "
+      @products = Product.where(sql_query, search: "%#{params["search"]["query"]}%")
+    else
+      @products = Product.all
+    end
   end
 
   def new
