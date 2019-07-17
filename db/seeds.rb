@@ -410,7 +410,6 @@ Product.create!(
     photo: "https://goodeggs2.imgix.net/product_photos/sjBrpKTZmYhCsKz2Trwv_sJ7q83rQFaj4EYUCk6Mq_beets_red_bunch_02.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
   )
 puts 'Finished!'
-
 # puts 'Creating 100 vegetables...'
 # 100.times do
 #   Product.create!(

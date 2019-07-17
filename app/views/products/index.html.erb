@@ -35,7 +35,7 @@
       <div class="col-sm-6 col-xs-6 col-md-4 column" >
          <%= link_to product_path(product) do %>
         <div class="card-trip">
-          <img src="<%= product.photo%>">
+          <img src="<%= product.photo.file.filename%>">
             <div class="card-trip-infos">
               <div>
                 <h2 class="wig-title"><%=product.title.truncate(20)%></h2>
@@ -52,4 +52,6 @@
   </div>
 
  </div>
+
+ <%= render "shared/footer" %>
 
