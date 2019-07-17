@@ -23,7 +23,9 @@
                 autofocus: true,
                 input_html: { autocomplete: "last_name" }%>
 
-    <%= f.input :role, collection: ["Customer", "Farmer"] %>
+    <%= f.input :role,
+                 required: true,
+                 collection: ["Customer", "Farmer"] %>
 
     <%= f.input :password,
                 required: true,

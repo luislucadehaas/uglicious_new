@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 resources :bookings, only: [:new, :create, :destroy, :update]
 end
 
-   resources :farms, only: [:new, :create, :destroy, :update]
+   resources :farms, only: [:new, :create, :edit, :update, :destroy, :index, :show]
+   resources :companies, only: [:new, :create, :edit, :update, :destroy, :index, :show]
 
    get 'farmer-dashboard', to: 'pages#dashboard_farmer', as: :dashboard_farmer
 

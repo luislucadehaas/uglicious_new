@@ -3,18 +3,15 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <br>
-        <h2>Create a farm</h2>
+        <h2>Create a company</h2>
         <br>
 
-        <%= simple_form_for(@farm) do |f| %>
+        <%= simple_form_for(@company) do |f| %>
 
         <%= f.input :name %>
         <%= f.input :description %>
         <%= f.input :address %>
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-
-        <%= f.button :submit, "Create a farm", class: "banner-button" %>
+        <%= f.button :submit, "Create a company", class: "banner-button" %>
         <% end %>
       </div>
     </div>
