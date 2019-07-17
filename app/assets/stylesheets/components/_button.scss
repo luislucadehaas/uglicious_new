@@ -1,0 +1,45 @@
+.banner-button {
+ background-color:$orange;
+ color:#ffffff;
+ margin:10px 5px 5px 5px;
+ border-radius: 2px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 10px 20px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 1px solid transparent;
+ display: inline-block;
+}
+
+.banner-button:hover {
+ color: #ffffff;
+ text-decoration: none;
+ background-color: #ea5013;
+ border-color: #ea5013;
+}
+
+a {
+ text-decoration: none;
+}
+
+.request-button {
+ background-color:#FC5B55;
+ color:#ffffff;
+ margin:10px 5px 5px 5px;
+ border-radius: 2px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 5px 10px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 1px solid transparent;
+ display: inline-block;
+}
+
+.request-button:hover {
+ color: #ffffff;
+ text-decoration: none;
+ background-color: #fc5555;
+ border-color: #fc5555;
+}

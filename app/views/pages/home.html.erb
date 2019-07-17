@@ -1,2 +1,77 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1498522271744-cdd435c13f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80);">
+  <div class="container">
+    <h1>Eat uglies, save the planet!</h1>
+    <p>Direct from farmers - Delicious - Fair price</p>
+    <%= link_to "Discover our products", "#", class: "banner-button" %>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+<h2>What are uglies?</h2>
+
+<div class="cards">
+  <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563356915/uglicious/icons/lemon_lwj90g.svg" width="50px">Always delicious
+  </div>
+
+   <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563357196/uglicious/icons/peppers__red_yitjhz.svg"width="80px">A bit lumpy
+  </div>
+
+  <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563356918/uglicious/icons/pear_hcwzvq.svg">Too small
+  </div>
+
+    <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563356915/uglicious/icons/potato_y990za.svg" width="50px" height="60px">Too big
+  </div>
+
+    <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563356917/uglicious/icons/pear_big_yihrvo.svg" width="40px">Some blemishes
+  </div>
+
+   <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563356915/uglicious/icons/apple_yax5vp.svg" width="60px">Not enough to sell
+  </div>
+
+  <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563363976/uglicious/icons/tomato_e3hkgr.svg">Not yet ripe
+  </div>
+
+    <div class="card-category">
+    <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563364153/uglicious/icons/carrots_kpcgfb.svg" width="100px">Too many
+  </div>
+</div>
+
+ <br>
+
+ <h2>Delicious products to save</h2>
+ <br>
+  <br>
+ <div class="container">
+<!-- <div class="row">
+    <%# @wigs.each do |wig| %>
+    <div class="col-sm-3">
+       <%#= link_to wig_path(wig) do %>
+      <div class="card-trip">
+         <%#= cl_image_tag("#{wig.photo}", :transformation=>[:gravity=>"face"])%>
+          <div class="card-trip-infos">
+            <div>
+              <h2 class="wig-title"><%#=wig.title.truncate(20)%></h2>
+            <p><%#=wig.color.truncate(30)%></p>
+          </div>
+         <h2 class="card-trip-pricing"><%#=wig.price%>€</h2>
+        </div>
+      </div>
+      <%# end %>
+    </div>
+   <%# end %>
+   -->
+   </div>
+</div>
+<br>
+<br>
+  </div>
+ <%= render 'shared/footer' %>
+
