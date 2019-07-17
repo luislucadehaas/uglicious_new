@@ -1,48 +1,69 @@
 <div class="container">
   <div class="row">
 
-    <div class="main-image"> <img src="<%= @product.photo %>">
+    <div class="col-sm-8">
+      <img src="<%= @product.photo %>">
+
+      <div class="row under_picture">
+        <div class="col-sm-3">
+          <p class="subtle-header"> Product Details:</p>
+        </div>
+        <div class="col-sm-9">
+          <p class="prod-text"> <%= @product.description %></p>
+        </div>
+      </div>
+
+      <div class="row under_picture">
+        <div class="col-sm-3">
+          <p class="subtle-header"> About the fram:</p>
+        </div>
+        <div class="col-sm-9">
+          <p class="description"> <%= @product.farm.name %> </p>
+          <p class="description"> <%= @product.farm.photo %> </p>
+          <p class="prod-text"> <%= @product.farm.description %></p>
+        </div>
+      </div>
     </div>
 
-    <div class="vertical-flex">
+    <div class="col-sm-4 vertical-flex">
       <div class="main-description">
 
         <div class="side-card-header">
           <h3><%= @product.farm.name %></h3>
-          <h1><%= @product.title %></h1>
+          <h2><%= @product.title %></h2>
         </div>
 
-        <div class="side-card-body"></div>
-        <div class="form-row">
-          <div class="col">
-            <p class="description">Price in kg: <%= @product.price_in_cents %></p>
+        <div class="side-card-body">
+          <div class="form-row">
+            <div class="col">
+              <p class="description">Price per kg in €: <%= @product.price_in_cents %></p>
+            </div>
+            <div class="col">
+              <p class="description">Available Quantity: <%= @product.quantity_in_kg %></p>
+            </div>
           </div>
-          <div class="col">
-            <p class="description">Available Quantity: <%= @product.quantity_in_kg %></p>
+          <p class="description">Good between:</p>
+          <div class="form-row">
+            <div class="col">
+              <p class="description"><%= @product.available_from %></p>
+            </div>
+            <div class="col">
+              <p class="description"><%= @product.available_until %></p>
+            </div>
           </div>
-        </div>
-        <p class="description">Good between:</p>
-        <div class="form-row">
-          <div class="col">
-            <p class="description"><%= @product.available_from %></p>
+          <% if user_signed_in? %>
+          <div class="form-wrapper">
+           <div class="form-row">
+            <div class="col">
+              <p class="description">Quantity available:<%= @product.quantity_in_kg %></p>
+            </div>
+            <div class="col">
+              <p class="description">Min quantity to order:<%= @product.min_quantity_to_order %></p>
+            </div>
           </div>
-          <div class="col">
-            <p class="description"><%= @product.available_until %></p>
-          </div>
-        </div>
-        <% if user_signed_in? %>
-        <div class="form-wrapper">
-         <div class="form-row">
-          <div class="col">
-            <p class="description">Quantity available:<%= @product.quantity_in_kg %></p>
-          </div>
-          <div class="col">
-            <p class="description">Min quantity to order:<%= @product.min_quantity_to_order %></p>
-          </div>
-        </div>
 
-        <p class=" subtitle">Order here: </p>
-        <%= simple_form_for [@product, @booking], method: "post" do |f| %>
+          <p class="subtitle">Order here: </p>
+          <%= simple_form_for [@product, @booking], method: "post" do |f| %>
           <div class="form-row">
             <div class="col">
               <%= f.input :quantity_in_kg%>
@@ -51,14 +72,16 @@
               <%= f.input :delivery_option%>
             </div>
           </div>
-        <%= f.button :submit, "Order now", class: "btn btn-flat" %>
+          <%= f.button :submit, "Order now", class: "btn btn-flat" %>
+          <% end %>
+        </div>
+        <% else %>
+        <div class="form-wrapper">
+          <p><%= link_to "Please log in to buy #{@product.title}", new_user_session_path %> </p>
+        </div>
         <% end %>
       </div>
-      <% else %>
-      <div class="form-wrapper">
-        <p><%= link_to "Please log in to buy #{@product.title}" %> </p>
-      </div>
-      <% end %>
     </div>
   </div>
+</div>
 </div>
