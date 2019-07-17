@@ -1,2 +1,64 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="container">
+  <div class="row">
+
+    <div class="main-image"> <img src="<%= @product.photo %>">
+    </div>
+
+    <div class="vertical-flex">
+      <div class="main-description">
+
+        <div class="side-card-header">
+          <h3><%= @product.farm.name %></h3>
+          <h1><%= @product.title %></h1>
+        </div>
+
+        <div class="side-card-body"></div>
+        <div class="form-row">
+          <div class="col">
+            <p class="description">Price in kg: <%= @product.price_in_cents %></p>
+          </div>
+          <div class="col">
+            <p class="description">Available Quantity: <%= @product.quantity_in_kg %></p>
+          </div>
+        </div>
+        <p class="description">Good between:</p>
+        <div class="form-row">
+          <div class="col">
+            <p class="description"><%= @product.available_from %></p>
+          </div>
+          <div class="col">
+            <p class="description"><%= @product.available_until %></p>
+          </div>
+        </div>
+        <% if user_signed_in? %>
+        <div class="form-wrapper">
+         <div class="form-row">
+          <div class="col">
+            <p class="description">Quantity available:<%= @product.quantity_in_kg %></p>
+          </div>
+          <div class="col">
+            <p class="description">Min quantity to order:<%= @product.min_quantity_to_order %></p>
+          </div>
+        </div>
+
+        <p class=" subtitle">Order here: </p>
+        <%= simple_form_for [@product, @booking], method: "post" do |f| %>
+          <div class="form-row">
+            <div class="col">
+              <%= f.input :quantity_in_kg%>
+            </div>
+            <div class="col">
+              <%= f.input :delivery_option%>
+            </div>
+          </div>
+        <%= f.button :submit, "Order now", class: "btn btn-flat" %>
+        <% end %>
+      </div>
+      <% else %>
+      <div class="form-wrapper">
+        <p><%= link_to "Please log in to buy #{@product.title}" %> </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

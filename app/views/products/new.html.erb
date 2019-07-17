@@ -7,18 +7,18 @@
         <%= simple_form_for(@product) do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
-        <%= f.input :price_in_cents, label: 'Price in kg'%>
+        <%= f.input :price_in_cents, label: 'Price per kg in €'%>
         <%= f.input :quantity_in_kg %>
         <%= f.input :min_quantity_to_order %>
-        <%= f.input :category_id, collection: Category.all %>
-          <div class="form-row">
-            <div class="col">
-              <%= f.input :available_from, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..."%>
-            </div>
-            <div class="col">
-              <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
-            </div>
+        <%= f.input :subgroup_id, collection: Subgroup.all %>
+        <div class="form-row">
+          <div class="col">
+            <%= f.input :available_from, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..."%>
           </div>
+          <div class="col">
+            <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
+          </div>
+        </div>
 
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
