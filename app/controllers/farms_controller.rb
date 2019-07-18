@@ -6,6 +6,7 @@ def new
 
   def create
     @farm = Farm.new(farm_params)
+    @farm.user = current_user
     if @farm.save
        redirect_to dashboard_farmer_path
     else

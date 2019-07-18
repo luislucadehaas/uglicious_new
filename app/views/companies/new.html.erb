@@ -8,9 +8,9 @@
 
         <%= simple_form_for(@company) do |f| %>
 
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :address %>
+        <%= f.input :name, required: true %>
+        <%= f.input :description, required: true  %>
+        <%= f.input :address, required: true  %>
         <%= f.button :submit, "Create a company", class: "banner-button" %>
         <% end %>
       </div>

@@ -6,8 +6,9 @@ def new
 
   def create
     @company = Company.new(company_params)
+    @company.user = current_user
     if @company.save
-       redirect_to dashboard_farmer_path
+       redirect_to dashboard_customer_path
     else
       render 'new'
     end
@@ -20,13 +21,13 @@ def new
   def update
     @company = Company.find(params[:id])
     @company.update(company_params)
-    redirect_to dashboard_farmer_path
+    redirect_to dashboard_customer_path
   end
 
   def destroy
     @company= Company.find(params[:id])
     @company.destroy
-    redirect_to dashboard_farmer_path
+    redirect_to dashboard_customer_path
   end
 
   private

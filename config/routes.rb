@@ -11,5 +11,5 @@ end
    resources :companies, only: [:new, :create, :edit, :update, :destroy, :index, :show]
 
    get 'farmer-dashboard', to: 'pages#dashboard_farmer', as: :dashboard_farmer
-
+   get 'customer-dashboard', to: 'pages#dashboard_customer', as: :dashboard_customer
 end
