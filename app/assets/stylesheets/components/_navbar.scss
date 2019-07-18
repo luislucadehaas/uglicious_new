@@ -5,11 +5,11 @@
   border-bottom-color: rgba(0,0,0,0.1);
   border-bottom-width: 1px;
   color: #FC5B55;
-
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  z-index: 1001;
 }
 
 .navbar-lewagon .navbar-brand img {

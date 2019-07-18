@@ -6,9 +6,13 @@ class PagesController < ApplicationController
   end
 
   def dashboard_farmer
+    @role = current_user&.role
+    @farm = current_user.farm
+
   end
 
   def dashboard_customer
+    @role = current_user&.role
   end
 
   end
