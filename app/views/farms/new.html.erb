@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="form-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <br>
+        <h2>Create a farm</h2>
+        <br>
+
+        <%= simple_form_for(@farm) do |f| %>
+
+        <%= f.input :name, required: true %>
+        <%= f.input :description, required: true %>
+        <%= f.input :address, required: true  %>
+        <%= f.input :photo, required: true  %>
+        <%= f.input :photo_cache, as: :hidden %>
+
+        <%= f.button :submit, "Create a farm", class: "banner-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

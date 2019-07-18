@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="form-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <br>
+        <h2>Create a company</h2>
+        <br>
+
+        <%= simple_form_for(@company) do |f| %>
+
+        <%= f.input :name, required: true %>
+        <%= f.input :description, required: true  %>
+        <%= f.input :address, required: true  %>
+        <%= f.button :submit, "Create a company", class: "banner-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
