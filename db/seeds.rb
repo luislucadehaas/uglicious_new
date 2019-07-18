@@ -9,6 +9,7 @@ puts "DESTROYing"
 Booking.destroy_all
 Product.destroy_all
 Farm.destroy_all
+Company.destroy_all
 User.destroy_all
 Subgroup.destroy_all
 Category.destroy_all
