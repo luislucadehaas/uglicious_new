@@ -10,73 +10,61 @@
           <p>63kg saved 🎯</p>
           <p>37 transactions</p>
           <%= link_to "Offer a new Product", new_product_path, class: "banner-button" %>
+        </div>
       </div>
+    </div>
+
+    <div class="col-sm-6 col-xs-6 col-md-6 column" >
+
+      <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="300px"></p>
+      <h3><%= @farm.name %></h3>
+      <p><%= @farm.description.truncate(100) %></p>
+    </div>
   </div>
-  <br>
-  <h3>My fruits & veggies</h3>
-  <% if current_user.products.empty? %>
-  <p>Offer your first product!</p>
-  <% else %>
-  <% current_user.products.each do |prod| %>
-  <%= link_to product_path(prod) do %>
-  <div class="card-request">
-   <img src="<%= prod.photo %>">
-   <div class="card-request-infos">
-    <h2><%= prod.title %></h2>
-    <p><%= prod.description %></p>
-    <p><%= prod.price_in_cents %>€</p>
-
-    <%= link_to "Edit this product", edit_product_path(prod), class: "banner-button" %>
-    <%= link_to "Delete this product", product_path(prod), method: :delete, class: "banner-button" %>
-    <%end %>
-    <% end %>
-    <%end %>
-
-    <%= link_to "Offer a new Product", new_product_path, class: "banner-button" %>
-    <br>
-    <br>
-    <h3>Last orders</h3>
-
-<div class="col-sm-6 col-xs-6 col-md-6 column" >
-
-    <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="300px"></p>
-    <h3><%= @farm.name %></h3>
-    <p><%= @farm.description.truncate(100) %></p>
-
-</div>
-</div>
   <br>
   <br>
   <h3>My fruits & veggies <%= @current_user.products.count %></h3>
-    <% if current_user.products.empty? %>
-      <p>Offer your first product!</p>
-    <% else %>
+  <% if current_user.products.empty? %>
+  <p>Offer your first product!</p>
+  <% else %>
 
-          <div class="row">
-              <% current_user.products.each do |prod| %>
-                  <div class="col-sm-6 col-xs-6 col-md-6 column" >
-                  <%= link_to product_path(prod) do %>
-                          <div class="card-request">
-                                <img src="<%= prod.photo %>">
-                                        <div class="card-request-infos">
-                                          <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
-                                            <p><%= prod.description.truncate(100) %></p>
-                                             <br>
-                                              <%= link_to "Edit", edit_product_path(prod) %>
-                                              <%= link_to "Delete", product_path(prod), method: :delete %>
-                                                </div>
-                                  </div>
-                              </div>
-                  <% end %>
-                  <% end %>
+  <div class="row">
+    <% current_user.products.each do |prod| %>
+    <div class="col-sm-6 col-xs-6 col-md-6 column" >
+      <%= link_to product_path(prod) do %>
+      <div class="card-request">
+        <img src="<%= prod.photo %>">
+        <div class="card-request-infos">
+          <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
+          <p><%= prod.description.truncate(100) %></p>
+          <%= link_to "Edit", edit_product_path(prod), class: "product-links" %>
+          <%= link_to "Delete", product_path(prod), method: :delete, class: "product-links" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
 
-             </div>
-      <% end %>
+  </div>
+  <% end %>
   <br>
   <br>
-    <h3>Last orders</h3>
+  <h3>Last transactions <%= @current_user.bookings.count %></h3>
+  <br>
+    <% current_user.bookings.each do |booking| %>
+    <%= link_to product_path(booking.product) do %>
+      <div class="card-request">
+        <img src="<%= booking.product.photo %>">
+        <div class="card-request-infos">
+          <h2><%= booking.product.title %> - <%= booking.product.price_in_cents %>€ per Kg</h2>
+          <p><%= booking.product.description.truncate(100) %></p>
+          <%= link_to "See customer invoice", class: "product-links" %>
+
+        </div>
 
     </div>
+    <% end %>
+    <% end %>
 </div>
 </div>
-
+</div>
