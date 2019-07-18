@@ -35,7 +35,7 @@
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
+  margin-bottom: 7px;
   margin-top: 8px;
 }
 
@@ -60,11 +60,11 @@
 
 
 
-
-
-
-
-
+.product-links {
+ font-size: 13px;
+ margin-top: 10px;
+ margin-right: 4px;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
