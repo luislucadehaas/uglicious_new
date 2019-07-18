@@ -1,16 +1,25 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :show]
+  skip_before_action :authenticate_user!, only: [:home, :show, :index]
 
   def home
     @role = current_user&.role
   end
 
   def dashboard_farmer
+    @role = current_user&.role
   end
 
   def dashboard_customer
+    @role = current_user&.role
   end
 
+  def log_out_farmer
+    sign_out
+    redirect_to new_user_session_path
   end
 
+  def after_sign_in_path_for(resource_or_scope)
+    stored_location_for(resource_or_scope) || super
+  end
 
+end
