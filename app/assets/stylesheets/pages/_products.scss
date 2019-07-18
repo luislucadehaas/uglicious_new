@@ -12,11 +12,43 @@
 }
 .white {
   background-color:white;
-    position:sticky;
+  position:sticky;
   top: 0;
   z-index: 1000;
 
 
+}
+
+a {
+  color:  black ;
+  opacity:.7;
+  font-weight:normal;
+}
+h6 {
+  font-size:14px;
+
+}
+h7 {
+    padding: 20px;
+  padding-left:0px;
+  color:black;
+  font-size:17px;
+
+}
+
+.collapsed {
+  padding: 20px;
+  padding-left:0px;
+  color:black;
+  font-size:17px;
+}
+.card-with-bottom-border {
+border-bottom:solid;
+border-color:#E8E8E8;
+border-width:0.1px;
+}
+.something {
+  color:black;
 }
 
 .header {
@@ -89,7 +121,7 @@
 }
 
 .btn-flat:hover {
-  background: #cc7000;
+   background-color: #ea5013;
   color: white;
 }
 
@@ -141,6 +173,8 @@
 }
 a:hover {
   text-decoration: none;
+  color:$orange;
+  opacity:1;
 }
 
 .card-trip:hover {

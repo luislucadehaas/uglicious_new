@@ -23,7 +23,7 @@
        <div class="card-request-infos">
     <h2><%= prod.title %></h2>
     <p><%= prod.description %></p>
-    <p><%= prod.price %>€</p>
+    <p><%= prod.price_in_cents %>€</p>
 
        <%= link_to "Edit this product", edit_product_path(prod), class: "banner-button" %>
 <%= link_to "Delete this product", product_path(prod), method: :delete, class: "banner-button" %>

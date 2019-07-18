@@ -5,70 +5,67 @@
     <div class="text-for-filter">
     <h4>Filter by</h4>
     <div>
-      <h6>Categories</h6>
       <div class="accordion" id="accordionExample">
-  <div class="card">
+  <div class="card-with-bottom-border">
     <div class="something" id="headingOne">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Vegetables
         </button>
       </h5>
     </div>
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-      <p>Cucumber</p>
-      <p>Tomatoes</p>
-      <p>Broccoli & Cauliflower</p>
-      <p>Peppers</p>
-      <p>Carrots & Celery</p>
-      <p>Squash</p>
-      <p>Corn & Eggplants</p>
-      <p>Potatoes</p>
+      <div class="other">
+      <h6><%= link_to "Cucumber", products_path(filter: 'Cucumber'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Tomatoes", products_path(filter: 'Tomatoes'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Broccoli & Cauliflower", products_path(filter: 'Broccoli & Cauliflower'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Peppers", products_path(filter: 'Peppers'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Carrots & Celery", products_path(filter: 'Carrots & Celery'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Squash", products_path(filter: 'Squash'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Corn & Eggplants", products_path(filter: 'Corn & Eggplant'), class: "this-is-a-link" %></h6>
+      <h6><%= link_to "Potatoes", products_path(filter: 'Potatoes'), class: "this-is-a-link" %></h6>
       </div>
     </div>
   </div>
-  <div class="card">
+  <div class="card-with-bottom-border">
     <div class="something" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           Fruits
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-      <p>Grapes & Cherries</p>
-      <p>Berries</p>
-      <p>Stone Fruits</p>
-      <p>Apple & Pears</p>
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="other">
+        <h6><%= link_to "Grapes & Cherries", products_path(filter: 'Grapes & Cherries'), class: "this-is-a-link" %></h6>
+        <h6><%= link_to "Berries", products_path(filter: 'Berries'), class: "this-is-a-link" %></h6>
+        <h6><%= link_to "Stone Fruits", products_path(filter: 'Stone Fruits'), class: "this-is-a-link" %></h6>
+        <h6><%= link_to "Apple & Pears", products_path(filter: 'Apple & Pears'), class: "this-is-a-link" %></h6>
       </div>
     </div>
   </div>
-  <div class="card">
+  <div class="card-with-bottom-border">
     <div class="something" id="headingThree">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
            Greens
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-      <p>Kale & Spinach</p>
-      <p>Lettuce & Chicoree</p>
-      <p>Greens</p>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="other">
+        <h6><%= link_to "Kale & Spinach", products_path(filter: 'Kale & Spinach'), class: "this-is-a-link" %></h6>
+        <h6><%= link_to "Lettuces & Chicorries", products_path(filter: 'Lettuces & Chicorries'), class: "this-is-a-link" %></h6>
+        <h6><%= link_to "Greens", products_path(filter: 'Greens'), class: "this-is-a-link" %></h6>
+
       </div>
     </div>
   </div>
 </div>
-<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Herb
-        </button>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Garlic & Onion
-        </button>
+<h7><%= link_to "Herbs", products_path(filter: 'Herbs'), class: "this-is-a-link" %></h7>
+<br>
+<h7><%= link_to "Garlic & Onions", products_path(filter: 'Garlic & Onions'), class: "this-is-a-link" %></h7>
 
     </div>
 
@@ -100,7 +97,7 @@
             <div class="card-trip-infos">
               <div>
                 <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
-              <p><%=product.farm.name.truncate(30)%> · <%=product.subgroup.name.truncate(20)%> <br> <%=product.quantity_in_kg%> Kg available</p>
+              <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
             </div>
            <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
           </div>
@@ -114,5 +111,5 @@
 
  </div>
 
- <%= render "shared/footer" %>
+
 

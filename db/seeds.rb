@@ -56,7 +56,7 @@ tomatoes = Subgroup.create!(name: "Tomatoes",category_id: vegetable.id)
 broccoli = Subgroup.create!(name: "Broccoli & Cauliflower",category_id: vegetable.id)
 peppers = Subgroup.create!(name: "Peppers",category_id: vegetable.id)
 carrots = Subgroup.create!(name: "Carrots & Celery",category_id: vegetable.id)
-squash = Subgroup.create!(name: "squash",category_id: vegetable.id)
+squash = Subgroup.create!(name: "Squash",category_id: vegetable.id)
 potatoes = Subgroup.create!(name: "Potatoes",category_id: vegetable.id)
 corn = Subgroup.create!(name: "Corn & Eggplant",category_id: vegetable.id)
 

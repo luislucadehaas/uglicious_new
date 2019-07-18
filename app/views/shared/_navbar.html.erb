@@ -9,7 +9,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if current_user&.role == "Farmer" %>
+      <% if current_user&.role == "farmer" %>
         <li class="nav-item">
           <%= link_to "🚜 Dashboard", dashboard_farmer_path, class: "nav-link" %>
         </li>
@@ -23,7 +23,7 @@
           </div>
         </li>
 
-      <% elsif current_user&.role == "Customer" %>
+      <% elsif current_user&.role == "customer" %>
        <li class="nav-item">
           <%= link_to "💼 Dashboard", dashboard_customer_path, class: "nav-link" %>
         </li>

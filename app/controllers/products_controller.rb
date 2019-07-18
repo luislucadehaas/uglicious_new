@@ -8,18 +8,14 @@ class ProductsController < ApplicationController
     elsif params[:search].present?
       sql_query = " \
       products.title @@ :search \
-      OR products.description @@ :search \
-<<<<<<< HEAD
-      # OR products.subgroup.name @@ :search \
-      # OR products.subgroup.category.name @@ :search \
+      OR subgroups.name @@ :search \
       "
-=======
->>>>>>> master
-
-      "
-      # OR products.subgroup.name @@ :search \
+      #
       # OR products.subgroup.category.name @@ :search \
-      @products = Product.where(sql_query, search: "%#{params["search"]["query"]}%")
+      @products = Product.joins(:subgroup).where(sql_query, search: "%#{params["search"]["query"]}%")
+    elsif params[:filter]
+      subgroup = Subgroup.where(name: params[:filter])
+      @products = Product.all.where(subgroup: subgroup)
     else
       @products = Product.all
     end
