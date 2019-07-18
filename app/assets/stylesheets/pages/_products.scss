@@ -1,9 +1,9 @@
 .search-form-control {
   position: relative;
    z-index: 1000;//relative
-}
+ }
 
-.search-form-control .btn {
+ .search-form-control .btn {
   position: absolute;
   top: 8px;
   bottom: 8px;
@@ -53,9 +53,9 @@ h6 {
   font-size:17px;
 }
 .card-with-bottom-border {
-border-bottom:solid;
-border-color:#E8E8E8;
-border-width:0.1px;
+  border-bottom:solid;
+  border-color:#E8E8E8;
+  border-width:0.1px;
 }
 .something {
   color:black;
@@ -131,8 +131,8 @@ border-width:0.1px;
 }
 
 .btn-flat:hover {
-   background-color: #ea5013;
-  color: white;
+ background-color: #ea5013;
+ color: white;
 }
 
 .column {

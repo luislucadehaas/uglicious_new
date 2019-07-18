@@ -1,115 +1,115 @@
 
 <div id="card-container">
   <div class="card-filter" style="width: 300px;
-    height: 100vh;">
-    <div class="text-for-filter">
+  height: 100vh;">
+  <div class="text-for-filter">
     <h4 style="color:black;margin:0;">Filter by</h4>
     <div>
       <div class="accordion" id="accordionExample">
-  <div class="card-with-bottom-border">
-    <div class="something" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Vegetables
-        </button>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="other">
-      <h6><%= link_to "Cucumber", products_path(filter: 'Cucumber'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Tomatoes", products_path(filter: 'Tomatoes'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Broccoli & Cauliflower", products_path(filter: 'Broccoli & Cauliflower'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Peppers", products_path(filter: 'Peppers'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Carrots & Celery", products_path(filter: 'Carrots & Celery'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Squash", products_path(filter: 'Squash'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Corn & Eggplants", products_path(filter: 'Corn & Eggplant'), class: "this-is-a-link" %></h6>
-      <h6><%= link_to "Potatoes", products_path(filter: 'Potatoes'), class: "this-is-a-link" %></h6>
-      </div>
-    </div>
-  </div>
-  <div class="card-with-bottom-border">
-    <div class="something" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          Fruits
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="other">
-        <h6><%= link_to "Grapes & Cherries", products_path(filter: 'Grapes & Cherries'), class: "this-is-a-link" %></h6>
-        <h6><%= link_to "Berries", products_path(filter: 'Berries'), class: "this-is-a-link" %></h6>
-        <h6><%= link_to "Stone Fruits", products_path(filter: 'Stone Fruits'), class: "this-is-a-link" %></h6>
-        <h6><%= link_to "Apple & Pears", products_path(filter: 'Apple & Pears'), class: "this-is-a-link" %></h6>
-      </div>
-    </div>
-  </div>
-  <div class="card-with-bottom-border">
-    <div class="something" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-           Greens
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="other">
-        <h6><%= link_to "Kale & Spinach", products_path(filter: 'Kale & Spinach'), class: "this-is-a-link" %></h6>
-        <h6><%= link_to "Lettuces & Chicorries", products_path(filter: 'Lettuces & Chicorries'), class: "this-is-a-link" %></h6>
-        <h6><%= link_to "Greens", products_path(filter: 'Greens'), class: "this-is-a-link" %></h6>
-
-      </div>
-    </div>
-  </div>
-</div>
-<h7 class="two-categories"><%= link_to "Herbs", products_path(filter: 'Herbs'), class: "this-is-a-link" %></h7>
-<br>
-<h7 class="two-categories"><%= link_to "Garlic & Onions", products_path(filter: 'Garlic & Onions'), class: "this-is-a-link" %></h7>
-
-    </div>
-
-</div>
-
-  </div>
-  <div class="cards-all">
-    <div class="white">
-      <div class="search">
-
-  <%= simple_form_for :search, url: products_path, method: :get do |f| %>
-          <div class="search-form-control form-group">
-             <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-              <button name="button" type="submit" class="btn btn-flat">
-             <i class="fas fa-search"></i> Search
-            </button>
+        <div class="card-with-bottom-border">
+          <div class="something" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Vegetables
+              </button>
+            </h5>
           </div>
-        <% end %>
-  </div>
-  </div>
-  <div class="aboverow">
-    <div class="row margin-1">
-            <% @products.each do |product| %>
-      <div class="col-sm-6 col-xs-6 col-md-4 column" >
-         <%= link_to product_path(product) do %>
-        <div class="card-trip">
 
-          <%= cl_image_tag product.photo %>
-            <div class="card-trip-infos">
-              <div>
-                <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
-              <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="other">
+              <h6><%= link_to "Cucumber", products_path(filter: 'Cucumber'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Tomatoes", products_path(filter: 'Tomatoes'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Broccoli & Cauliflower", products_path(filter: 'Broccoli & Cauliflower'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Peppers", products_path(filter: 'Peppers'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Carrots & Celery", products_path(filter: 'Carrots & Celery'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Squash", products_path(filter: 'Squash'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Corn & Eggplants", products_path(filter: 'Corn & Eggplant'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Potatoes", products_path(filter: 'Potatoes'), class: "this-is-a-link" %></h6>
             </div>
-           <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
+          </div>
+        </div>
+        <div class="card-with-bottom-border">
+          <div class="something" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                Fruits
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="other">
+              <h6><%= link_to "Grapes & Cherries", products_path(filter: 'Grapes & Cherries'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Berries", products_path(filter: 'Berries'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Stone Fruits", products_path(filter: 'Stone Fruits'), class: "this-is-a-link" %></h6>
+              <h6><%= link_to "Apple & Pears", products_path(filter: 'Apple & Pears'), class: "this-is-a-link" %></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card-with-bottom-border">
+          <div class="something" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+               Greens
+             </button>
+           </h5>
+         </div>
+         <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="other">
+            <h6><%= link_to "Kale & Spinach", products_path(filter: 'Kale & Spinach'), class: "this-is-a-link" %></h6>
+            <h6><%= link_to "Lettuces & Chicorries", products_path(filter: 'Lettuces & Chicorries'), class: "this-is-a-link" %></h6>
+            <h6><%= link_to "Greens", products_path(filter: 'Greens'), class: "this-is-a-link" %></h6>
+
           </div>
         </div>
       </div>
-     <% end %>
-     <% end %>
     </div>
-  </div>
+    <h7 class="two-categories"><%= link_to "Herbs", products_path(filter: 'Herbs'), class: "this-is-a-link" %></h7>
+    <br>
+    <h7 class="two-categories"><%= link_to "Garlic & Onions", products_path(filter: 'Garlic & Onions'), class: "this-is-a-link" %></h7>
+
   </div>
 
+</div>
+
+</div>
+<div class="cards-all">
+  <div class="white">
+    <div class="search">
+
+      <%= simple_form_for :search, url: products_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+       <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+       <button name="button" type="submit" class="btn btn-flat">
+         <i class="fas fa-search"></i> Search
+       </button>
+     </div>
+     <% end %>
+   </div>
  </div>
+ <div class="aboverow">
+  <div class="row margin-1">
+    <% @products.each do |product| %>
+    <div class="col-sm-6 col-xs-6 col-md-4 column" >
+     <%= link_to product_path(product) do %>
+     <div class="card-trip">
+
+      <%= cl_image_tag product.photo %>
+      <div class="card-trip-infos">
+        <div>
+          <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
+          <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
+        </div>
+        <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+</div>
+</div>
+
+</div>
 
 
 
