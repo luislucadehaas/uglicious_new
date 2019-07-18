@@ -12,11 +12,53 @@
 }
 .white {
   background-color:white;
-    position:sticky;
+  position:sticky;
   top: 0;
   z-index: 1000;
 
 
+}
+.collapsed:hover {
+  padding: 20px;
+  padding-left:0px;
+  color:$green;
+  font-size:17px;
+  text-decoration: none;
+
+}
+
+a {
+  color:  black ;
+  opacity:.6;
+  font-weight:300;
+}
+h6 {
+  font-size:13px;
+  padding-left: 10px;
+
+}
+.two-categories{
+  padding: 20px;
+  padding-left:0px;
+  color:black;
+  font-size:17px;
+  font-weight: bold;
+
+}
+
+.collapsed {
+  padding: 20px;
+  padding-left:0px;
+  color:black;
+  font-size:17px;
+}
+.card-with-bottom-border {
+border-bottom:solid;
+border-color:#E8E8E8;
+border-width:0.1px;
+}
+.something {
+  color:black;
 }
 
 .header {
@@ -89,7 +131,7 @@
 }
 
 .btn-flat:hover {
-  background: #cc7000;
+   background-color: #ea5013;
   color: white;
 }
 
@@ -141,6 +183,8 @@
 }
 a:hover {
   text-decoration: none;
+  color:$orange;
+  opacity:1;
 }
 
 .card-trip:hover {
