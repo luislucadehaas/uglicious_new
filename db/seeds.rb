@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "DESTROYing"
+Booking.destroy_all
 Product.destroy_all
 Farm.destroy_all
 User.destroy_all
@@ -19,6 +20,15 @@ max = User.create!(
   email:'max@test.com',
   password:'testword',
   role: "farmer",
+  first_name: "Max",
+  last_name:"Brendle",
+  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+)
+
+max_cust = User.create!(
+  email:'maxcust@test.com',
+  password:'testword',
+  role: "customer",
   first_name: "Max",
   last_name:"Brendle",
   photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
