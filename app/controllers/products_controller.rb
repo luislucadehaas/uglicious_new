@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:home, :show]
 
 
   def index
@@ -15,6 +16,11 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+  end
+
+  def show
+    @product = Product.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -50,7 +56,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price_in_cents, :quantity_in_kg, :min_quantity_to_order, :available_from, :available_until, :photo, :photo_cache, :category_id)
+    params.require(:product).permit(:title, :description, :price_in_cents, :quantity_in_kg, :min_quantity_to_order, :available_from, :available_until, :photo, :photo_cache, :subgroup_id)
   end
 
 end
