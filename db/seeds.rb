@@ -16,7 +16,14 @@ puts "destroyed"
 
 puts "create users"
 max = User.create!(email:'max@test.com', password:'testword', role: "farmer", first_name: "Max", last_name:"Brendle", photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg")
-luis = User.create!(email:'luis@test.com', password:'testword', role: "farmer", first_name: "Luis-Luca", last_name:"de Haas", photo: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/luis_zskpks.jpg")
+luis = User.create!(
+  email:'luis@test.com',
+  password:'testword',
+  role: "farmer",
+  first_name: "Luis-Luca",
+  last_name:"de Haas",
+  photo: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/luis_zskpks.jpg"
+  )
 stan = User.create!(email:'stan@test.com', password:'testword', role: "farmer", first_name: "Stanislav", last_name:"Levasseur", photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg")
 puts "users created"
 

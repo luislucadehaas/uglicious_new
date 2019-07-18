@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="row">
+  <div class="row above_picture">
 
     <div class="col-sm-8">
-      <img src="<%= @product.photo %>">
+      <img class="show_main_picture" src="<%= @product.photo %>">
 
       <div class="row under_picture">
         <div class="col-sm-3">
@@ -16,10 +16,10 @@
       <div class="row under_picture">
         <div class="col-sm-3">
           <p class="subtle-header"> About the fram:</p>
+          <img class="show_farm_picture" src="<%= @product.farm.user.photo %>">
         </div>
         <div class="col-sm-9">
           <p class="description"> <%= @product.farm.name %> </p>
-          <p class="description"> <%= @product.farm.photo %> </p>
           <p class="prod-text"> <%= @product.farm.description %></p>
         </div>
       </div>
