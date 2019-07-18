@@ -9,9 +9,10 @@ class ProductsController < ApplicationController
       sql_query = " \
       products.title @@ :search \
       OR products.description @@ :search \
+       OR products.subgroup.name @@ :search \
+      OR products.subgroup.category.name @@ :search \
       "
-            # OR products.subgroup.name @@ :search \
-      # OR products.subgroup.category.name @@ :search \
+
       @products = Product.where(sql_query, search: "%#{params["search"]["query"]}%")
     else
       @products = Product.all

@@ -67,7 +67,7 @@ puts "categories subgroups"
 #   Category.create!(name: category)
 # end
 
-puts 'Creating 40 vegetables...'
+puts 'Creating 62 vegetables...'
 
 
 p1 = Product.create!(
