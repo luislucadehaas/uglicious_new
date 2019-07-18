@@ -1,8 +1,8 @@
 <div class="container">
-<br>
-<br>
+  <br>
+  <br>
 
-<div class="dashboard-user">
+  <div class="dashboard-user">
     <%= cl_image_tag current_user.photo, width: "85", class: "rounded-circle alone" %>
 
     <div class="user-infos">
@@ -10,33 +10,33 @@
       <p>Expert waste-fighter ⭐️⭐️</p>
       <p>63kg saved 🎯</p>
     </div>
-</div>
-<br>
-<h3>My fruits & veggies</h3>
+  </div>
+  <br>
+  <h3>My fruits & veggies</h3>
   <% if current_user.products.empty? %>
-    <p>Offer your first product!</p>
+  <p>Offer your first product!</p>
   <% else %>
-      <% current_user.products.each do |prod| %>
-      <%= link_to product_path(prod) do %>
-    <div class="card-request">
-     <img src="<%= prod.photo %>">
-       <div class="card-request-infos">
+  <% current_user.products.each do |prod| %>
+  <%= link_to product_path(prod) do %>
+  <div class="card-request">
+   <img src="<%= prod.photo %>">
+   <div class="card-request-infos">
     <h2><%= prod.title %></h2>
     <p><%= prod.description %></p>
-    <p><%= prod.price %>€</p>
+    <p><%= prod.price_in_cents %>€</p>
 
-       <%= link_to "Edit this product", edit_product_path(prod), class: "banner-button" %>
-<%= link_to "Delete this product", product_path(prod), method: :delete, class: "banner-button" %>
+    <%= link_to "Edit this product", edit_product_path(prod), class: "banner-button" %>
+    <%= link_to "Delete this product", product_path(prod), method: :delete, class: "banner-button" %>
     <%end %>
     <% end %>
     <%end %>
 
-<%= link_to "Offer a new Product", new_product_path, class: "banner-button" %>
-<br>
-<br>
-  <h3>Last orders</h3>
+    <%= link_to "Offer a new Product", new_product_path, class: "banner-button" %>
+    <br>
+    <br>
+    <h3>Last orders</h3>
 
   </div>
-  </div>
-  </div>
+</div>
+</div>
 

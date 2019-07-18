@@ -15,7 +15,7 @@
 
       <div class="row under_picture">
         <div class="col-sm-3">
-          <p class="subtle-header"> About the fram:</p>
+          <p class="subtle-header"> About the farm:</p>
           <img class="show_farm_picture" src="<%= @product.farm.user.photo %>">
         </div>
         <div class="col-sm-9">
@@ -62,19 +62,25 @@
             </div>
           </div>
 
-          <p class="subtitle">Order here: </p>
-          <%= simple_form_for [@product, @booking], method: "post" do |f| %>
-          <div class="form-row">
-            <div class="col">
-              <%= f.input :quantity_in_kg%>
+            <% if current_user.role == "customer" %>
+              <p class="subtitle">Order here: </p>
+              <%= simple_form_for [@product, @booking], method: "post" do |f| %>
+              <div class="form-row">
+                <div class="col">
+                  <%= f.input :quantity_in_kg%>
+                </div>
+                <div class="col">
+                  <%= f.input :delivery_option%>
+                </div>
+              </div>
+              <%= f.button :submit, "Order now", class: "btn btn-flat" %>
+              <% end %>
             </div>
-            <div class="col">
-              <%= f.input :delivery_option%>
+          <% else %>
+            <div class="form-row">
+                 <%= link_to "Please log in as a customer", log_out_farmer_path, class: "dropdown-item" %>
             </div>
-          </div>
-          <%= f.button :submit, "Order now", class: "btn btn-flat" %>
           <% end %>
-        </div>
         <% else %>
         <div class="form-wrapper">
           <p><%= link_to "Please log in to buy #{@product.title}", new_user_session_path %> </p>

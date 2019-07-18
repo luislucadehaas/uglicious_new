@@ -1,8 +1,8 @@
 <div class="container">
-<br>
-<br>
+  <br>
+  <br>
 
-<div class="dashboard-user">
+  <div class="dashboard-user">
     <%= cl_image_tag current_user.photo, width: "85", class: "rounded-circle alone" %>
 
     <div class="user-infos">
@@ -10,5 +10,32 @@
       <p>Expert waste-fighter ⭐️⭐️</p>
       <p>63kg saved 🎯</p>
     </div>
-    </div>
-    </div>
+  </div>
+  <br>
+  <h3>My orders</h3>
+  <% #raise %>
+  <% if current_user.bookings.empty? %>
+  <p>Book your first product!</p>
+  <% else %>
+  <% current_user.bookings.each do |booking| %>
+  <%= link_to product_path(booking.product) do %>
+  <div class="card-request">
+   <img src="<%= booking.product.photo %>">
+   <div class="card-request-infos">
+    <h2><%= booking.product.title %></h2>
+    <p><%= booking.product.description %></p>
+    <p><%= booking.product.price_in_cents %>€</p>
+
+    <%= link_to "See my invoice", class: "banner-button" %>
+    <% end %>
+    <% end %>
+    <% end %>
+
+    <br>
+    <br>
+
+
+  </div>
+</div>
+
+</div>
