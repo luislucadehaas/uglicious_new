@@ -2,6 +2,7 @@
   <div class="form-wrapper">
     <div class="row justify-content-center">
       <div class="col-md-6">
+        <% if current_user.id == @product.farm.user_id %>
         <h2>Update your offer here:</h2>
 
         <%= simple_form_for(@product) do |f| %>
@@ -24,6 +25,9 @@
         <%= f.input :photo_cache, as: :hidden %>
 
         <%= f.button :submit, "Update this product", class: "btn btn-primary" %>
+        <% end %>
+        <% else %>
+          <p>This product was not created by you.</p>
         <% end %>
       </div>
     </div>
