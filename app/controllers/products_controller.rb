@@ -10,8 +10,6 @@ class ProductsController < ApplicationController
       products.title @@ :search \
       OR subgroups.name @@ :search \
       "
-      #
-      # OR products.subgroup.category.name @@ :search \
       @products = Product.joins(:subgroup).where(sql_query, search: "%#{params["search"]["query"]}%")
     elsif params[:filter]
       subgroup = Subgroup.where(name: params[:filter])
