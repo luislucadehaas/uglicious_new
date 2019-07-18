@@ -81,6 +81,7 @@ When none of the local farms we work with have Organic Persian Cucumbers, we sou
     min_quantity_to_order: Faker::Number.number(1)
   )
 p1.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/i8NXRuZ1SGGo2ZnKRajP_2018_0830_PaduaVV_PersianCucumbers_1lbclamshell%20%289e0fec43389142256f5ed177220ebe4d53a5d717%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 p1.save
 
 p2 = Product.create!(
@@ -93,6 +94,7 @@ p2 = Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p2.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/tHSLOWi6RNCCkJp1ay0y_2018_0416_GoodEggsProduce_Cucumber_1ct%20%28a275ebe926d6697d228d339fdbc6750ff1478f39%29%20%286%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p2.save
 
@@ -106,6 +108,7 @@ p3 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p3.remote_photo_url ="https://goodeggs2.imgix.net/product_photos/Gby9URIR6K3TdFwa19uA_pickling%20cuke.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p3.save
 
@@ -119,6 +122,7 @@ p4 = Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p4.remote_photo_url =  "https://goodeggs1.imgix.net/product_photos/hieMVDLFQgGVLjiB6RLP_2018_0802_LonelyMountainFarm_MixedHeirloomTomatoes_1.5lb%20%28fbb7fdbde5c8482d977db7075dbd94fcc047f03d%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p4.save
 
@@ -132,6 +136,7 @@ p5 = Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p5.remote_photo_url =  "https://goodeggs1.imgix.net/product_photos/ANX3TXqTTuJFxQo3ugUL_2017_0705_GenericProduce_SlicerTomatoTrio_v1%20%282924839fdd4c3d695e6559d9084d11bb2f611899%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p5.save
 
@@ -145,6 +150,7 @@ p6 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p6.remote_photo_url =   "https://goodeggs1.imgix.net/product_photos/zRGN83rQRJOrwOOsm9Ya_2018_0705_TerraFirmaFarm_TieDyeBerkleyHeirloomTomatoes_2%20%286443c17ba8fbd79e72932f650a22e80fb4137b6f%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p6.save
 p7 = Product.create!(
@@ -157,6 +163,7 @@ p7 = Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p7.remote_photo_url =   "https://goodeggs1.imgix.net/product_photos/zqZGwpvIS06NGaWVolQr_2018_0830_happyboy_SanMarzanoTomatoes_1lb%20%28a74abcd0aff673ba61b37fd546e6550b58660a8f%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p7.save
 
@@ -170,6 +177,7 @@ p8 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p8.remote_photo_url =   "https://goodeggs1.imgix.net/product_photos/rhKTfnnlT7eJ4UyM7rb4_2017_1025_GoodEggsProduce_Cauliflower1ct%20%280c7e49cf0cbc61baec07495cf18904aea8abce84%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p8.save
 p9 = Product.create!(
@@ -182,6 +190,7 @@ p9 = Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p9.remote_photo_url =    "https://goodeggs2.imgix.net/product_photos/1NanuBLqQNmsUeRUjYTO_2018_1129_GoodEggsProduce_BroccoliCrowns_2lb%20%2806dc5491fd02494bf930e5ed9ec98e1c73ce978d%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p9.save
 
@@ -196,6 +205,7 @@ Please note: Broccoli Di Ciccio can be harvested many different stages of maturi
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p10.remote_photo_url =    "https://goodeggs1.imgix.net/product_photos/9wlJSM1vSBm3YseKlu8h_2018_0507_CokeFarms_BroccoliDiCicco%20%28d822213d2c99234fa19f291ebed182d91392ea1a%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p10.save
 p11 =Product.create!(
@@ -208,6 +218,7 @@ p11 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p11.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/cqpisbPsSSCrUs1iTAar_2018_0507_TomateroFarm_RomanescoCauliflower_1head%20%28dfd8e6f5fea7f6cd39da654dc741185b75a85abe%29%20%286%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p11.save
 p12 =Product.create!(
@@ -220,6 +231,7 @@ p12 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p12.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/yLTl3kTNQ72J7dSEuNMu_2018_1129_GoodEggsProduce_PurpleCauliflower_1ct%20%2882a59ef1ce4ac163d43706955199061f80697bf4%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p12.save
 
@@ -233,6 +245,7 @@ p13 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p13.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/qQ9xv7MRJSdeqo8WRXnl_2018_0307_GoodEggsProduce_BunchedCarrots_2bu_1%20%28ed68d6b45987ed887282fc7f29f6f1552553a170%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p13.save
 p14 =Product.create!(
@@ -245,6 +258,7 @@ p14 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p14.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/lJionHr5RpClk5suHnbF_2019_0123_TomateroFarm_OrganicFennel_1count_2%20%2813b1c589c05b8799ace454f160f82e5ced987208%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p14.save
 p15 =Product.create!(
@@ -257,6 +271,7 @@ p15 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p15.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/q6sG1pSNKo3IvbsU5ETw_2018_0416_GoodEggsProduce_Celery%20%28a5035c294726786e0ca2a0d82dc61e2524470936%29%20%284%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p15.save
 p16 =Product.create!(
@@ -269,6 +284,7 @@ p16 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p16.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/GEQAfF9ETdWHOT3M6IvO_2018_0124_GenericRedBellPeppers_1ct%20%28cba4cbd3932f7b80a0d51ddf0e002cd59c48d965%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p16.save
 p17 =Product.create!(
@@ -281,6 +297,7 @@ p17 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p17.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/v9WZB7tgSHq7Nt34q6Pl_2018_0307_GoodEggsProduce_OrangeBellPepper_1ct%20%28a7778effa1e4482ce2510e2b6394c183073f8317%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p17.save
 p18 =Product.create!(
@@ -293,6 +310,7 @@ p18 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p18.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/F06p4B9RuqY8szjgf45A_2018_0309_DelCabo_ShishitoPeppers%20%28b7f88472b4638fb199a29b97cd321aa771058b16%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p18.save
 
@@ -306,6 +324,7 @@ p19 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p19.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/APiRjPShShWnanM6pQ1d_2018_0124_GenericGreenBellPeppers_1ct%20%28b73add727be6d1c33d2e22077e15e4aa879f889c%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p19.save
 p20 =Product.create!(
@@ -318,6 +337,7 @@ p20 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p20.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/MnyAggicRyiKkLnSqQ3T_2017_0626_2ctYellowCorn%20%28f877780b28be95b752f6278eb08f13b7703350c3%29%20%282%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p20.save
 p21 =Product.create!(
@@ -330,6 +350,7 @@ p21 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p21.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/pvU1hDfTFqy05pQB6H3o_2019_0123_WholesumHarvest_GlobeEggplant_1count%20%28c6b5f3fd92e0bedabc111e6a1b2f2e6dcc20292b%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p21.save
 p22 =Product.create!(
@@ -342,6 +363,7 @@ p22 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p22.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/I6O24op4QLKjfYlUfREI_2017_0720_GenericProduce_ListadaEggplant1%23%20%28cb75f2c092e0866de611bf7a791efccde1544c57%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p22.save
 
@@ -355,6 +377,7 @@ p23 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p23.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/1Gw3uAlMSZCmCqvueUVH_2017_1221_GoodEggsProduce_GenericZucchini_1ct%20%284c2f0e7f38d00426bbad559eca95b24fbb3a4b88%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p23.save
 p24 =Product.create!(
@@ -367,6 +390,7 @@ p24 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p24.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/DASTpf24QUWLna1iEmxJ_2018_0522_GoodEggsProduct_YellowCrookneckSquash_1lb%20%28a0ae259fefb1dfb3e807141c878e399536f1ff8d%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p24.save
 p25 =Product.create!(
@@ -379,6 +403,7 @@ p25 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p25.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/h8BAAHGTVu2cHAQuRIQU_butternut_squash_01%20copy%20%2808818c2c321d2f542cf48d06dfd1eff21f7c46b9%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p25.save
 
@@ -392,6 +417,7 @@ p26 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p26.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/KVROhjq7RBis3vO6eERb_2017_1115_GarnetSweetPotato_1lb_1%20%28ca170434b0c3d3a4f8ca4f036ae0ad1c875da661%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p26.save
 p27 =Product.create!(
@@ -404,6 +430,7 @@ p27 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p27.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/emThW3VnRiyTJ4DC8Tbi_potatoes_02%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p27.save
 
@@ -417,6 +444,7 @@ p28 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p28.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/hYdGuUx9TUtc7ZNy6dAd_L0gelF5RhO55t1AQGvgN_513a83eb11bc26020000d2ef_standard.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p28.save
 
@@ -430,6 +458,7 @@ p28.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p29.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/Xmcawew1Sj6BzQ1ENyqZ_2018_0705_RiverdogFarm_YellowPotatoes_1lb%20%282ee96537f8a61496784c8d3e4d2555b89e573f90%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p29.save
 
@@ -443,6 +472,7 @@ p29.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p30.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/sjBrpKTZmYhCsKz2Trwv_sJ7q83rQFaj4EYUCk6Mq_beets_red_bunch_02.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p30.save
 
@@ -456,6 +486,7 @@ p30.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p31.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/AFlowYnkTG2DiTnjHhoq_2018_0621_GoodEggsProduce_RedCherries_1lb%20%28ac1858973f94731faea89e9447b071685c4c18b4%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p31.save
 
@@ -469,6 +500,7 @@ p31.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p32.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/wBEI7fTwKAeO3RJJOKCg_2018_0905_FruitWorld_GreenSeedlessGrapes_1lb%20%283b7cc37f96381c01dfcecc853f8f25ee5744ed36%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p32.save
 
@@ -482,6 +514,7 @@ p32.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p33.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/f4wGjcabSPyKYUrvSHVr_2018_0628_GoodEggsProduce_GrapesClamshell_1lb%20%282a2dbea1065e351a3995e7c8f12b73fb2b97d7d2%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p33.save
 
@@ -495,6 +528,7 @@ p33.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p34.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/HqsQ8s5TSOCDDArEN6ja_2018_0705_GoodEggsProduce_RainierCherries_1.5lb%20%286952613bd0b8575576406099a943947e99d30c3d%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p34.save
 
@@ -508,6 +542,7 @@ p34.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p35.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/p0eDbJ6TOLlJDH1WFOwn_blueberries_large%20%285c89d0a190e885880cc18c93ba300a8ca13eac92%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p35.save
 
@@ -521,6 +556,7 @@ p35.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p36.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/XtgvLqrVR7WmHm6uVZF4_2019_0103_GoodEggsProduce_OrganicStrawberries_1ct%20%281aae40ca170a4a51b038011e2ce7cc729084e1d1%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p36.save
 
@@ -534,6 +570,7 @@ p36.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p37.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/P7UUTc6TxCoGUZWKIGmN_2018_0108_GenericBlackberries_1pack%20%28720dc43fbfb58cabad169cafb53836d6b9ea7e2c%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p37.save
 
@@ -547,6 +584,7 @@ p37.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p38.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/gieWYzXWToO4BC6Egb3P_jKlQOom7eqI12bivmBjHvwYDjY3bJrRB4wdods78sKI.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p38.save
 
@@ -560,6 +598,7 @@ p38.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p39.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/5Kv0jaSRT7mM2VrTussk_2018_0712_BlossomBluff_FlavorQueenPluot_Trio%20%282a7d394d2981166fac5587d6d2ef0e9f9d9b10fd%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p39.save
 
@@ -573,6 +612,7 @@ p39.save
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p40.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/PgiAL7jQNTFvGWbZpMgm_2018_0705_GalpinFamilyFarms_WesternerRedPlums_1lb_2%20%28ab9ed8d816a769b0f91928d26e31228a97f91994%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p40.save
 
@@ -586,6 +626,7 @@ p41 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p41.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/C2sEXrm8QY2SgDX2cSNl_2018_0628_FullBellyFarm_RoyalBlenheimApricots_1lb_1%20%288b492c1f9c7f18fec2122a0f9dccaa85ff73a8cb%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p41.save
 
@@ -599,6 +640,7 @@ p42 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p42.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/usAyH2kCSfi709AGz2m5_2018_0718_BlossomBluff_WhitePeachDuo%20%284d9b263f1d5d216cbc8e37ffe02417d491e49c5a%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 p42.save
 
 p43 =Product.create!(
@@ -611,6 +653,7 @@ p43 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p43.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/eSGumgVZRfm25XGrO8wu_granny%20smith.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p43.save
 
@@ -624,6 +667,7 @@ p44 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p44.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/mxFB7KSrQNKTDO8FGXCC_2018_0226_GoodEggsProduce_PinkLadyApple_Trio%20%288061c0f5a7a5b506d7aab7705cc7d186e57c0793%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p44.save
 
@@ -637,6 +681,7 @@ p45 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p45.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/XtWPQxlRlCk70UA6Drg1_2018_0226_GoodEggsProduce_GalaApple_1ct%20%2847e8e8b2e2d01d3b7bbda274114143daf92bd616%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p45.save
 
@@ -650,6 +695,7 @@ p46 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p46.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/ddaCcqlS2iJ4CIFL4mJQ_rhubarb_01.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p46.save
 
@@ -663,6 +709,7 @@ p47 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p47.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/e27JSJK5TAS34TAaJbkQ_2018_1119_lacinatokale_1bunch%20%2828b6d7dfcf169e2c6a72e142f52acd71a8cbf72a%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p47.save
 
@@ -676,6 +723,7 @@ p48 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p48.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/eCtzGme5SDKOSVgaDTQA_2019_0114_JayLeaf_BabySpinach_0.5lb%20copy%20%2808ce9c5ddae19e2ae602c1302d108e41704e8498%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p48.save
 
@@ -689,6 +737,7 @@ p49 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p49.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/YeQKbLnGQfKWOtyWaOAw_2019_0415_WashedBabyKale_0.25lb%20%2877d54340059966a465502d43979a9e7a63a6c4a8%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p49.save
 
@@ -702,6 +751,7 @@ p50 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p50.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/BnMlb77XRMe5ejeqZJ2n_5157a45f8fa8e902000001b0_standard.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p50.save
 
@@ -715,6 +765,7 @@ p51 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p51.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/FD7CmJGfRcC2IUGMPPnp_2017_0628_GenericProduce_RomaineLettuce%20%2858f7ca3c68e21e46e922ef85f456b00af33d3a4d%29%20%283%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p51.save
 
@@ -728,6 +779,7 @@ p52 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p52.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/WGKbsNNrTEKvNcijfvta_2019_0204_CaliforniaEndiveFarms_BelgianEndive_0.5lb%20%283ec9201a02ff62b7cb5671eb0074c8b602db3b92%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p52.save
 
@@ -741,6 +793,7 @@ p53 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p53.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/TNiTaQ2SN665qvzHIuCg_2018_0514_SayHayFarms_LittleGemLettuces_1lb%20%2882f0c99500d1096ec055739bf42856b795998f80%29%20%282%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p53.save
 
@@ -754,6 +807,7 @@ p54 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p54.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/ZnK0V39SThSM3XECpogS_chard_rainbow.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p54.save
 
@@ -767,6 +821,7 @@ p55 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p55.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/bSko4x0GQPq3XZuypSrx_2018_1027_HappyBoyFarms_CollardGreens_1bu%20%28283bd29a29644016435c1202cdce4dee790e1a8b%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p55.save
 
@@ -780,6 +835,7 @@ p56 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p56.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/7ExDMXBZSNeUUmKKiBYn_cilantro_14.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p56.save
 
@@ -793,6 +849,7 @@ p57 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p57.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/Wsb5nKxOQAeLHTJyeFmT_2019_0319_Ouroboros_AquaponicLivingChives_1bunch%20%28527c5a8e30ea0eb2524dbbce791dbb295b5c858b%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p57.save
 
@@ -806,6 +863,7 @@ p58 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p58.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/mqgHb4wJTX2Mn4rYNQFn_2018_0416_TomateroBasil_1bunch%20%2834a1861a128701b49112bc809cdffd91a74dbdc9%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p58.save
 
@@ -819,6 +877,7 @@ p59 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p59.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/sgL462InSFWI1K1oQyKr_2019_0124_GoodEggsProduce_LargeYellowOnion_1count%20%28cedd6bbcbc3de5ca7b2fd9ec46071e9738227c92%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p59.save
 
@@ -832,6 +891,7 @@ p60 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p60.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/dWBK0zzT2ebyqOWUgxEB_2019_0501_RedSpringOnions_0.5lb%20%28fde4f2335c0aa50ded6a0c27ec454f875ca2d3e7%29%20%282%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p60.save
 
@@ -845,6 +905,7 @@ p61 =Product.create!(
     min_quantity_to_order: Faker::Number.between(6, 10),
   )
 p61.remote_photo_url = "https://goodeggs2.imgix.net/product_photos/4Emz1DViRpOdBw8tSFDx_2017_1016_ChristopherRanch_Pre-PackedGarlic_3oz%20%28981865c293d7d06bc6571c44eeab1c0e69a320b0%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 
 p61.save
 
@@ -859,6 +920,7 @@ p62 =Product.create!(
 
   )
 p62.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/14a5CDpSTAKZE7VDEwVz_2019_0624_CokeFarm_SpringShallots_0.5lb%20%28696aa33a9ced5beef9fafd4ef2acb36718037731%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+printf '.'
 p62.save
 puts 'Finished!'
 # puts 'Creating 100 vegetables...'
