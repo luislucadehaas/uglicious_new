@@ -18,21 +18,31 @@
 
 
 }
+.collapsed:hover {
+  padding: 20px;
+  padding-left:0px;
+  color:$green;
+  font-size:17px;
+  text-decoration: none;
+
+}
 
 a {
   color:  black ;
-  opacity:.7;
-  font-weight:normal;
+  opacity:.6;
+  font-weight:300;
 }
 h6 {
-  font-size:14px;
+  font-size:13px;
+  padding-left: 10px;
 
 }
-h7 {
-    padding: 20px;
+.two-categories{
+  padding: 20px;
   padding-left:0px;
   color:black;
   font-size:17px;
+  font-weight: bold;
 
 }
 

@@ -3,7 +3,7 @@
   <div class="card-filter" style="width: 300px;
     height: 100vh;">
     <div class="text-for-filter">
-    <h4>Filter by</h4>
+    <h4 style="color:black;margin:0;">Filter by</h4>
     <div>
       <div class="accordion" id="accordionExample">
   <div class="card-with-bottom-border">
@@ -63,9 +63,9 @@
     </div>
   </div>
 </div>
-<h7><%= link_to "Herbs", products_path(filter: 'Herbs'), class: "this-is-a-link" %></h7>
+<h7 class="two-categories"><%= link_to "Herbs", products_path(filter: 'Herbs'), class: "this-is-a-link" %></h7>
 <br>
-<h7><%= link_to "Garlic & Onions", products_path(filter: 'Garlic & Onions'), class: "this-is-a-link" %></h7>
+<h7 class="two-categories"><%= link_to "Garlic & Onions", products_path(filter: 'Garlic & Onions'), class: "this-is-a-link" %></h7>
 
     </div>
 
