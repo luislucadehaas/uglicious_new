@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
   has_many :farms
+  has_many :companies
   has_many :products, through: :farms
   has_many :bookings
   has_many :reviews, through: :bookings
