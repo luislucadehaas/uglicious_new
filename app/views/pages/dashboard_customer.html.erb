@@ -1,16 +1,27 @@
 <div class="container">
   <br>
-  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="dashboard-user">
+        <%= cl_image_tag current_user.photo, width: "85", class: "rounded-circle alone" %>
+        <div class="user-infos">
+          <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+          <p>Expert waste-fighter ⭐️⭐️</p>
+          <p>63kg saved 🎯</p>
+          <p>37 transactions</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="dashboard-user">
-    <%= cl_image_tag current_user.photo, width: "85", class: "rounded-circle alone" %>
+    <div class="col-sm-6" >
 
-    <div class="user-infos">
-      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-      <p>Expert waste-fighter ⭐️⭐️</p>
-      <p>63kg saved 🎯</p>
+      <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="300px"></p>
+      <h3><%= current_user.companies.first.name
+      %></h3>
+      <p><%= current_user.companies.first.description.truncate(100) %></p>
     </div>
   </div>
+  <br>
   <br>
   <h3>My orders</h3>
   <% #raise %>
@@ -23,19 +34,19 @@
    <img src="<%= booking.product.photo %>">
    <div class="card-request-infos">
     <h2><%= booking.product.title %></h2>
-    <p><%= booking.product.description %></p>
+    <p><%= booking.product.description.truncate(100) %></p>
     <p><%= booking.product.price_in_cents %>€</p>
 
-    <%= link_to "See my invoice", class: "banner-button" %>
-    <% end %>
-    <% end %>
-    <% end %>
-
-    <br>
-    <br>
-
-
+    <%= link_to "See my invoice", class: "product-links" %>
+    </div>
   </div>
-</div>
+  <% end %>
+  <% end %>
+  <% end %>
+
+  <br>
+  <br>
+
+
 
 </div>

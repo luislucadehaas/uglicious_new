@@ -6,12 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "DESTROYing"
+puts "destroying Bookings"
 Booking.destroy_all
+puts "destroying Products"
 Product.destroy_all
+puts "destroying Farms"
 Farm.destroy_all
+puts "destroying Companies"
 Company.destroy_all
+puts "destroying Users"
 User.destroy_all
+puts "destroying Subgroups"
 Subgroup.destroy_all
+puts "destroying Categories"
 Category.destroy_all
 
 puts "destroyed"
@@ -21,15 +28,6 @@ max = User.create!(
   email:'max@test.com',
   password:'testword',
   role: "farmer",
-  first_name: "Max",
-  last_name:"Brendle",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
-)
-
-max_cust = User.create!(
-  email:'maxcust@test.com',
-  password:'testword',
-  role: "customer",
   first_name: "Max",
   last_name:"Brendle",
   photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
@@ -48,11 +46,37 @@ luis = User.create!(
   email:'stan@test.com',
   password:'testword',
   role: "farmer",
-  first_name: "Stanislav",
-  last_name:"Levasseur",
+  first_name: "Stanislaus",
+  last_name:"Levavasseur",
   photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg"
 )
 
+max_cust = User.create!(
+  email:'maxcust@test.com',
+  password:'testword',
+  role: "customer",
+  first_name: "Max",
+  last_name:"Brendle",
+  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+)
+
+luis_cust = User.create!(
+  email:'luiscust@test.com',
+  password:'testword',
+  role: "customer",
+  first_name: "Luis-Luca",
+  last_name:"de Haas",
+  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+)
+
+stan_cust = User.create!(
+  email:'stancust@test.com',
+  password:'testword',
+  role: "customer",
+  first_name: "Stanislaus",
+  last_name:"Levavasseur",
+  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+)
 puts "users created"
 
 puts "farm creation"
@@ -61,6 +85,13 @@ bauer2 = Farm.create!(name: "Lake View Farm", user_id: stan.id, address:"Grünka
 bauer3 = Farm.create!(name: "Peaceful Pine Place", user_id: max.id, address:"Kamener Weg 30-50, 13507 Berlin", description:"Peaceful Pine Place is a 25 acre farm nestled in the beautiful and peaceful Berlin.  The focus on this farm is the growing of healthy and flavorful foods while using earth friendly sustainable practices.  In effort to continually reduce a carbon footprint on earth, the farm has a solar system, state-of-the-art water reclamation system, and several compost piles which all assist the organic methods of producing nutritionally rich foods.  We are continuing all those same practices as we grow the business!")
 
 puts "farm created"
+
+puts "company creation"
+company1 = Company.create!(name: "University Mensa", user_id: luis_cust.id, address:"Straße zum 17 Juni 20, 12103 Berlin", description:"We provide fresh food to our many thousand students daily.")
+company2 = Company.create!(name: "Dr. Ö processed foods", user_id: max_cust.id, address:"Industripark 30-50, 13129 Berlin", description:"Dr. Ö processes fresh foods, prepares meals form them and will sell those freezed to supermarkets.")
+company3 = Company.create!(name: "MathildaS Bio Lunchplace", user_id: stan_cust.id, address:"Torstr. 160, 10115 Berlin", description:"The hip and stylish place in the heart of Berlin to have the healthies lunch you could possibly imagine.")
+
+puts "company created"
 
 puts "create categories"
 herbs = Category.create!(name: "Herbs")
