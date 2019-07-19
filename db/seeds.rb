@@ -46,7 +46,7 @@ luis = User.create!(
   email:'stan@test.com',
   password:'testword',
   role: "farmer",
-  first_name: "Stanislaus",
+  first_name: "Stan",
   last_name:"Levavasseur",
   remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg"
 )
@@ -194,7 +194,7 @@ p4.save
 
 p5 = Product.create!(
   title: "Saladette Tomatoes",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   subgroup_id: tomatoes.id,
   description: "These first-of-the-season Organic Early Girl Tomatoes from Terra Firma Farm in Winters, CA, are firm enough to slice into salads or sandos, but flavorful enough to give you a taste of the first hint of summer.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -208,7 +208,7 @@ p5.save
 
 p6 =Product.create!(
   title: "Organic Berkeley Tie-Dye Pink Heirloom Tomatoes",
-  farm_id: bauer1.id,
+  farm_id: bauer2.id,
   subgroup_id: tomatoes.id,
   description: "Incredibly full of color and flavor, these Organic Berkeley Tie-Dye Heirloom Tomatoes are perfect to add color sliced up on salads or in sandwiches.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -221,7 +221,7 @@ printf '.'
 p6.save
 p7 = Product.create!(
   title: "San Marzano Tomatoes",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   subgroup_id: tomatoes.id,
   description: "There's nothing quite like making your own tomato sauce from scratch! These San Marzanos from Terra Firma Farm are the perfect sauce tomato you're looking for. Thin-skinned and thick-walled, these Italian plum tomatoes come so fresh, you'd think they came out of your own garden!",
   price_in_cents: Faker::Number.between(1, 6),
