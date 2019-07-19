@@ -43,11 +43,11 @@
           <p class="description">Good between:</p>
           <div class="form-row">
             <div class="col">
-              <p class="description"><strong style="color: #EA622C"><%= @product.available_from.strftime("%B %d, %Y") %></strong></p>
+              <p class="description"><strong style="color: #EA622C"><%= @product.available_from&.strftime("%B %d, %Y") %></strong></p>
             </div>
 
             <div class="col">
-              <p class="description"><strong style="color: #EA622C"><%= @product.available_until.strftime("%B %d, %Y") %></strong></p>
+              <p class="description"><strong style="color: #EA622C"><%= @product.available_until&.strftime("%B %d, %Y") %></strong></p>
             </div>
           </div>
           <% if user_signed_in? %>
