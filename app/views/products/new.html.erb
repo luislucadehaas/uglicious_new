@@ -1,9 +1,10 @@
 <div class="container-2">
-  <div class="form-wrapper">
+  <div class="form-wrapper back-form" style="background-image: url(https://res.cloudinary.com/dc875ky15/image/upload/v1563535063/uglicious/icons/pear_last_gf5ayf.svg);">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <h2>Create a new offer here:</h2>
-
+      <br>
+      <h2>Sell a new product</h2>
+      <br>
         <%= simple_form_for(@product) do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
@@ -23,7 +24,7 @@
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
 
-        <%= f.button :submit, "Add a product", class: "banner-button" %>
+        <%= f.button :submit, "Save product", class: "banner-button" %>
         <% end %>
       </div>
     </div>

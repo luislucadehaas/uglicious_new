@@ -3,7 +3,7 @@
 <div class="banner" style="background-image: url(https://www.perfarmer.com/imgs/banner_michel.jpeg);">
   <div class="container">
     <h1>Sell uglies, save the planet!</h1>
-    <p>Valorize</p>
+    <p style="color:white">Valorize your waste</p>
     <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
   </div>
 </div>
@@ -11,17 +11,17 @@
 <% elsif current_user && current_user.role.downcase == "customer" %>
 <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1503639595033-c11290f0accf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2141&q=80);">
   <div class="container">
-    <h1>Eat uglies, save the planet!</h1>
-    <p>Valorize</p>
+    <h1 style="color:white">Eat uglies, save the planet!</h1>
+    <p style="color:white">Direct from farmers - Delicious - Fair price</p>
     <%= link_to "Explore the market", products_path, class: "banner-button" %>
   </div>
 </div>
 
 <% else %>
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1504472685735-9bd4075b3779?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);">
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1511448598600-c01f02a2ee95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
   <div class="container">
-    <h1>The best marketplace to fight foodwaste</h1>
-    <p>Direct from farmers - Delicious - Fair price</p>
+    <h1 style="color:white">The marketplace to fight foodwaste</h1>
+    <p style="color:white">Direct from farmers - Delicious - Fair price</p>
     <%= link_to "Explore the market", products_path, class: "banner-button" %>
     <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
   </div>
