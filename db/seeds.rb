@@ -30,7 +30,7 @@ max = User.create!(
   role: "farmer",
   first_name: "Max",
   last_name:"Brendle",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
 )
 
 luis = User.create!(
@@ -39,7 +39,7 @@ luis = User.create!(
   role: "farmer",
   first_name: "Luis-Luca",
   last_name:"de Haas",
-  photo: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/luis_zskpks.jpg"
+  remote_photo_url:  "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/luis_zskpks.jpg"
 )
 
   stan = User.create!(
@@ -48,7 +48,7 @@ luis = User.create!(
   role: "farmer",
   first_name: "Stanislaus",
   last_name:"Levavasseur",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg"
 )
 
 max_cust = User.create!(
@@ -57,7 +57,7 @@ max_cust = User.create!(
   role: "customer",
   first_name: "Max",
   last_name:"Brendle",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
 )
 
 luis_cust = User.create!(
@@ -66,7 +66,7 @@ luis_cust = User.create!(
   role: "customer",
   first_name: "Luis-Luca",
   last_name:"de Haas",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
 )
 
 stan_cust = User.create!(
@@ -75,7 +75,7 @@ stan_cust = User.create!(
   role: "customer",
   first_name: "Stanislaus",
   last_name:"Levavasseur",
-  photo:"https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
 )
 puts "users created"
 
@@ -999,11 +999,11 @@ puts 'Finished!'
 #     price_in_cents: Faker::Number.number(1),
 #     quantity_in_kg:Faker::Number.number(2),
 #     min_quantity_to_order: Faker::Number.number(2),
-#     photo: "https://foodrevolution.org/wp-content/uploads/2019/03/iStock-908062538-1.jpg"
+#     remote_photo_url:  "https://foodrevolution.org/wp-content/uploads/2019/03/iStock-908062538-1.jpg"
 #   )
 # end
 # puts 'Finished!'
-# Product.create(title: "tomatoes", farm_id: bauer.id, description:'This is the most piraty wig of all piraty wigs. You will feel like a badass pirate if you rock this pirating wig.  Happy pirating!', price_in_cents: 4000,  photo: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752188/U36167_bw2g2b.jpg')
+# Product.create(title: "tomatoes", farm_id: bauer.id, description:'This is the most piraty wig of all piraty wigs. You will feel like a badass pirate if you rock this pirating wig.  Happy pirating!', price_in_cents: 4000,  remote_photo_url:  'https://res.cloudinary.com/dc875ky15/image/upload/v1562752188/U36167_bw2g2b.jpg')
 # Product.create(title: "something",farm_id: bauer.id, description:'Make yourself the diva you always wanted to be. With this natural feeling look you will rock any party!', price_in_cents: 5000, photo: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752180/42206_oy82g0.jpg')
 # Product.create(user_id: luis.id, description:'How often do experts say you should listen to Bob Marley? Reggae-larly. Any other qustions? No? We thought so.', price: 2, color:'black', size:'XL', title: 'Bobbys Bop', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752198/29002-rasta-beret-w-real-dreadlocks-1_ertyy0.jpg', address: 'Paul-Heyse-Straße 26, 10407 Berlin')
 # Product.create(user_id: max.id, description:'You feel dumb? We have a fix for that. Become the brigtest person in any room with our Albret wig!', price: 50, color:'white', size:'L', title: 'Albert Stein', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752198/70796_E_MC2_qqtzi5.jpg', address: 'Karl-Marx-Allee 93A, 10243 Berlin')

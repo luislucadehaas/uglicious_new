@@ -14,6 +14,7 @@
       </div>
     </div>
 
+
     <div class="col-sm-6" >
 
       <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563536321/uglicious/icons/food_processor_p2hm3v.jpg" width="300px"></p>
@@ -40,6 +41,7 @@
     <h2><%= booking.product.title %></h2>
     <p><%= booking.product.description.truncate(100) %></p>
     <p><%= booking.product.price_in_cents %>€</p>
+    <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
 
     <%= link_to "See my invoice", class: "product-links" %>
     </div>

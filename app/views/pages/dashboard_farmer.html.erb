@@ -1,3 +1,9 @@
+  <% totalbookings = 0%>
+  <% current_user.farm.products.each do |p| %>
+    <% p.bookings.each do |booking| %>
+    <% totalbookings += 1 %>
+     <% end %>
+    <% end %>
 <div class="container">
   <br>
   <div class="row">
@@ -8,8 +14,11 @@
           <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
           <p>Expert waste-fighter ⭐️⭐️</p>
           <p>63kg saved 🎯</p>
-          <p>37 transactions</p>
+
+
+          <p><%= totalbookings %> transactions</p>
           <%= link_to "Sell a new Product", new_product_path, class: "banner-button" %>
+
         </div>
       </div>
     </div>
@@ -26,6 +35,31 @@
   </div>
   <br>
   <br>
+
+  <br>
+  <br>
+  <br>
+  <h3>Last transactions <%= totalbookings %></h3>
+  <% #raise %>
+    <% current_user.farm.products.each do |p| %>
+    <% p.bookings.each do |booking| %>
+    <%= link_to product_path(booking.product) do %>
+      <div class="card-request">
+        <img src="<%= booking.product.photo %>">
+        <div class="card-request-infos">
+          <h2><%= booking.product.title %> - Total Earnings: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</h2>
+          <p><%= booking.product.description.truncate(100) %></p>
+          <p><%= booking.product.price_in_cents %>€ per Kg</p>
+          <%= link_to "See customer invoice", class: "product-links" %>
+
+
+        </div>
+
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+
   <h3>My fruits & veggies <%= @current_user.products.count %></h3>
   <% if current_user.products.empty? %>
   <p>Offer your first product!</p>
@@ -65,9 +99,7 @@
 
         </div>
 
-    </div>
-    <% end %>
-    <% end %>
+
 </div>
 </div>
 </div>
