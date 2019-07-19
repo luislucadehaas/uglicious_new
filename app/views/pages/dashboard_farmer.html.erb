@@ -49,17 +49,24 @@
   <% end %>
   <br>
   <br>
-  <h3>Last transactions <%= current_user.farm.products.first.bookings.count %></h3>
   <br>
+  <% totalbookings = 0%>
+  <% current_user.farm.products.each do |p| %>
+    <% p.bookings.each do |booking| %>
+    <% totalbookings += 1 %>
+     <% end %>
+    <% end %>
+  <h3>Last transactions <%= totalbookings %></h3>
+  <% #raise %>
     <% current_user.farm.products.each do |p| %>
     <% p.bookings.each do |booking| %>
     <%= link_to product_path(booking.product) do %>
       <div class="card-request">
         <img src="<%= booking.product.photo %>">
         <div class="card-request-infos">
-          <h2><%= booking.product.title %> - <%= booking.product.price_in_cents %>€ per Kg</h2>
+          <h2><%= booking.product.title %> - Total Earnings: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</h2>
           <p><%= booking.product.description.truncate(100) %></p>
-          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
+          <p><%= booking.product.price_in_cents %>€ per Kg</p>
           <%= link_to "See customer invoice", class: "product-links" %>
 
 
@@ -69,6 +76,7 @@
     <% end %>
     <% end %>
     <% end %>
+
 </div>
 </div>
 </div>
