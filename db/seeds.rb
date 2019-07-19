@@ -139,6 +139,8 @@ puts 'Creating 62 vegetables...'
 p1 = Product.create!(
   title: "Organic Persian Cucumbers",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: cucumber.id,
   description: "Soft-skinned Persian Cucumbers are delicious and versatile. Their soft skin makes them sweet and crunchy. Slice them up for salads and sandwiches, or blend them up into a gazpacho.
   When none of the local farms we work with have Organic Persian Cucumbers, we source them from trusted distributors.",
@@ -153,6 +155,8 @@ p1.save
 p2 = Product.create!(
   title: "Organic Slicer Cucumber",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: cucumber.id,
   description: "Your standard cucumber, great for salads or sandwiches.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -167,6 +171,8 @@ p2.save
 p3 =Product.create!(
   title: "Organic Pickling Cucumbers",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: cucumber.id,
   description: "These Organic Pickling Cucumbers are crisp and perfect for their namesake activity. Slice 'em thin or quarter them into spears and then follow your favorite pickling recipe: sweet, spicy, or anywhere in between!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -181,6 +187,8 @@ p3.save
 p4 = Product.create!(
   title: "Mixed Heirloom Tomatoes",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
   description: "These Organic Heirloom Tomatoes from Terra Firma Farm in Winters, CA are perfect for a light caprese salad.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -195,6 +203,8 @@ p4.save
 p5 = Product.create!(
   title: "Saladette Tomatoes",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
   description: "These first-of-the-season Organic Early Girl Tomatoes from Terra Firma Farm in Winters, CA, are firm enough to slice into salads or sandos, but flavorful enough to give you a taste of the first hint of summer.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -209,6 +219,8 @@ p5.save
 p6 =Product.create!(
   title: "Organic Berkeley Tie-Dye Pink Heirloom Tomatoes",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
   description: "Incredibly full of color and flavor, these Organic Berkeley Tie-Dye Heirloom Tomatoes are perfect to add color sliced up on salads or in sandwiches.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -222,6 +234,8 @@ p6.save
 p7 = Product.create!(
   title: "San Marzano Tomatoes",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
   description: "There's nothing quite like making your own tomato sauce from scratch! These San Marzanos from Terra Firma Farm are the perfect sauce tomato you're looking for. Thin-skinned and thick-walled, these Italian plum tomatoes come so fresh, you'd think they came out of your own garden!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -236,6 +250,8 @@ p7.save
 p8 =Product.create!(
   title: "Small Cauliflower",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: broccoli.id,
   description: "This beautiful Brassica can be roasted or added to any stir-fry. ",
   price_in_cents: Faker::Number.between(1, 6),
@@ -249,6 +265,8 @@ p8.save
 p9 = Product.create!(
   title: "Broccoli Crowns",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: broccoli.id,
   description: "All floret, very little stem, these delicious Coke Farm Broccoli Crowns are perfect for roasting, sautéing or a simple steam.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -263,6 +281,8 @@ p9.save
 p10 =Product.create!(
   title: "Broccoli Di Ciccio",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: broccoli.id,
   description: "This delicious Organic Broccoli Di Ciccio from Coke Farm has tiny florets and small leaves with tender stems. Getting a bit of char with a high heat pan gives sweet Brassica a wonderful depth of flavor.
   Please note: Broccoli Di Ciccio can be harvested many different stages of maturity, so it may have more leaves or more florets, but it'll always be delicious!",
@@ -277,6 +297,8 @@ p10.save
 p11 =Product.create!(
   title: "Small Romanesco",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: broccoli.id,
   description: "This fractal cousin of Cauliflower has a nuttier taste and a nuttier appearance.  Roast it whole, coated with olive oil or cut off individual spirals to add to a roasted veggie mix. Romanesco's bright appearance will make you forget you're ushering in autumn with this Brassica.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -290,6 +312,8 @@ p11.save
 p12 =Product.create!(
   title: "Purple Cauliflower",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: broccoli.id,
   description: "All the same wonderful Brassica taste, now in bolder colors!  Purple (aka Graffiti) Cauliflower can be used any way you would White Cauliflower: mashed, steamed, roasted, crumbled, etc.  The color difference is due to higher levels of the antioxidant anthocyanin, which can be found in many red/purple vegetables and in red wine.  It sometimes has a subtle nutty flavor compared to its more common counterpart, but its main advantage is eye-appeal on the plate.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -304,6 +328,8 @@ p12.save
 p13 =Product.create!(
   title: "Nantes Carrots",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: carrots.id,
   description: "Who doesn't love carrots? These sweet, crunchy root veggies can be harvested all year round, and they can be prepared in an endless number of ways. Invaluable for stock, soup, stuffing your turkey, roasting, baking, juicing, mashing, slicing raw, and shredding for carrot cake.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -317,6 +343,8 @@ p13.save
 p14 =Product.create!(
   title: "Fennel",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: carrots.id,
   description: "Subtly sweet with a hint of licorice, Organic Fennel is great for grilling, roasting or shaving raw.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -330,6 +358,8 @@ p14.save
 p15 =Product.create!(
   title: "Tango Celery",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: carrots.id,
   description: "Firm, juicy stalks with a healthy green sheen have that sweet, potent flavor that make this Tango Celery perfect in any classic preparation. Adding crunch to autumn salads or that elusive background flavor to any soup, we've come to love this old vegetable anew, growing with flavor quality rather than poundage in mind. One medium-sized head.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -343,6 +373,8 @@ p15.save
 p16 =Product.create!(
   title: "Red Bell Pepper",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: peppers.id,
   description: "Red Bell Peppers are a great addition to any kitchen, as they're versatile and can be added to any dish, cooked or raw. Try charring them on top of the stove and adding to a simple fresh tomato sauce to add sweetness and depth of flavor.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -356,6 +388,8 @@ p16.save
 p17 =Product.create!(
   title: "Orange Bell Pepper",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: peppers.id,
   description: "Orange Bell Peppers add color and crunch to your salad or stir-fry. They are sweet, crisp, and versatile. Try charring them on top of the stove and adding to a simple fresh tomato sauce to add sweetness and depth of flavor.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -369,6 +403,8 @@ p17.save
 p18 =Product.create!(
   title: "Shishito Peppers",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: peppers.id,
   description: "The thinner, glossier, less-spicey cousin of the Pimiento de Padron Pepper, the Shishito is a Japanese frying pepper variety well-suited for a high-heat pan and a pinch of sea salt.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -383,6 +419,8 @@ p18.save
 p19 =Product.create!(
   title: "Green Bell Pepper",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: peppers.id,
   description: "Harvested when the peppers are on the less mature side to maintain that tangy peppery flavor without being too sweet, these Green Bells are delicious on the grill, flash-fried in a fajita mix, or sliced raw into a salad.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -396,6 +434,8 @@ p19.save
 p20 =Product.create!(
   title: "Bi-Color Corn",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: corn.id,
   description: "It wouldn't be summer without sweet corn on the BBQ.or sliced raw into virtually any salad. . . or added fresh into your favorite cornbread recipe. Any way you like it, sweet corn has arrived to kick off the summer season.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -409,6 +449,8 @@ p20.save
 p21 =Product.create!(
   title: "Globe Eggplant",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: corn.id,
   description: "Slice 'em and grill 'em, or soak 'em and roast 'em, there's no wrong way to enjoy this delicious summertime treat.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -422,6 +464,8 @@ p21.save
 p22 =Product.create!(
   title: "Listada Eggplant",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: corn.id,
   description: "These Spanish heirlooms are great all purpose eggplants with a creamy, rich taste and a texture that holds up well to grilling.  Firm and dry, there is no need to salt these beauties to extract excess liquid or bitterness. The best fryers around. Eggplant parm anyone?",
   price_in_cents: Faker::Number.between(1, 6),
@@ -436,6 +480,8 @@ p22.save
 p23 =Product.create!(
   title: "Zucchini",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: squash.id,
   description: "The workhorse of the summer squash world, Zucchini can be cooked in many different ways! Some favorites include stuffed zucchini, zucchini bread, and zucchini fries.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -449,6 +495,8 @@ p23.save
 p24 =Product.create!(
   title: "Yellow Crookneck Squash",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: squash.id,
   description: "Yellow Crookneck is a delicately flavored early variety of summer squash. Chopped up roughly and sautéed with garlic and oil, then topped with some ripped basil, this squash side dish will remind you that summer is just around the corner.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -462,6 +510,8 @@ p24.save
 p25 =Product.create!(
   title: "Butternut Squash",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: squash.id,
   description: "Butternut Squash has a nutty flavor and is sweet like a pumpkin. When ripe, the flesh turns increasingly deep orange and becomes sweeter and richer. It has a long shelf life and is a great countertop kitchen staple. Butternut squash pairs well with sage. Caramelize a few sage leaves in butter and drizzle upon roasted, grilled or even baked and mashed squash for an incredible treat.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -476,6 +526,8 @@ p25.save
 p26 =Product.create!(
   title: "Garnet Sweet Potatoes",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: potatoes.id,
   description: "This classic variety of sweet potato has a burgundy skin and deep orange flesh. Wash them, poke a few holes in them, toss them on a baking sheet, and you'll have a sweet and filling side by the time you've finished prepping the rest of your dinner.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -489,6 +541,8 @@ p26.save
 p27 =Product.create!(
   title: "Baby Red Potatoes",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: potatoes.id,
   description: "With a beautiful white flesh and stunning red skin, these small potatoes are great for boiling or roasting whole.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -503,6 +557,8 @@ p27.save
 p28 =Product.create!(
   title: "Butterball Potatoes",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: potatoes.id,
   description: "Organic German Butterball potatoes are beautiful golden potatoes and the perfect all-around crowd pleaser. They do well with any task they are given, be it frying, steaming, roasting, stewing, grilling or baking.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -517,6 +573,8 @@ p28.save
 p29 =Product.create!(
   title: "Yukon Gold Potatoes",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: potatoes.id,
   description: "Yukon Golds are sweet and a bit waxier than your standard Russet mashing potato, so they hold up a bit better in a mash, leaving some chunks to enjoy.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -531,6 +589,8 @@ p29.save
 p30 = Product.create!(
   title: "Red Ace Beets",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: potatoes.id,
   description: "These classic round Red Ace beets are the heart and soul of every root-lover! So sweet and versatile, perfect in everything from a roasted vegetable mix to freshly juiced with ginger and lemon. 1 bunch, typically 4 individual medium-sized roots (with beautiful greens that are also edible, prepared like Chard)!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -545,6 +605,8 @@ p30.save
 p31 = Product.create!(
   title: "Dark Sweet Cherries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: grapes.id,
   description: "These Organic Dark Sweet Cherries are the perfect treat. Snack on them right out of the bag, or add them to your breakfast or desserts!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -559,6 +621,8 @@ p31.save
 p32 = Product.create!(
   title: "Seedless Green Grapes",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: grapes.id,
   description: "Organic Green Seedless Grapes are a summertime favorite. Kid-friendly as could be (just halve for safe snacking if you have really little ones at the table)! They're great for road trips, picnics, and game day snacks too, or cut them into bunches and set out with cheese and sliced meat for a no-cook dinner that everyone will dig into.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -573,6 +637,8 @@ p32.save
 p33 = Product.create!(
   title: "Seedless Red Grapes",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: grapes.id,
   description: "Organic Seedless Red Grapes are a summertime favorite. Kid-friendly as could be (just halve for safe snacking if you have really little ones at the table)! They're great for road trips, picnics, and game day snacks too, or cut them into bunches and set out with cheese and sliced meat for a no-cook dinner that everyone will dig into.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -587,6 +653,8 @@ p33.save
 p34 =      Product.create!(
   title: "Rainier Cherries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: grapes.id,
   description: "Rainier Cherries are here! Sweet and juicy with a hint of acidity that will keep you reaching for more. Brimming with antioxidants and a long list of health benefits, cherries are truly one of nature's best superfoods. Feel free to gorge yourself on a big bowl of these luscious, heart shaped stone fruits. Harvested daily to your table!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -601,6 +669,8 @@ p34.save
 p35 =Product.create!(
   title: "Blueberries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: berries.id,
   description: "These plump, delicious and organically-grown blueberries were harvested at perfect ripeness. They are perfect as fresh toppings on oatmeals, yogurts, pancakes, waffles or cereal for a nutritious breakfast, and are also great for salads or even baked into muffins!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -615,6 +685,8 @@ p35.save
 p36 = Product.create!(
   title: "Strawberries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: berries.id,
   description: "These locally-grown Organic Strawberries have a perfect, juicy crunch! They are perfect for snacking, smoothies, and desserts.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -629,6 +701,8 @@ p36.save
 p37 = Product.create!(
   title: "Triple Crown Blackberries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: berries.id,
   description: "Triple Crown Blackberries are a large, juicy, extremely sweet and flavorful blackberry.  They grow on vigorous thornless bushes and are addictively good.  Great for eating fresh or baking.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -643,6 +717,8 @@ p37.save
 p38 =Product.create!(
   title: "Elderberries",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: berries.id,
   description: "Often used for its medicinal use, Elderberries' tart flavor is also great for cooking and baking. The berries are inedible when raw, and need to be cooked to be eaten. They can be used to make juice, jams, pies, or even wine.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -657,6 +733,8 @@ p38.save
 p39 = Product.create!(
   title: "Flavor Queen Pluot",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: stonefruits.id,
   description: "These Flavor Queen Pluots have a lovely light green skin and a bright, sweet yellow flesh that makes this one of the sweetest pluot variety around. It's apricot aftertaste and plum texture, this juicy stonefruit is one of summer time's favorites.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -671,6 +749,8 @@ p39.save
 p40 = Product.create!(
   title: "Black Cherry Plums",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: stonefruits.id,
   description: "These Black Cherry Plums have a deep black skin with a bright beet-red flesh. They're relatively tart, but they also have all the rich plummy flavor of summertime. Since they're a clingstone variety, they might not slice as neatly as a later-season fruit, but they're perfect for eating out of hand!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -685,6 +765,8 @@ p40.save
 p41 =Product.create!(
   title: "Brittany Gold Apricots",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: stonefruits.id,
   description: "These apricots are large, juicy and have hints of raspberry flavor! Delicious both fresh and in pies & tarts.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -699,6 +781,8 @@ p41.save
 p42 =Product.create!(
   title: "Summer Sweet White Peach",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: stonefruits.id,
   description: "Smooth, balanced, and lusciously-textured, this peach is a pleaser for those who like a lower acid, fragrant and floral sweetness.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -712,6 +796,8 @@ p42.save
 p43 =Product.create!(
   title: "Granny Smith Apple",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: apple.id,
   description: "Granny Smith Apples are the most classic tart apple. Smooth green skin, crunchy flesh, and balanced tartness make this apple perfect for snacking or baking.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -726,6 +812,8 @@ p43.save
 p44 =Product.create!(
   title: "Cripps Pink Apple",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: apple.id,
   description: "Sweet and crisp, these Organic Cripps Pink Apples are the bounty of Chile's autumn (our summer) harvest. They're a perfect snack for summer camp or a hiking trip. They're the same variety that are sometimes marketed as Pink Lady Apples.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -740,6 +828,8 @@ p44.save
 p45 =Product.create!(
   title: "Gala Apple",
   farm_id: bauer2.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: apple.id,
   description: "Gala Apples are mildly sweet and easy-eating with a crisp and juicy texture. Their pleasant taste is one that picky eaters prefer which makes them a perfect addition to lunches and snacks for kids. This delicately flavored apple shines in fresh preparations such as salads, fruit salsas and chutneys or as a compliment to slices of cheddar and swiss cheese. Gala Apples bake well and are best when paired with stronger flavored varieties like Gravensteins or Granny Smith.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -754,6 +844,8 @@ p45.save
 p46 =Product.create!(
   title: "Victoria Rhubarb",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: springfruits.id,
   description: "With their coastal microclimate in Davenport, CA, Swanton Berry Farm is able to grow this beautiful heirloom variety of Rhubarb well into summer. While it may not boast the same fully-red stalk as the more common Crimson variety, Victoria Rhubarb offers a wonderfully tart flavor to any sweet dessert or savory protein dish.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -768,6 +860,8 @@ p46.save
 p47 =Product.create!(
   title: "Lacinato Kale",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: kale.id,
   description: "Lacinato kale has been cultivated for centuries and is a true staple of our kitchens. Also known as dinosaur kale, Italian kale, or cavolo nero, its earthy and slightly bittersweet flavor lends itself perfectly to salads, sautés, soups, casseroles, gratins, and smoothies. Try pairing it with a salty, strong cheese like parmigiano or manchego and a sweet dried fruit for a delicious and nutritious salad that deserves a place on the Thanksgiving table.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -782,6 +876,8 @@ p47.save
 p48 =Product.create!(
   title: "Baby Spinach",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: kale.id,
   description: "Tiny and tender, this Organic Baby Spinach from Jayleaf Farms is a perfect for a fresh spinach salad or whizzed into your morning smoothie.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -796,6 +892,8 @@ p48.save
 p49 =Product.create!(
   title: "Baby Dino Kale",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: kale.id,
   description: "Dino Kale, Lacinato Kale, Tuscan Kale, Cavolo Nero or Blue Kale: whatever you call it, we call it delicious! These tiny leaves are harvested from very young plants, so they are extra tender and sweet. They will cook much more quickly than large kales and are also delicious raw!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -810,6 +908,8 @@ p49.save
 p50 =Product.create!(
   title: "Redbor Kale",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: kale.id,
   description: "Redbor Kale is a wonderful, sweet kale variety that looks a bit like a cross between the Curly and Red Russian varieties. Use it raw or cooked!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -824,6 +924,8 @@ p50.save
 p51 =Product.create!(
   title: "Romaine Lettuce",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: lettuce.id,
   description: "Crisp, crunchy and sweet, Organic Romaine Lettuce is perfect for classic Caesar salads or for chopping thinly to add to your next taco bowl.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -838,6 +940,8 @@ p51.save
 p52 =Product.create!(
   title: "Belgian Endives",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: lettuce.id,
   description: "no matter how you pronounce it, this crunchy, sweet veggie is perfect for boats, or sliced into salads.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -852,6 +956,8 @@ p52.save
 p53 =Product.create!(
   title: "Little Gem",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: lettuce.id,
   description: "Beautiful, crunchy and oh-so-sweet, these little gems will brighten up any salad.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -866,6 +972,8 @@ p53.save
 p54 =Product.create!(
   title: "Rainbow Chard",
   farm_id: bauer3.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: green.id,
   description: "Our organic rainbow chard is especially tender and delicious. Here on the coast just 40 miles south of San Francisco, our climate is uniquely suited to growing world-class organic leafy greens like this chard.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -880,6 +988,8 @@ p54.save
 p55 =Product.create!(
   title: "Collard Greens",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: green.id,
   description: "These thick, blue-green leaves of Happy Boy Farm's Collard plants are sweet in flavor and chock full of nutrients to boot!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -894,6 +1004,8 @@ p55.save
 p56 =Product.create!(
   title: "Cilantro",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: herbgroup.id,
   description: "Also known as coriander, cilantro is a staple in salsas, guacamole, and ceviche. Try blending it with some garlic and olive oil for a zesty pesto or add whole leaves to your salad for some gourmet flair!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -908,6 +1020,8 @@ p56.save
 p57 =Product.create!(
   title: "Chives",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: herbgroup.id,
   description: "The most delicate member of the allium family, Chives are perfect chopped and used to top omelets or mashed potatoes.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -922,6 +1036,8 @@ p57.save
 p58 =Product.create!(
   title: "Basil",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: herbgroup.id,
   description: "It's full-on basil season! Rip up into a fresh salad, on your next pasta dish, or zap up into some pesto. Store basil outside of the refrigerator: cut the stems and put the basil upright in a jar of water, with a plastic bag covering the leaves.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -936,6 +1052,8 @@ p58.save
 p59 =Product.create!(
   title: "Yellow Onion",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: garlicgroup.id,
   description: "Yellow onions are the workhorses of the allium family. With rich flavor and a subtle, aromatic sweetness that increases when cooked, these are one staple you won't want to be without. Dice them for a mirepoix to make broth and soup, quarter them to stuff your turkey, or slice and add them to any roasting pan for an extra boost of flavor. ",
   price_in_cents: Faker::Number.between(1, 6),
@@ -950,6 +1068,8 @@ p59.save
 p60 =Product.create!(
   title: "Red Spring Onions",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: garlicgroup.id,
   description: "Spring onions are mild, tender, flavorful, and aromatic. They're edible from bulb to greens, and can be enjoyed raw in salads or as a topping for soups, stews, and more. Try charring them in a cast-iron pan or on the grill with a bit of oil to bring out their sweeter side!",
   price_in_cents: Faker::Number.between(1, 6),
@@ -964,6 +1084,8 @@ p60.save
 p61 =Product.create!(
   title: "Garlic",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: garlicgroup.id,
   description: "It's full-on basil season! Rip up into a fresh salad, on your next pasta dish, or zap up into some pesto. Store basil outside of the refrigerator: cut the stems and put the basil upright in a jar of water, with a plastic bag covering the leaves.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -978,6 +1100,8 @@ p61.save
 p62 =Product.create!(
   title: "Spring Shallots",
   farm_id: bauer1.id,
+  available_from: "2019-07-19",
+  available_until: "2019-07-25",
   subgroup_id: garlicgroup.id,
   description: "This sweet and mild allium is a kitchen staple, and its spring version, with greens still attached, are even milder and sweeter. It'll give a mild kick to a raw salad or, if you cut up the bulbs and leave them to soak in your next vinaigrette, they'll add a deliciously sweet crunch.",
   price_in_cents: Faker::Number.between(1, 6),
@@ -994,21 +1118,11 @@ puts 'Finished!'
 #   Product.create!(
 #     title: Faker::Food.vegetables,
 #     farm_id: bauer.id,
-#     category: Category.all.sample,
+
 #     description: Faker::Food.description,
 #     price_in_cents: Faker::Number.number(1),
 #     quantity_in_kg:Faker::Number.number(2),
 #     min_quantity_to_order: Faker::Number.number(2),
 #     remote_photo_url:  "https://foodrevolution.org/wp-content/uploads/2019/03/iStock-908062538-1.jpg"
 #   )
-# end
-# puts 'Finished!'
-# Product.create(title: "tomatoes", farm_id: bauer.id, description:'This is the most piraty wig of all piraty wigs. You will feel like a badass pirate if you rock this pirating wig.  Happy pirating!', price_in_cents: 4000,  remote_photo_url:  'https://res.cloudinary.com/dc875ky15/image/upload/v1562752188/U36167_bw2g2b.jpg')
-# Product.create(title: "something",farm_id: bauer.id, description:'Make yourself the diva you always wanted to be. With this natural feeling look you will rock any party!', price_in_cents: 5000, photo: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752180/42206_oy82g0.jpg')
-# Product.create(user_id: luis.id, description:'How often do experts say you should listen to Bob Marley? Reggae-larly. Any other qustions? No? We thought so.', price: 2, color:'black', size:'XL', title: 'Bobbys Bop', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752198/29002-rasta-beret-w-real-dreadlocks-1_ertyy0.jpg', address: 'Paul-Heyse-Straße 26, 10407 Berlin')
-# Product.create(user_id: max.id, description:'You feel dumb? We have a fix for that. Become the brigtest person in any room with our Albret wig!', price: 50, color:'white', size:'L', title: 'Albert Stein', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752198/70796_E_MC2_qqtzi5.jpg', address: 'Karl-Marx-Allee 93A, 10243 Berlin')
-# Product.create(user_id: stan.id, description:'Find your inner Pamela with our top notch Pamela Wig! Pamela it all the way.', price: 100, color:'blonde', size:'XS', title: 'Pamela', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752198/42225_jcpkpw.jpg', address: 'Marienburger Str. 29, 10405 Berlin')
-# Product.create(user_id: stan.id, description:'Its the greatest wig the world has ever seen. All other Wigs are for loosers.', price: 100, color:'blonde', size:'L', title: 'The Greatest Wig', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752208/77394-1_bkuhgh.jpg', address: 'Rosenthaler Str. 40-41, 10178 Berlin')
-# Wig.create(user_id: louis.id, description:'Feel the flow with Elvis. Chesthair is not inclouded.', price: 35, color:'black', size:'XL', title: 'Elvis', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752208/BW071_vb4l3v.jpg')
-# Wig.create(user_id: max.id, description:'!!Caution!! You might wake up in Vegas. Vegas Baby!', price: 100000, color:'brown', size:'L', title: 'Hangover', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752208/5418-3_urujqj.jpg', address: 'Unter den Linden 10, 10117 Berlin')
-# Wig.create(user_id: stan.id, description:'Not as beautiful as Heidi. But still a Heidi.', price: 100000, color:'brown', size:'S', title: 'Heid', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752208/42247_vdqww0.jpg', address: 'Rudi-Dutschke-Straße 26, 10969 Berlin')
+# endd: stan.id, description:'Not as beautiful as Heidi. But still a Heidi.', price: 100000, color:'brown', size:'S', title: 'Heid', remote_photo_url: 'https://res.cloudinary.com/dc875ky15/image/upload/v1562752208/42247_vdqww0.jpg', address: 'Rudi-Dutschke-Straße 26, 10969 Berlin')
