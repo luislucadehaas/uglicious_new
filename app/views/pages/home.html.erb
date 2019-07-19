@@ -1,14 +1,35 @@
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1498522271744-cdd435c13f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80);">
+<% if current_user && current_user.role.downcase == "farmer" %>
+<div class="banner" style="background-image: url(https://www.perfarmer.com/imgs/banner_michel.jpeg);">
   <div class="container">
-    <h1>Eat uglies, save the planet!</h1>
-    <p>Direct from farmers - Delicious - Fair price</p>
-    <%= link_to "Discover our products", products_path, class: "banner-button" %>
+    <h1>Sell uglies, save the planet!</h1>
+    <p>Valorize</p>
+    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
   </div>
 </div>
+
+<% elsif current_user && current_user.role.downcase == "customer" %>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1503639595033-c11290f0accf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2141&q=80);">
+  <div class="container">
+    <h1>Eat uglies, save the planet!</h1>
+    <p>Valorize</p>
+    <%= link_to "Explore the market", products_path, class: "banner-button" %>
+  </div>
+</div>
+
+<% else %>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1504472685735-9bd4075b3779?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);">
+  <div class="container">
+    <h1>The best marketplace to fight foodwaste</h1>
+    <p>Direct from farmers - Delicious - Fair price</p>
+    <%= link_to "Explore the market", products_path, class: "banner-button" %>
+    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
+  </div>
+</div>
+<% end %>
 <br>
 <br>
 <div class="container">
-  <h2>What are uglies?</h2>
+  <h2 class="first-title-home">What are uglies?</h2>
 
   <div class="cards">
 
@@ -48,9 +69,8 @@
 <br>
 
 <h2>Delicious products to save</h2>
-<br>
-<br>
- <div class="aboverow">
+
+<div class="aboverow-home">
   <div class="row margin-1">
     <% @products.each do |product| %>
     <div class="col-sm-6 col-xs-6 col-md-3 column" >
