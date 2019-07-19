@@ -26,6 +26,9 @@
   text-decoration: none;
 
 }
+h4 {
+  color: $green;
+}
 
 a {
   color:  gray ;
@@ -37,7 +40,7 @@ h6 {
   padding-left: 10px;
 
 }
-.two-categories{
+.two-categories {
   padding: 20px;
   padding-left:0px;
   color:black;
@@ -105,6 +108,11 @@ h6 {
   justify-content: flex-end;
 
 }
+.padding {
+    border-bottom:solid;
+  border-color:#E8E8E8;
+  border-width:0.1px;
+  }
 .text-for-filter {
   padding:20px;
   padding-left:40px;
