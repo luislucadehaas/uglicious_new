@@ -70,7 +70,7 @@
                   <%= f.input :quantity_in_kg%>
                 </div>
                 <div class="col">
-                  <%= f.input :delivery_option%>
+                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered"]%>
                 </div>
               </div>
               <%= f.button :submit, "Order now", class: "btn btn-flat" %>
