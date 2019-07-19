@@ -37,6 +37,7 @@
     <h2><%= booking.product.title %></h2>
     <p><%= booking.product.description.truncate(100) %></p>
     <p><%= booking.product.price_in_cents %>€</p>
+    <p><%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
 
     <%= link_to "See my invoice", class: "product-links" %>
     </div>
