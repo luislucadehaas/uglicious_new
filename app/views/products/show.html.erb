@@ -76,6 +76,10 @@
               <%= f.button :submit, "Order now", class: "btn btn-flat" %>
               <% end %>
             </div>
+          <% elsif current_user.id == @product.farm.user_id%>
+            <div class="form-row">
+              <p>This Product is offered by you</p>
+            </div>
           <% else %>
             <div class="form-row">
                  <%= link_to "Please log in as a customer", log_out_farmer_path, class: "dropdown-item" %>
