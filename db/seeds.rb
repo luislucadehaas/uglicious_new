@@ -46,7 +46,7 @@ luis = User.create!(
   email:'stan@test.com',
   password:'testword',
   role: "farmer",
-  first_name: "Stanislaus",
+  first_name: "Stan",
   last_name:"Levavasseur",
   remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/stan_u0cm3k.jpg"
 )
@@ -202,7 +202,7 @@ p4.save
 
 p5 = Product.create!(
   title: "Saladette Tomatoes",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-19",
   available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
@@ -218,7 +218,8 @@ p5.save
 
 p6 =Product.create!(
   title: "Organic Berkeley Tie-Dye Pink Heirloom Tomatoes",
-  farm_id: bauer1.id,
+
+  farm_id: bauer2.id,
   available_from: "2019-07-19",
   available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
@@ -233,7 +234,7 @@ printf '.'
 p6.save
 p7 = Product.create!(
   title: "San Marzano Tomatoes",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-19",
   available_until: "2019-07-25",
   subgroup_id: tomatoes.id,
