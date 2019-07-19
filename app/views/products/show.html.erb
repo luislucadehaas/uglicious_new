@@ -36,11 +36,9 @@
         <div class="side-card-body">
           <div class="form-row">
             <div class="col">
-              <p class="description">Price per kg in €: <%= @product.price_in_cents %></p>
+              <p class="description">Price per kg: <strong style="color: #FFC942"> <%= @product.price_in_cents %></strong> €</p>
             </div>
-            <div class="col">
-              <p class="description">Available Quantity: <%= @product.quantity_in_kg %></p>
-            </div>
+
           </div>
           <p class="description">Good between:</p>
           <div class="form-row">
@@ -55,12 +53,14 @@
           <div class="form-wrapper">
            <div class="form-row">
             <div class="col">
-              <p class="description">Quantity available:<%= @product.quantity_in_kg %></p>
+              <p class="description">Qty. available:<strong style="color: #FFC942"> <%= @product.quantity_in_kg %></strong> Kg
+              </p>
             </div>
             <div class="col">
-              <p class="description">Min quantity to order:<%= @product.min_quantity_to_order %></p>
+              <p class="description">Min qty. to buy:<strong style="color: #FFC942"> <%= @product.min_quantity_to_order %></strong> Kg</p>
             </div>
           </div>
+          <br>
 
             <% if current_user.role == "customer" %>
               <p class="subtitle">Order here: </p>
