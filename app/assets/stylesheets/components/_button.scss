@@ -12,12 +12,38 @@
  display: inline-block;
 }
 
+
 .banner-button:hover {
  color: #ffffff;
  text-decoration: none;
  background-color: #ea5013;
  border-color: #ea5013;
 }
+
+.banner-button-2 {
+ background-color:#ffff;
+ color: $green;
+ margin:10px 5px 5px 5px;
+ border-radius: 0.5px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 10px 20px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 0.5px;
+ border-style: solid;
+ border-color: $green;
+ display: inline-block;
+}
+
+
+.banner-button-2:hover {
+ color: #ffffff;
+ text-decoration: none;
+ background-color: $green;
+ border-color: $green;
+}
+
 
 a {
  text-decoration: none;
