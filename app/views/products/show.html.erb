@@ -16,10 +16,10 @@
       <div class="row under_picture">
         <div class="col-sm-3">
           <p class="subtle-header"> About the farm:</p>
-          <img class="show_farm_picture" src="<%= @product.farm.user.photo %>">
+          <img class="show_farm_picture" src="<%= @product.farm.user.photo %>" style="width: 160px;">
         </div>
         <div class="col-sm-9">
-          <p class="description"> <%= @product.farm.name %> </p>
+          <h4 class="description"> <%= @product.farm.name %> </h4>
           <p class="prod-text"> <%= @product.farm.description %></p>
         </div>
       </div>
@@ -29,38 +29,39 @@
       <div class="main-description">
 
         <div class="side-card-header">
-          <h3><%= @product.farm.name %></h3>
+          <h4><%= @product.farm.name %></h4>
           <h2><%= @product.title %></h2>
         </div>
 
         <div class="side-card-body">
           <div class="form-row">
             <div class="col">
-              <p class="description">Price per kg in €: <%= @product.price_in_cents %></p>
+              <p class="description">Price per kg: <strong style="color: #FFC942"> <%= @product.price_in_cents %></strong> €</p>
             </div>
-            <div class="col">
-              <p class="description">Available Quantity: <%= @product.quantity_in_kg %></p>
-            </div>
+
           </div>
           <p class="description">Good between:</p>
           <div class="form-row">
             <div class="col">
-              <p class="description"><%= @product.available_from %></p>
+              <p class="description"><strong style="color: #EA622C"><%= @product.available_from.strftime("%B %d, %Y") %></strong></p>
             </div>
+
             <div class="col">
-              <p class="description"><%= @product.available_until %></p>
+              <p class="description"><strong style="color: #EA622C"><%= @product.available_until.strftime("%B %d, %Y") %></strong></p>
             </div>
           </div>
           <% if user_signed_in? %>
           <div class="form-wrapper">
            <div class="form-row">
             <div class="col">
-              <p class="description">Quantity available:<%= @product.quantity_in_kg %></p>
+              <p class="description">Qty. available:<strong style="color: #FFC942"> <%= @product.quantity_in_kg %></strong> Kg
+              </p>
             </div>
             <div class="col">
-              <p class="description">Min quantity to order:<%= @product.min_quantity_to_order %></p>
+              <p class="description">Min qty. to buy:<strong style="color: #FFC942"> <%= @product.min_quantity_to_order %></strong> Kg</p>
             </div>
           </div>
+          <br>
 
             <% if current_user.role == "customer" %>
               <p class="subtitle">Order here: </p>
@@ -93,5 +94,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
