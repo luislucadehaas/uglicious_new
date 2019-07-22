@@ -36,13 +36,13 @@
         <div class="side-card-body">
           <div class="form-row">
             <div class="col">
-              <p class="description">Price per kg: <strong style="color: #FFC942"> <%= @product.price_in_cents %></strong> €</p>
+              <p class="description", id="kg-price">Price per kg: <strong style="color: #FFC942"> <%= @product.price_in_cents %></strong> €</p>
             </div>
-
           </div>
           <p class="description">Good between:</p>
-          <div class="form-row">
+          <div class="form-wrapper">
             <div class="col">
+              <% raise %>
               <p class="description"><strong style="color: #EA622C"><%= @product.available_from&.strftime("%B %d, %Y") %></strong></p>
             </div>
 
@@ -58,22 +58,24 @@
               </p>
             </div>
             <div class="col">
-              <p class="description">Min qty. to buy:<strong style="color: #FFC942"> <%= @product.min_quantity_to_order %></strong> Kg</p>
+              <p class="description">Min qty. to order:<strong style="color: #FFC942"> <%= @product.min_quantity_to_order %></strong> Kg</p>
             </div>
           </div>
           <br>
 
             <% if current_user.role == "customer" %>
-              <p class="subtitle">Order here: </p>
+              <p class="subtitle"><strong>Order here: </strong></p>
               <%= simple_form_for [@product, @booking], method: "post" do |f| %>
               <div class="form-row">
                 <div class="col">
-                  <%= f.input :quantity_in_kg%>
+                  <%= f.input :quantity_in_kg, wrapper_html: { id:'kg-order' }%>
                 </div>
                 <div class="col">
-                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered"]%>
+                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option' }%>
                 </div>
               </div>
+              <p id="total-price"></p>
+
               <%= f.button :submit, "Order now", class: "btn btn-flat" %>
               <% end %>
             </div>
@@ -96,4 +98,4 @@
   </div>
 </div>
 </div>
-</div>
+<%= javascript_pack_tag "full_price" %>
