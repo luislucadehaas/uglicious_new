@@ -8,7 +8,7 @@ const initMapbox = () => {
     const bounds = new mapboxgl.LngLatBounds();
     console.log(markers);
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 40, maxZoom: 15, duration: 0 });
+    map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
   };
 
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -30,9 +30,13 @@ const initMapbox = () => {
         .setPopup(popup)
         .addTo(map);
     });
+    // document.querySelector("#map canvas").style.width="100%";
+    // document.querySelector("#map canvas").style.height="600px";
+    // var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
+    // mapCanvas.style.width = '100%';
+    // mapElement.resize();
     fitMapToMarkers(map, markers);
   }
-
 };
 
 export { initMapbox };
