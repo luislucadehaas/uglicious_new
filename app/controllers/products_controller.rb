@@ -17,6 +17,15 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+
+    @markers = Farm.all.map do |farm|
+      {
+        lat: farm.latitude,
+        lng: farm.longitude,
+        #infoWindow: render_to_string(partial: "infowindow", locals: { farm: farm }),
+        image_url: helpers.asset_url('https://res.cloudinary.com/dc875ky15/image/upload/v1563790340/harvest_c9we67.png')
+      }
+    end
   end
 
   def show
