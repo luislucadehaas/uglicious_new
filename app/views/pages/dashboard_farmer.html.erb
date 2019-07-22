@@ -52,7 +52,6 @@
         <p><%= booking.product.description.truncate(100) %></p>
         <p><%= booking.product.price_in_cents %>€ per Kg</p>
         <%= link_to "See customer invoice", class: "product-links" %>
-
            <div class="status-box">
               <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
                 <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
@@ -60,7 +59,6 @@
               <% end %>
           </div>
       </div>
-
     </div>
     <% end %>
     <% end %>
