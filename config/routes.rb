@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
    get 'log_out_farmer', to: 'pages#log_out_farmer', as: :log_out_farmer
    get 'farmer-dashboard', to: 'pages#dashboard_farmer', as: :dashboard_farmer
+   get 'farmer-orders', to: 'pages#orders', as: :farmer_orders
    get 'customer-dashboard', to: 'pages#dashboard_customer', as: :dashboard_customer
 end
