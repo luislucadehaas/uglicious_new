@@ -1,29 +1,29 @@
 
 <% if current_user && current_user.role.downcase == "farmer" %>
-<div class="banner" style="background-image: url(https://www.perfarmer.com/imgs/banner_michel.jpeg);">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dc875ky15/image/upload/v1563552599/uglicious/uglicious_zqe9xz.png);">
   <div class="container">
-    <h1>Sell uglies, save the planet!</h1>
-    <p style="color:white">Valorize your waste</p>
-    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
+    <h1>Sometimes uglies are better.</h1>
+    <p>Sell your ugly but delicious veggies, directly to food processors.</p>
+    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button-3" %>
   </div>
 </div>
 
 <% elsif current_user && current_user.role.downcase == "customer" %>
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1503639595033-c11290f0accf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2141&q=80);">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dc875ky15/image/upload/v1563552599/uglicious/uglicious_zqe9xz.png);">
   <div class="container">
-    <h1 style="color:white">Eat uglies, save the planet!</h1>
-    <p style="color:white">Direct from farmers - Delicious - Fair price</p>
+    <h1>Sometimes uglies are better.</h1>
+    <p>Buy ugly but delicious veggies, directly from farmers.</p>
     <%= link_to "Explore the market", products_path, class: "banner-button" %>
   </div>
 </div>
 
 <% else %>
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1511448598600-c01f02a2ee95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dc875ky15/image/upload/v1563552599/uglicious/uglicious_zqe9xz.png);">
   <div class="container">
-    <h1 style="color:white">The marketplace to fight foodwaste</h1>
-    <p style="color:white">Direct from farmers - Delicious - Fair price</p>
+    <h1>Sometimes uglies are better.</h1>
+    <p>Buy ugly but delicious veggies, directly from farmers.</p>
     <%= link_to "Explore the market", products_path, class: "banner-button" %>
-    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button" %>
+    <%= link_to "Start selling", dashboard_farmer_path, class: "banner-button-2" %>
   </div>
 </div>
 <% end %>
