@@ -2,7 +2,7 @@
   justify-content: space-between;
   background: white;
   border-bottom-width: 1px;
-  color: #FC5B55;
+  color: $green;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,6 +15,33 @@
 }
 
 .nav-link {
-  color: #FC5B55;
+  color: $green;
 
+}
+
+
+.nav-item .dropdown {
+  margin-top: 5px;
+}
+
+.navbar-lewagon-2 {
+  justify-content: space-between;
+  border-bottom-width: 1px;
+  color: $green;
+  z-index: 100;
+}
+
+
+.navbar-lewagon-2 .navbar-collapse {
+  flex-grow: 0;
+  z-index: 1001;
+}
+
+.navbar-lewagon-2 .navbar-brand-2 img {
+  width: 140px;
+}
+
+.text-logo {
+  font-size: 21px;
+  color: white;
 }

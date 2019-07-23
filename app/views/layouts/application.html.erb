@@ -13,11 +13,11 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <%#= if controller.controller_name == "pages" && controller.action_name == "dashboard_farmer" %>
-  <%#= render 'shared/sidebar' %>
-  <%# else %>
+  <% if controller.controller_name == "pages" && controller.action_name == "dashboard_farmer" %>
+  <%= render 'shared/navbar2' %>
+  <% else %>
   <%= render 'shared/navbar' %>
-  <%#= end %>
+  <% end %>
     <%= render 'shared/flashes' %>
 
   <%= yield %>

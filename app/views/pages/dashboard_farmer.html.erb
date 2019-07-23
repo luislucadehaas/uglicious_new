@@ -7,15 +7,56 @@
 
   <div class="dash-container d-flex">
     <div class="sidebar">
+      <div class="input">
+       <p><%= link_to "uglicious", root_path, class: "text-logo" %></p>
       <p><i class="fas fa-home"></i><%= link_to "Home", dashboard_farmer_path %></p>
       <p><i class="fas fa-plus-circle"></i><%= link_to "New product", new_product_path %></p>
       <p><i class="fas fa-shopping-basket"></i></i>Orders</p>
       <p><i class="fas fa-chart-bar"></i>Reports</p>
-      <p><i class="fas fa-comments"></i>Chat</p>
+      <p><i class="fas fa-envelope"></i></i>Inbox</p>
+    </div>
     </div>
 
     <div class="content-container">
       <h2>Farm overview</h2>
+
+<div class="row">
+
+  <div class="col-sm-4 col-xs-4 col-md-4 column" >
+    <div class="card-meteo">
+
+      <div class="card-meteo-infos">
+
+        <div class="row">
+          <div class="col-sm">
+
+           <i class="fas fa-sun"></i>
+         </div>
+         <div class="col-sm">
+           <h2>33°C</h2>
+         </div>
+       </div>
+       <h3><%= current_user.first_name.truncate(6) %>, it's sunny today</h3>
+       <p> Chance of rain: 3%</p>
+       <p> Humidity: 10%</p>
+       <p>Wind: nw 6 mph</p>
+     </div>
+   </div>
+ </div>
+
+ <div class="col-sm-8 col-xs-8 col-md-8 column" >
+   <div class="card-farm">
+    <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="200px"></p>
+    <div class="card-farm-infos">
+      <h3><%= @farm.name %></h3>
+      <p><%= @farm.address %></p>
+      <p><%= @farm.description.truncate(200) %></p>
+      <%= link_to "Edit my farm", "#", class: "product-links" %>
+    </div>
+  </div>
+</div>
+
+</div>
 
       <div class="row">
        <div class="col-sm-3 col-xs-3 col-md-3 column">
@@ -65,45 +106,6 @@
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="row">
-
-  <div class="col-sm-4 col-xs-4 col-md-4 column" >
-    <div class="card-meteo">
-
-      <div class="card-meteo-infos">
-
-        <div class="row">
-          <div class="col-sm">
-
-           <i class="fas fa-sun"></i>
-         </div>
-         <div class="col-sm">
-           <h2>33°C</h2>
-         </div>
-       </div>
-       <h3><%= current_user.first_name.truncate(6) %>, it's sunny today</h3>
-       <p> Chance of rain: 3%</p>
-       <p> Humidity: 10%</p>
-       <p>Wind: nw 6 mph</p>
-     </div>
-   </div>
- </div>
-
- <div class="col-sm-8 col-xs-8 col-md-8 column" >
-   <div class="card-farm">
-    <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="200px"></p>
-    <div class="card-farm-infos">
-      <h3><%= @farm.name %></h3>
-      <p><%= @farm.address %></p>
-      <p><%= @farm.description.truncate(200) %></p>
-      <%= link_to "Edit my farm", "#", class: "product-links" %>
-    </div>
-  </div>
-</div>
-
 </div>
 
 <div class="row">
