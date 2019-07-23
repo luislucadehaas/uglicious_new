@@ -7,34 +7,67 @@
   width: 100px;
 }
 
+.override_width {
+  margin: 0 7% 0 7%;
+}
+
 .side-card-header {
   border-bottom: 1px solid #d5d4d0;
   margin-bottom: 16px;
 }
 
+#kg-order {
+  font-size: 13px;
+}
+
+#del-option {
+  font-size: 13px;
+}
+
 .side-card-header h2 {
-  font-size: 34px;
+  font-size: 30px;
+}
+
+.side-card-header h4 {
+  font-size: 15px;
 }
 
 .subtle-header {
   font-size:11px;
 }
 
+.farm_name {
+    font-size: 15px;
+}
+
 .side-card-header h3 {
   font-size: 20px;
 }
 
+.above_picture {
+  margin-top: 18px;
+}
+
 .under_picture {
   border-top: 1px solid #d5d4d0;
-  margin:0;
+  padding:16px;
+  margin: 0px;
+}
+
+#show_input {
+  font-size: 13px;
 }
 
 .prod-text {
   width:100%;
 }
 
+.show_farm_picture {
+  width: 100%;
+}
+
 .side-card-body p {
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 10px;
 }
 
@@ -42,12 +75,19 @@
   border-bottom: 1px solid #d5d4d0;
 }
 
-.under_picture{
- margin-top: 22px;
+.descrip_collumn{
+  padding: 0 4px 0 4px;
 }
 
-.above_picture{
- margin-top: 22px;
+.cont_collumn{
+  padding: 0 6px 0 6px;
+  font-size: 13px;
+  font-weight: light;
+}
+
+.under_picture{
+  margin: 22px 0 0 0;
+  padding: 18px 0 0 0;
 }
 
 #new_booking {
