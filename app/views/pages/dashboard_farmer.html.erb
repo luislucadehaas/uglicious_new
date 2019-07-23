@@ -4,94 +4,141 @@
   <% totalbookings += 1 %>
   <% end %>
   <% end %>
-  <div class="container">
-    <br>
-    <div class="row">
-      <div class="col-sm-6 col-xs-6 col-md-6 column">
-        <div class="dashboard-user">
-          <%= cl_image_tag current_user.photo, class: "rounded-circle-alone" %>
-          <div class="user-infos">
-            <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-            <p>Expert waste-fighter ⭐️⭐️</p>
-            <p>63kg saved 🎯</p>
 
-
-            <p><%= totalbookings %> transactions</p>
-            <%= link_to "Sell a new Product", new_product_path, class: "banner-button" %>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-xs-6 col-md-6 column" >
-
-        <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="300px"></p>
-        <h3><%= @farm.name %></h3>
-        <p><%= @farm.address %></p>
-        <%= link_to "Edit", "#", class: "product-links" %>
-        <%= link_to "Delete", "#", method: :delete, class: "product-links" %>
-
-      </div>
+  <div class="dash-container d-flex">
+    <div class="sidebar">
+      <div class="input">
+       <p><%= link_to "uglicious", root_path, class: "text-logo" %></p>
+      <p><i class="fas fa-home"></i><%= link_to "Home", dashboard_farmer_path %></p>
+      <p><i class="fas fa-plus-circle"></i><%= link_to "New product", new_product_path %></p>
+      <p><i class="fas fa-shopping-basket"></i></i>Orders</p>
+      <p><i class="fas fa-chart-bar"></i>Reports</p>
+      <p><i class="fas fa-envelope"></i></i>Inbox</p>
     </div>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <h3>Last transactions <%= totalbookings %></h3>
-    <% #raise %>
-    <% current_user.farm.products.each do |p| %>
-    <% p.bookings.each do |booking| %>
-
-    <%= link_to product_path(booking.product) do %>
-    <div class="card-request">
-      <img src="<%= booking.product.photo %>">
-      <div class="card-request-infos">
-        <h2><%= booking.product.title %> - Total Earnings: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</h2>
-        <p><%= booking.product.description.truncate(100) %></p>
-        <p><%= booking.product.price_in_cents %>€ per Kg</p>
-        <%= link_to "See customer invoice", class: "product-links" %>
-           <div class="status-box">
-              <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
-                <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
-                <%= f.submit %>
-              <% end %>
-          </div>
-      </div>
     </div>
-    <% end %>
-    <% end %>
-    <% end %>
 
-    <h3>My fruits & veggies <%= @current_user.products.count %></h3>
-    <% if current_user.products.empty? %>
-    <p>Offer your first product!</p>
-    <% else %>
+    <div class="content-container">
+      <h2>Farm overview</h2>
 
-    <div class="row">
-      <% current_user.products.order(created_at: :desc).each do |prod| %>
-      <div class="col-sm-6 col-xs-6 col-md-6 column" >
-        <%= link_to product_path(prod) do %>
-        <div class="card-request">
-          <img src="<%= prod.photo %>">
-          <div class="card-request-infos">
-            <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
-            <p><%= prod.description.truncate(100) %></p>
-            <%= link_to "Edit", edit_product_path(prod), class: "product-links" %>
-            <%= link_to "Delete", product_path(prod), method: :delete, class: "product-links" %>
-          </div>
-        </div>
-      </div>
-      <% end %>
-      <% end %>
+<div class="row">
 
-    </div>
-    <% end %>
+  <div class="col-sm-4 col-xs-4 col-md-4 column" >
+    <div class="card-meteo">
 
+      <div class="card-meteo-infos">
 
+        <div class="row">
+          <div class="col-sm">
+
+           <i class="fas fa-sun"></i>
+         </div>
+         <div class="col-sm">
+           <h2>33°C</h2>
+         </div>
+       </div>
+       <h3><%= current_user.first_name.truncate(6) %>, it's sunny today</h3>
+       <p> Chance of rain: 3%</p>
+       <p> Humidity: 10%</p>
+       <p>Wind: nw 6 mph</p>
+     </div>
+   </div>
+ </div>
+
+ <div class="col-sm-8 col-xs-8 col-md-8 column" >
+   <div class="card-farm">
+    <p> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563462264/uglicious/farms/farm_iwbxep.jpg" width="200px"></p>
+    <div class="card-farm-infos">
+      <h3><%= @farm.name %></h3>
+      <p><%= @farm.address %></p>
+      <p><%= @farm.description.truncate(200) %></p>
+      <%= link_to "Edit my farm", "#", class: "product-links" %>
     </div>
   </div>
 </div>
 
+</div>
+
+      <div class="row">
+       <div class="col-sm-3 col-xs-3 col-md-3 column">
+        <div class="card-metrics">
+          <i class="fas fa-euro-sign full-icon"></i>
+          <div class="metric-num">
+            <p>5.3k</p>
+          </div>
+          <div class="metric-text">
+            <p>Gross sales</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-xs-3 col-md-3 column">
+        <div class="card-metrics">
+          <i class="fas fa-shopping-bag full-icon"></i>
+          <div class="metric-num">
+            <p><%= totalbookings %></p>
+          </div>
+          <div class="metric-text">
+            <p>Orders</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-xs-3 col-md-3 column">
+       <div class="card-metrics">
+        <i class="fas fa-carrot full-icon"></i>
+        <div class="metric-num">
+          <p>63kg</p>
+        </div>
+        <div class="metric-text">
+          <p>Veggies sold</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3 col-xs-3 col-md-3 column">
+     <div class="card-metrics">
+      <i class="fas fa-seedling full-icon"></i>
+      <div class="metric-num">
+        <p>100g</p>
+      </div>
+      <div class="metric-text">
+        <p>CO2 saved</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2 id="h-margin">Fruits & veggies </h2>
+  <div class="number-notification"><%= @current_user.products.count %></div>
+</div>
+
+<div class="row">
+
+ <% if current_user.products.empty? %>
+ <p>Offer your first product!</p>
+ <% else %>
+ <% current_user.products.order(created_at: :desc).each do |prod| %>
+ <div class="col-sm-6 col-xs-6 col-md-6 column" >
+  <%= link_to product_path(prod) do %>
+  <div class="card-request">
+    <img src="<%= prod.photo %>">
+    <div class="card-request-infos">
+      <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
+      <p><%= prod.description.truncate(100) %></p>
+      <%= link_to "Edit", edit_product_path(prod), class: "product-links" %>
+      <%= link_to "Delete", product_path(prod), method: :delete, class: "product-links" %>
+    </div>
+  </div>
+</div>
+<% end %>
+<% end %>
+
+</div>
+<% end %>
+</div>
+
+</div>
 
