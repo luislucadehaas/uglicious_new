@@ -1,11 +1,12 @@
 .card-request {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 9px 0 rgba(139, 159, 196, 0.2);
+  border-radius: 5px;
   display: flex;
   position: relative;
   margin-bottom: 16px;
-  color: black;
+  color: $gray;
 }
 
 
@@ -20,7 +21,7 @@
 }
 
 .card-request-infos{
-  color: black;
+  color: $gray;
 }
 
 

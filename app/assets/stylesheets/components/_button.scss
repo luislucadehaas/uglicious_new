@@ -12,6 +12,7 @@
  display: inline-block;
 }
 
+
 .banner-button:hover {
  color: #ffffff;
  text-decoration: none;
@@ -19,9 +20,73 @@
  border-color: #ea5013;
 }
 
+.banner-button-2 {
+ background-color:#ffff;
+ color: $green;
+ margin:10px 5px 5px 5px;
+ border-radius: 2px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 7px 20px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 0.5px;
+ border-style: solid;
+ border-color: $green;
+ display: inline-block;
+}
+
+
+.banner-button-2:hover {
+ color: #ffffff;
+ text-decoration: none;
+ background-color: $green;
+ border-color: $green;
+}
+
+
 a {
  text-decoration: none;
 }
+
+.banner-button-3 {
+ background-color: $green;
+ color: #ffffff;
+ margin:10px 5px 5px 5px;
+ border-radius: 2px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 7px 20px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 0.5px;
+ border-style: solid;
+ border-color: $green;
+ display: inline-block;
+}
+
+
+.banner-button-3:hover {
+ color: #ffffff;
+ text-decoration: none;
+ background-color: #337157;
+ border-color: #337157;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .request-button {
  background-color:#FC5B55;
