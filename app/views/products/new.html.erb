@@ -1,9 +1,15 @@
+<div class="dash-container d-flex">
+  <%= render 'shared/sidebar' %>
+  <div class="content-container">
+
 <div class="container-2">
-  <div class="form-wrapper back-form" style="background-image: url(https://res.cloudinary.com/dc875ky15/image/upload/v1563535063/uglicious/icons/pear_last_gf5ayf.svg);">
+  <div class="form-wrapper back-form">
     <div class="row justify-content-center">
       <div class="col-md-6">
       <br>
-      <h2>Sell a new product</h2>
+      <div class="row justify-content-center">
+      <h2>Sell a new product</h2> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563363976/uglicious/icons/tomato_e3hkgr.svg" class="img-create">
+      </div>
       <br>
         <%= simple_form_for(@product) do |f| %>
         <%= f.input :title %>
@@ -29,4 +35,6 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>
