@@ -39,14 +39,14 @@
               <p class="small_text", id="kg-price"><strong style="font-size: 18px;"><%= @product.price_in_cents %>€</strong> per kg</p>
             </div>
           </div>
-          <p class="small_header">Good between:</p>
-          <div class="form-row">
+<!--           <p class="small_header">Good between:</p>
+ -->          <div class="form-row">
             <div class="col">
-              <p class="date_display"><%= @product.available_from&.strftime("%B %d, %Y") %></p>
+              <p class="small_text"><strong style="font-size: 18px;"> <%= @product.available_from&.strftime("%B %d, %Y") %></strong> until</p>
             </div>
 
             <div class="col">
-              <p class="date_display"><%= @product.available_until&.strftime("%B %d, %Y") %></p>
+              <p class="small_text"><strong style="font-size: 18px;"><%= @product.available_until&.strftime("%B %d, %Y") %></strong></p>
             </div>
           </div>
           <% if user_signed_in? %>
@@ -65,7 +65,7 @@
                    <%= f.input :quantity_in_kg, wrapper_html: { id:'kg-order' }%>
                 </div>
                 <div class="col">
-                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option'}, class: 'testing'%>
+                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option'}%>
                 </div>
               </div>
               <p id="total-price">Total price:</p>
