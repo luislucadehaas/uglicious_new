@@ -218,7 +218,8 @@ background-image:url("https://res.cloudinary.com/dc875ky15/image/upload/v1563800
   display: inline-block;
   font-size: 16px;
   border-radius:3px;
-  border-width: 0.1px;
+  border:solid;
+border-width: 0.2px;
 
 
 
@@ -226,6 +227,7 @@ background-image:url("https://res.cloudinary.com/dc875ky15/image/upload/v1563800
 .btn-farm:hover {
   color: white;
 transform: scale(1.03);
+
 }
 .new-button {
   height:30px;

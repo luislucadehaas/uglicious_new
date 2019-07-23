@@ -23,10 +23,19 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @booking = Booking.new
+            @markers = Farm.all.map do |farm|
+      {
+        lat: farm.latitude,
+        lng: farm.longitude,
+        #infoWindow: render_to_string(partial: "infowindow", locals: { farm: farm }),
+        image_url: helpers.asset_url('https://res.cloudinary.com/dc875ky15/image/upload/v1563810070/Gruppe_1_pfhknr.png')
+      }
+    end
   end
 
   def new
     @product = Product.new
+
   end
 
   def create
