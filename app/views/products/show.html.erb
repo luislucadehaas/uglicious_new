@@ -36,37 +36,36 @@
         <div class="side-card-body">
           <div class="form-row">
             <div class="col">
-              <p class="description", id="kg-price">Price per kg: <%= @product.price_in_cents %> €</p>
+              <p class="small_text", id="kg-price"><strong style="font-size: 18px;"><%= @product.price_in_cents %>€</strong> per kg</p>
             </div>
           </div>
-          <p class="description">Good between:</p>
-          <div class="form-row">
+<!--           <p class="small_header">Good between:</p>
+ -->          <div class="form-row">
             <div class="col">
-              <p class="description"><%= @product.available_from&.strftime("%B %d, %Y") %></p>
+              <p class="small_text"><strong style="font-size: 18px;"> <%= @product.available_from&.strftime("%B %d, %Y") %></strong> until</p>
             </div>
 
             <div class="col">
-              <p class="description"><%= @product.available_until&.strftime("%B %d, %Y") %></p>
+              <p class="small_text"><strong style="font-size: 18px;"><%= @product.available_until&.strftime("%B %d, %Y") %></strong></p>
             </div>
           </div>
           <% if user_signed_in? %>
             <div class="form-row">
                 <div class="col">
-                  <p class="description">Available: <%= @product.quantity_in_kg %> Kg</p>
+                  <p class="small_text"> <strong style="font-size: 18px;"><%= @product.quantity_in_kg %> Kg</strong> available</p>
                 </div>
               <div class="col">
-                <p class="description">Min order: <%= @product.min_quantity_to_order %> Kg</p>
+                <p class="small_text"><strong style="font-size: 18px;"> <%= @product.min_quantity_to_order %> Kg</strong> min. order</p>
               </div>
             </div>
           <% if current_user.role == "customer" %>
-              <p class="subtitle">Order here: </p>
               <%= simple_form_for [@product, @booking], method: "post" do |f| %>
               <div class="form-row">
                 <div class="col">
                    <%= f.input :quantity_in_kg, wrapper_html: { id:'kg-order' }%>
                 </div>
                 <div class="col">
-                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option'}, class: 'testing'%>
+                  <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option'}%>
                 </div>
               </div>
               <p id="total-price">Total price:</p>
@@ -89,15 +88,7 @@
         <% end %>
       </div>
     </div>
-      <div
-  id="map"
-  style="width: 350px; height: 500px; margin-top: 90px; "
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
   </div>
-  </div>
-
 </div>
 </div>
 <%= javascript_pack_tag "full_price" %>

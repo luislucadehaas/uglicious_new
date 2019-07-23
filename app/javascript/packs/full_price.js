@@ -17,9 +17,9 @@ const  calculateTotalCost = (event) => {
     totalPriceField.innerText = "Total Price:";
   } else {
       if (delOptions.selectedIndex == 2) {
-      totalPriceField.innerText =  `Total Price: ${kgPrice * kgOrder + 8}`;
+      totalPriceField.innerText =  `Total Price: ${kgPrice * kgOrder + 8}€`;
     } else {
-      totalPriceField.innerText =  `Total Price: ${kgPrice * kgOrder }`;
+      totalPriceField.innerText =  `Total Price: ${kgPrice * kgOrder }€`;
     }
   }
 };
