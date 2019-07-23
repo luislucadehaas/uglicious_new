@@ -8,13 +8,13 @@ const initMapbox = () => {
       const bounds = new mapboxgl.LngLatBounds();
       console.log(markers);
       markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-      map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+      map.fitBounds(bounds, { padding: 90, maxZoom: 15, duration: 0 });
     };
 
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/luislucadehaas/cjyekjyuc438k1cs2cnlrphle'
+      style: 'mapbox://styles/luislucadehaas/cjyfj8kye18pq1clgci7k2e4i'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
@@ -32,10 +32,13 @@ const initMapbox = () => {
     });
     const startpoint = map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {
-        enableHighAccuracy: true
+        enableHighAccuracy: true,
       },
-      trackUserLocation: true
-    }));
+      fitBoundsOptions: {
+        maxZoom:10.8,
+      },
+        trackUserLocation: true
+      }));
 
 //     function getRoute(end) {
 //   // make a directions request using cycling profile
@@ -173,8 +176,8 @@ const initMapbox = () => {
 // });
 
 
-    fitMapToMarkers(map, markers);
-  }
+fitMapToMarkers(map, markers);
+}
 };
 
 export { initMapbox };
