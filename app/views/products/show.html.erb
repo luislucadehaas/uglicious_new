@@ -1,25 +1,25 @@
-<div class="container">
+<div class="override_width">
   <div class="row above_picture">
 
     <div class="col-sm-8">
       <img class="show_main_picture" src="<%= @product.photo %>">
 
       <div class="row under_picture">
-        <div class="col-sm-3">
+        <div class="col-sm-3 descrip_collumn">
           <p class="subtle-header"> Product Details:</p>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9 cont_collumn">
           <p class="prod-text"> <%= @product.description %></p>
         </div>
       </div>
 
       <div class="row under_picture">
-        <div class="col-sm-3">
+        <div class="col-sm-3 descrip_collumn" >
           <p class="subtle-header"> About the farm:</p>
-          <img class="show_farm_picture" src="<%= @product.farm.user.photo %>" style="width: 160px;">
+          <img class="show_farm_picture" src="<%= @product.farm.user.photo %>" >
         </div>
-        <div class="col-sm-9">
-          <h4 class="description"> <%= @product.farm.name %> </h4>
+        <div class="col-sm-9 cont_collumn">
+          <h4 class="farm_name"> <%= @product.farm.name %> </h4>
           <p class="prod-text"> <%= @product.farm.description %></p>
         </div>
       </div>
@@ -36,29 +36,29 @@
         <div class="side-card-body">
           <div class="form-row">
             <div class="col">
-              <p class="description", id="kg-price">Price per kg: <strong style="color: #FFC942"> <%= @product.price_in_cents %></strong> €</p>
+              <p class="small_text", id="kg-price"><strong style="font-size: 18px;"><%= @product.price_in_cents %>€</strong> per kg</p>
             </div>
           </div>
-          <p class="description">Good between:</p>
-          <div class="form-row">
+<!--           <p class="small_header">Good between:</p>
+ -->          <div class="form-row">
             <div class="col">
-              <p class="description"><strong style="color: #EA622C"><%= @product.available_from&.strftime("%B %d, %Y") %></strong></p>
+              <p class="small_text"><strong style="font-size: 18px;"> <%= @product.available_from&.strftime("%B %d, %Y") %></strong> until</p>
             </div>
 
             <div class="col">
-              <p class="description"><strong style="color: #EA622C"><%= @product.available_until&.strftime("%B %d, %Y") %></strong></p>
+              <p class="small_text"><strong style="font-size: 18px;"><%= @product.available_until&.strftime("%B %d, %Y") %></strong></p>
             </div>
           </div>
           <% if user_signed_in? %>
-          <div class="form-wrapper">
-           <div class="form-row">
-            <div class="col">
-              <p class="description">Qty. available:<strong style="color: #FFC942"> <%= @product.quantity_in_kg %></strong> Kg
-              </p>
+            <div class="form-row">
+                <div class="col">
+                  <p class="small_text"> <strong style="font-size: 18px;"><%= @product.quantity_in_kg %> Kg</strong> available</p>
+                </div>
+              <div class="col">
+                <p class="small_text"><strong style="font-size: 18px;"> <%= @product.min_quantity_to_order %> Kg</strong> min. order</p>
+              </div>
             </div>
-            <div class="col">
-              <p class="description">Min qty. to order:<strong style="color: #FFC942"> <%= @product.min_quantity_to_order %></strong> Kg</p>
-            </div>
+
           </div>
           <br>
 
@@ -71,6 +71,7 @@
             </div>
             <div class="col">
               <%= f.input :delivery_option, collection: ["Pick-up at the farm", "Get delivered - 8€"], wrapper_html: { id:'del-option' }%>
+
             </div>
           </div>
           <p id="total-price"></p>
@@ -95,6 +96,7 @@
       <% end %>
     </div>
   </div>
+
   <div
   id="map"
   style="width: 350px; height: 500px; margin-top: 60px; "
