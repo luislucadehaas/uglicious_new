@@ -1,0 +1,15 @@
+<div class="cards-all-info">
+
+ <%= link_to farms_path(farm) do %>
+ <div class="cardinfo">
+  <img class= "image" src="<%= farm.photo%>">
+  <div class="cardinfos">
+    <div class="words">
+      <h2 class="wig-title"><%=farm.name.truncate(20)%></h2>
+      <p><%=farm.address%></p>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+
