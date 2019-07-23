@@ -4,6 +4,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to dashboard_farmer_path
+  end
+
   def create
     @product = Product.find(params[:product_id])
     @booking = Booking.new(booking_params)
@@ -22,7 +28,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:quantity_in_kg, :delivery_option)
+    params.require(:booking).permit(:quantity_in_kg, :delivery_option, :status)
   end
 
 end
