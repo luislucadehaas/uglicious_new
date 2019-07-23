@@ -31,7 +31,7 @@
           <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
           <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
 
-          <%= f.button :submit, "Update status", class: "banner-button"%>
+          <%= f.button :submit, "Update status", class: "banner-button", id: "sweet-alert-update"%>
 
           <% end %>
         </div>

@@ -13,7 +13,16 @@ initSweetalert('#sweet-alert-demo', {
   position: 'center',
   type: 'success',
   title: 'Thank you for your order',
+showConfirmButton: false,
+  html: '<a href="/customer-dashboard"><button class= "btn banner-button">Go to Dashboard</button></a>' +
+  '<a href="/products"><button class= "btn banner-button-3">Keep shopping</button></a>'
+});
+
+
+initSweetalert('#sweet-alert-update', {
+  position: 'center',
+  type: 'success',
+  title: 'Updated successfully',
   showConfirmButton: false,
   timer: 2000,
 });
-

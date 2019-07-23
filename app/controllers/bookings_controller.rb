@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.address = current_user.companies.first.address
     if @booking.save
       @product.quantity_in_kg -= @booking.quantity_in_kg
-      redirect_to dashboard_customer_path
+
     else
       render @product
     end
