@@ -43,6 +43,7 @@
     <% #raise %>
     <% current_user.farm.products.each do |p| %>
     <% p.bookings.each do |booking| %>
+
     <%= link_to product_path(booking.product) do %>
     <div class="card-request">
       <img src="<%= booking.product.photo %>">
@@ -51,10 +52,13 @@
         <p><%= booking.product.description.truncate(100) %></p>
         <p><%= booking.product.price_in_cents %>€ per Kg</p>
         <%= link_to "See customer invoice", class: "product-links" %>
-
-
+           <div class="status-box">
+              <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
+                <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
+                <%= f.submit %>
+              <% end %>
+          </div>
       </div>
-
     </div>
     <% end %>
     <% end %>
