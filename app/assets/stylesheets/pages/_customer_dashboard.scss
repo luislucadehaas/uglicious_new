@@ -78,11 +78,25 @@
   justify-content: flex-start;
 }
 
-.card-booking {
+.card-booking-left {
   font-size: 13px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.card-booking-middle {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-booking-right {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .bookings_column h3 {
@@ -135,3 +149,5 @@
 .cust-subtitles {
   margin-left: 20px;
 }
+
+

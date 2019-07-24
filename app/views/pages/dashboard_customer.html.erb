@@ -9,7 +9,7 @@
     <div class="content-container row">
 
       <div class="col-sm-8 bookings_column">
-      <h2 class="headers-customer">Farm overview</h2>
+      <h2 class="headers-customer">Company overview</h2>
 
 
         <div class="col-sm-12 row card-company">
@@ -48,32 +48,34 @@
 
               <% current_user.bookings.each do |booking| %>
                 <% if booking.status == "pending" %>
-                  <%= link_to product_path(booking.product) do %>
                     <div class="col-sm-12 row card-company">
 
-                      <div class="col-4 card-booking left">
-                        <img src="<%= booking.product.photo %>">
+                      <div class="col-4 card-booking-left">
+                        <%= link_to product_path(booking.product) do %>
+                          <img src="<%= booking.product.photo %>">
+                        <% end %>
                       </div>
 
-                      <div class="col-4 card-booking middle">
+                      <div class="col-4 card-booking-middle">
                         <h3><%= booking.product.title %></h3>
                         <p><%= booking.product.description.truncate(50) %></p>
                       </div>
 
-                      <div class="col-4 card-booking right">
-                        <p><%= booking.product.price_in_cents %>€</p>
+                      <div class="col-4 card-booking-right">
+                        <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                        <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
 
                         <% if booking.delivery_option == "Get delivered - 8€" %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
                         <% else %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
                         <% end %>
 
-                        <p><%= booking.status %></p>
+                        <p>Status: <%= booking.status %></p>
+                        <%= link_to "See invoice", "#", class: "customer-button" %>
                       </div>
 
                     </div>
-                  <% end %>
                 <% end %>
               <% end %>
 
@@ -86,25 +88,29 @@
                   <%= link_to product_path(booking.product) do %>
                     <div class="col-sm-12 row card-company">
 
-                      <div class="col-4 card-booking left">
-                        <img src="<%= booking.product.photo %>">
+                      <div class="col-4 card-booking-left">
+                        <%= link_to product_path(booking.product) do %>
+                          <img src="<%= booking.product.photo %>">
+                        <% end %>
                       </div>
 
-                      <div class="col-4 card-booking middle">
+                      <div class="col-4 card-booking-middle">
                         <h3><%= booking.product.title %></h3>
                         <p><%= booking.product.description.truncate(50) %></p>
                       </div>
 
-                      <div class="col-4 card-booking right">
-                        <p><%= booking.product.price_in_cents %>€</p>
+                      <div class="col-4 card-booking-right">
+                        <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                        <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
 
                         <% if booking.delivery_option == "Get delivered - 8€" %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
                         <% else %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
                         <% end %>
 
-                        <p><%= booking.status %></p>
+                        <p>Status: <%= booking.status %></p>
+                        <%= link_to "See invoice", "#", class: "customer-button" %>
                       </div>
 
                     </div>
@@ -119,30 +125,34 @@
               <% current_user.bookings.each do |booking| %>
                 <% if booking.status == "completed" %>
                   <%= link_to product_path(booking.product) do %>
-                    <div class="col-sm-12 row card-company">
+                  <div class="col-sm-12 row card-company">
 
-                      <div class="col-4 card-booking left">
+                    <div class="col-4 card-booking-left">
+                      <%= link_to product_path(booking.product) do %>
                         <img src="<%= booking.product.photo %>">
-                      </div>
-
-                      <div class="col-4 card-booking middle">
-                        <h3><%= booking.product.title %></h3>
-                        <p><%= booking.product.description.truncate(50) %></p>
-                      </div>
-
-                      <div class="col-4 card-booking right">
-                        <p><%= booking.product.price_in_cents %>€</p>
-
-                        <% if booking.delivery_option == "Get delivered - 8€" %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
-                        <% else %>
-                          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
-                        <% end %>
-
-                        <p><%= booking.status %></p>
-                      </div>
-
+                      <% end %>
                     </div>
+
+                    <div class="col-4 card-booking-middle">
+                      <h3><%= booking.product.title %></h3>
+                      <p><%= booking.product.description.truncate(50) %></p>
+                    </div>
+
+                    <div class="col-4 card-booking-right">
+                      <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                      <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
+
+                      <% if booking.delivery_option == "Get delivered - 8€" %>
+                        <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                      <% else %>
+                        <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
+                      <% end %>
+
+                      <p>Status: <%= booking.status %></p>
+                      <%= link_to "See invoice", "#", class: "customer-button" %>
+                    </div>
+
+                  </div>
                   <% end %>
                 <% end %>
               <% end %>
