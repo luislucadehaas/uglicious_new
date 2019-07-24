@@ -40,6 +40,7 @@ const initMapbox = () => {
         trackUserLocation: true
       }));
 
+
 //     function getRoute(end) {
 //   // make a directions request using cycling profile
 //   // an arbitrary start will always be the same

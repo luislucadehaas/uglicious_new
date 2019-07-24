@@ -14,4 +14,5 @@ Rails.application.routes.draw do
    get 'farmer-dashboard', to: 'pages#dashboard_farmer', as: :dashboard_farmer
    get 'farmer-orders', to: 'pages#orders', as: :farmer_orders
    get 'customer-dashboard', to: 'pages#dashboard_customer', as: :dashboard_customer
+   get "find", to: 'farms#find', as: :find
 end

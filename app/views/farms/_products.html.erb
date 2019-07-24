@@ -1,0 +1,17 @@
+<% products.each do |prod| %>
+<div class="col-sm-6 col-xs-6 col-md-12 column" >
+  <%= link_to product_path(prod) do %>
+  <div class="card-request">
+    <img style="height:130px;"src="<%= prod.photo %>">
+    <div class="card-request-infos">
+      <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
+      <p><%= prod.description.truncate(100) %></p>
+      <div style="overflow: hidden;">
+        <p style="float: left; color: #EA622C;"><%= prod.subgroup.name %></p>
+        <p style="float: right; color: #377A5E;"><%= prod.farm.name %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<% end %>

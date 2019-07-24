@@ -1,28 +1,14 @@
-    <%= link_to 'Back', products_path, class: "btn btn-flat" %>
-  <div class="mantel" style="display:flex;">
-  <div
-  id="map"
-  style="width: 60%; height: 100vh; position:sticky; top:0; "
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  >
-
-</div>
-<div>
- <% @products.each do |prod| %>
- <div class="col-sm-6 col-xs-6 col-md-12 column" >
-  <%= link_to product_path(prod) do %>
-  <div class="card-request">
-    <img style="height:122px;"src="<%= prod.photo %>">
-    <div class="card-request-infos">
-      <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
-      <p><%= prod.description.truncate(100) %></p>
-      <p><%= prod.subgroup.name %></p>
+    <%= link_to <i class="fas fa-chevron-left"></i>, products_path %>
+    <div class="mantel" style="display:flex;">
+      <div
+      id="map"
+      style="width: 60%; height: 100vh; position:sticky; top:0; "
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      >
 
     </div>
-  </div>
-</div>
-<% end %>
-<% end %>
-</div>
+    <div id="list-of-items">
+<%= render partial: 'products', locals: { products: @products} %>
+    </div>
 </div>

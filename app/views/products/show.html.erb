@@ -70,7 +70,7 @@
               </div>
               <p id="total-price">Total price:</p>
 
-              <%= f.button :submit, "Order now", class: "btn btn-flat" %>
+              <%= f.button :submit, "Order now", class: "btn btn-flat", id: "sweet-alert-demo" %>
               <% end %>
           <% elsif current_user.id == @product.farm.user_id%>
             <div class="form-row">
