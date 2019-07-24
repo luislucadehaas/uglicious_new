@@ -1,5 +1,6 @@
 class FarmsController < ApplicationController
   def index
+    @products = Product.all
     @markers = Farm.all.map do |farm|
       {
         lat: farm.latitude,
