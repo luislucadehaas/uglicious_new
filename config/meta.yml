@@ -1,0 +1,4 @@
+meta_product_name: "Uglicious"
+meta_title: "Uglicious - Sometimes uglies are better"
+meta_description: "Buy ugly but delicious veggies, directly from farmers."
+meta_image: "https://res.cloudinary.com/dc875ky15/image/upload/v1563980507/1200630_lwpbc5.png" # should exist in `app/assets/images/`
