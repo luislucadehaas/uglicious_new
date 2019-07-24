@@ -1,7 +1,4 @@
 
-
-
-
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
     <div id="card-container">
@@ -98,29 +95,29 @@
 
      </div>
      <div class="new-button">
-<%= link_to "Farms", farms_path, class: "btn-farm"%>
-</div>
-</div>
-<div class="aboverow">
-  <div class="row margin-1">
-    <% @products.each do |product| %>
-    <div class="col-sm-6 col-xs-6 col-md-4 column" >
-     <%= link_to product_path(product) do %>
-     <div class="card-trip">
-
-      <%= cl_image_tag product.photo %>
-      <div class="card-trip-infos">
-        <div>
-          <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
-          <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
-        </div>
-        <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
-      </div>
+      <%= link_to "Farms", farms_path, class: "btn-farm"%>
     </div>
   </div>
-  <% end %>
-  <% end %>
-</div>
+  <div class="aboverow">
+    <div class="row margin-1">
+      <% @products.each do |product| %>
+      <div class="col-sm-6 col-xs-6 col-md-4 column" >
+       <%= link_to product_path(product) do %>
+       <div class="card-trip">
+
+        <%= cl_image_tag product.photo %>
+        <div class="card-trip-infos">
+          <div>
+            <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
+            <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
+          </div>
+          <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
 </div>
 </div>
 </div>

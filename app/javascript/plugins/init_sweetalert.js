@@ -6,6 +6,7 @@ const initSweetalert = (selector, options = {}) => {
   console.log(swalButton);
   if (swalButton) { // protect other pages
     swalButton.addEventListener('click', () => {
+
       Swal.fire(options);
     });
   }
