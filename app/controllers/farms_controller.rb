@@ -1,6 +1,5 @@
 class FarmsController < ApplicationController
   def index
-    @products = Product.all
     @markers = Farm.all.map do |farm|
       {
         lat: farm.latitude,
@@ -9,19 +8,39 @@ class FarmsController < ApplicationController
         image_url: helpers.asset_url('https://res.cloudinary.com/dc875ky15/image/upload/v1563869999/marker_wz5vh9.png')
       }
     end
-  end
-  def new
-    @farm = Farm.new
-  end
+    if params[:filter]
+      farms = Farm.where(name: params[:filter])
+      @products = Product.all.where(farm: farms)
+    else
+      @products = Product.all
+    end
 
-  def create
-    @farm = Farm.new(farm_params)
-    @farm.user = current_user
-    if @farm.save
-     redirect_to dashboard_farmer_path
-   else
-    render 'new'
-  end
+end
+
+def find
+      if params[:filter]
+      farms = Farm.where(name: params[:filter])
+      @products = Product.all.where(farm: farms)
+    else
+      @products = Product.all
+    end
+  respond_to do |format|
+      format.js {render layout: false} # Add this line to you respond_to block
+    end
+end
+
+def new
+  @farm = Farm.new
+end
+
+def create
+  @farm = Farm.new(farm_params)
+  @farm.user = current_user
+  if @farm.save
+   redirect_to dashboard_farmer_path
+ else
+  render 'new'
+end
 end
 
 def edit

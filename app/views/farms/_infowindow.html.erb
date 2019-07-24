@@ -5,8 +5,9 @@
   <img class= "image" src="<%= farm.photo%>">
   <div class="cardinfos">
     <div class="words">
-      <h2 class="wig-title"><%=farm.name.truncate(20)%></h2>
-      <p><%=farm.address%></p>
+      <h4 class="wig-title"><%=farm.name.truncate(20)%></h4>
+      <h8><%=farm.address%></h8>
+      <p><%= link_to "See their Products", find_path(filter: farm.name), class: "btn request-button", remote: true%></p>
     </div>
   </div>
 </div>
