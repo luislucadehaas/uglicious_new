@@ -1,10 +1,7 @@
-<% totalbookings = 0%>
-<% raise %>
-<% current_user.farm.products.each do |p| %>
-<% p.bookings.each do |booking| %>
-<% totalbookings += 1 %>
-<% end %>
-<% end %>
+  <% totalbookings = 0%>
+  <% current_user.bookings.each do |booking| %>
+  <% totalbookings += 1 %>
+  <% end %>
 
    <div class="dash-container d-flex">
     <%= render 'shared/sidebar' %>

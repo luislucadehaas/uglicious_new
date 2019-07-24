@@ -73,29 +73,15 @@ a {
  border-color: #337157;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .request-button {
- background-color:#FC5B55;
+ background-color:$orange;
  color:#ffffff;
  margin:10px 5px 5px 5px;
  border-radius: 2px;
  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
  font-weight: 400;
- padding: 5px 10px;
+ font-size: 13px;
+ padding: 5px 5px;
  line-height: 1.5;
  vertical-align: middle;
  border: 1px solid transparent;
@@ -105,6 +91,6 @@ a {
 .request-button:hover {
  color: #ffffff;
  text-decoration: none;
- background-color: #fc5555;
- border-color: #fc5555;
+ background-color: $orange;
+ border-color: $orange;
 }
