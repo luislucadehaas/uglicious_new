@@ -48,6 +48,7 @@
  border-radius: 50%;
  width: 28px;
  height: 28px;
+ font-weight: 800;
  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
  font-size: 13px;
   display: flex;
@@ -84,7 +85,7 @@
   padding-top: 20px;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 38px;
+  margin-bottom: 19px;
 }
 
 .metric-num {
@@ -186,7 +187,7 @@ left: -71px;
   border-radius: 5px;
   display: flex;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 37px;
   color: $gray;
 }
 
@@ -243,11 +244,25 @@ margin-right: 8px;
 margin-right: 8px;
 }
 
-
 .img-create {
 margin-left: 24px;
 width: 70px;
 margin-top: -23px;
 }
 
+table, th, td {
+    border: 1px solid rgba(239, 240, 241, .5);
 
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left
+}
+
+table {
+margin-top: 10px;
+}
+
+th {
+background-color: $lightgreen;
+color: $green;
+}
