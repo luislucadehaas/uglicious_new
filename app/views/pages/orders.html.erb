@@ -40,7 +40,7 @@
     <td><%= link_to "See", class: "fas fa-file-alt" %></td>
     <td> <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
           <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
-          <%= f.button :submit, "Update", class: "request-button,  id: "sweet-alert-update"%></td>
+          <%= f.button :submit, "Update", class: "request-button", id:"sweet-alert-update"%></td>
   </tr>
 
 
