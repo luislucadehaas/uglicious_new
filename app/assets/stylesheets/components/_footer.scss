@@ -1,11 +1,11 @@
 .footer {
-  background: #ADB5BD;
+  background: $lightgreen;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: white;
+  color: $green;
 }
 .footer-links {
   display: flex;
@@ -13,7 +13,7 @@
 
 }
 .footer-links a {
-  color: white;
+  color: $green;
   opacity: 1;
   text-decoration: none;
   font-size: 24px;

@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    redirect_to dashboard_farmer_path
+    redirect_to farmer_orders_path
   end
 
   def create
