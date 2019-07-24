@@ -21,6 +21,7 @@ class PagesController < ApplicationController
     @farm = current_user.farm
   end
 
+
   def log_out_farmer
     sign_out
     redirect_to new_user_session_path
