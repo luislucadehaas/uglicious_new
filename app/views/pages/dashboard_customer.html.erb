@@ -1,53 +1,118 @@
-<div class="container">
-  <br>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="dashboard-user">
-        <%= cl_image_tag current_user.photo, class: "rounded-circle-alone" %>
-        <div class="user-infos">
-          <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-          <p>Junior waste-fighter ⭐️</p>
-          <p>3kg saved 🎯</p>
-          <p>1 transaction</p>
-          <%= link_to "Buy more", products_path, class: "banner-button" %>
+<% totalbookings = 0%>
+<% raise %>
+<% current_user.farm.products.each do |p| %>
+<% p.bookings.each do |booking| %>
+<% totalbookings += 1 %>
+<% end %>
+<% end %>
+
+   <div class="dash-container d-flex">
+    <%= render 'shared/sidebar' %>
+    <div class="container">
+
+      <div class="row metrics_row">
+
+        <div class="col-sm-3 card-metrics">
+          <i class="fas fa-euro-sign full-icon"></i>
+          <div class="metric-num">
+            <p>5.3k</p>
+          </div>
+          <div class="metric-text">
+            <p>Gross sales</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-metrics">
+          <i class="fas fa-seedling full-icon"></i>
+          <div class="metric-num">
+            <p>100g</p>
+          </div>
+          <div class="metric-text">
+            <p>CO2 saved</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-metrics">
+          <i class="fas fa-shopping-bag full-icon"></i>
+          <div class="metric-num">
+            <p><%= totalbookings %></p>
+          </div>
+          <div class="metric-text">
+            <p>Orders</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-metrics">
+          <i class="fas fa-carrot full-icon"></i>
+          <div class="metric-num">
+            <p>63kg</p>
+          </div>
+          <div class="metric-text">
+            <p>Veggies sold</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+
+      </div>
+
+      <div class="row">
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="dashboard-user">
+            <%= cl_image_tag current_user.photo, class: "rounded-circle-alone" %>
+            <div class="user-infos">
+              <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+              <p>Junior waste-fighter ⭐️</p>
+              <p>3kg saved 🎯</p>
+              <p>1 transaction</p>
+              <%= link_to "Buy more", products_path, class: "banner-button" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6" >
+          <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563536321/uglicious/icons/food_processor_p2hm3v.jpg" width="300px">
+          <h3><%= current_user.companies.first.name%></h3>
+          <p><%= current_user.companies.first.address%></p>
+          <%= link_to "Edit", "#", class: "product-links" %>
+          <%= link_to "Delete", "#", method: :delete, class: "product-links" %>
         </div>
       </div>
-    </div>
-
-    <div class="col-sm-6" >
-      <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563536321/uglicious/icons/food_processor_p2hm3v.jpg" width="300px">
-       <h3><%= current_user.companies.first.name%></h3>
-      <p><%= current_user.companies.first.address%></p>
-      <%= link_to "Edit", "#", class: "product-links" %>
-      <%= link_to "Delete", "#", method: :delete, class: "product-links" %>
-      </div>
-  </div>
-  <br>
-  <br>
-  <h3>My orders</h3>
-  <% if current_user.bookings.empty? %>
-    <p>Book your first product!</p>
-  <% else %>
-    <% current_user.bookings.each do |booking| %>
-    <%= link_to product_path(booking.product) do %>
-    <div class="card-request">
-      <img src="<%= booking.product.photo %>">
-      <div class="card-request-infos">
-        <h2><%= booking.product.title %></h2>
-        <p><%= booking.product.description.truncate(100) %></p>
-        <p><%= booking.product.price_in_cents %>€</p>
-        <% if booking.delivery_option == "Get delivered - 8€" %>
+      <br>
+      <br>
+      <h3>My orders</h3>
+      <% if current_user.bookings.empty? %>
+      <p>Book your first product!</p>
+      <% else %>
+      <% current_user.bookings.each do |booking| %>
+      <%= link_to product_path(booking.product) do %>
+      <div class="card-request">
+        <img src="<%= booking.product.photo %>">
+        <div class="card-request-infos">
+          <h2><%= booking.product.title %></h2>
+          <p><%= booking.product.description.truncate(100) %></p>
+          <p><%= booking.product.price_in_cents %>€</p>
+          <% if booking.delivery_option == "Get delivered - 8€" %>
           <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
-        <% else %>
-            <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
-        <% end %>
-        <%= link_to "See my invoice", class: "product-links" %>
+          <% else %>
+          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
+          <% end %>
+          <%= link_to "See my invoice", class: "product-links" %>
+        </div>
+        <div class="status-box">
+          <p><%= booking.status %></p>
+        </div>
       </div>
-      <div class="status-box">
-        <p><%= booking.status %></p>
-      </div>
+      <% end %>
+      <% end %>
+      <% end %>
     </div>
-    <% end %>
-    <% end %>
-  <% end %>
-</div>
+  </div>

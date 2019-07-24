@@ -1,6 +1,5 @@
   <% totalbookings = 0%>
-  <% current_user.farm.products.each do |p| %>
-  <% p.bookings.each do |booking| %>
+  <% current_user.bookings.each do |booking| %>
   <% totalbookings += 1 %>
   <% end %>
   <% end %>
