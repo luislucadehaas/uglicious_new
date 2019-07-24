@@ -1,53 +1,211 @@
-<div class="container">
-  <br>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="dashboard-user">
-        <%= cl_image_tag current_user.photo, class: "rounded-circle-alone" %>
-        <div class="user-infos">
-          <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-          <p>Junior waste-fighter ⭐️</p>
-          <p>3kg saved 🎯</p>
-          <p>1 transaction</p>
-          <%= link_to "Buy more", products_path, class: "banner-button" %>
+  <% totalbookings = 0%>
+  <% current_user.bookings.each do |booking| %>
+  <% totalbookings += 1 %>
+  <% end %>
+
+  <div class="dash-container d-flex">
+    <%= render 'shared/sidebar2' %>
+
+    <div class="content-container row">
+
+      <div class="col-sm-8 bookings_column">
+      <h2 class="headers-customer">Company overview</h2>
+
+
+        <div class="col-sm-12 row card-company">
+
+          <div class="col-3 card-customer-pic">
+            <%= cl_image_tag current_user.photo %>
+          </div>
+          <div class="col-3 card-company-left">
+            <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
+            <p><%= current_user.email %></p>
+            <p><%= current_user.companies.first.address%></p>
+          </div>
+
+          <div class="col-3 card-company-middle">
+            <h4><%= current_user.companies.first.name%></h4>
+            <p><%= current_user.companies.first.description%></p>
+          </div>
+
+          <div class="col-3 company-right">
+            <%= link_to "Edit", "#", class: "customer-button", style: "position: absolute; left: 4%; bottom: 45%;"  %>
+            <%= link_to "Delete company", "#", class: "customer-button", style: "position: absolute; left: 4%; bottom: 30%;" %>
+            <%= link_to "Buy more", products_path, class: "banner-button", style: "position: absolute; left: 2%; bottom: 0%;" %>
+          </div>
+        </div>
+
+
+        <h3 class="headers-customer">My orders</h3>
+
+          <% if current_user.bookings.empty? %>
+            <p>Book your first product!</p>
+          <% else %>
+
+              <% unless Booking.where(status:"pending").where(user_id: current_user.id).empty? %>
+                <h5 class="cust-subtitles">Pending:</h5>
+              <% end %>
+
+              <% current_user.bookings.each do |booking| %>
+                <% if booking.status == "pending" %>
+                    <div class="col-sm-12 row card-company">
+
+                      <div class="col-4 card-booking-left">
+                        <%= link_to product_path(booking.product) do %>
+                          <img src="<%= booking.product.photo %>">
+                        <% end %>
+                      </div>
+
+                      <div class="col-4 card-booking-middle">
+                        <h3><%= booking.product.title %></h3>
+                        <p><%= booking.product.description.truncate(50) %></p>
+                      </div>
+
+                      <div class="col-4 card-booking-right">
+                        <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                        <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
+
+                        <% if booking.delivery_option == "Get delivered - 8€" %>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                        <% else %>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
+                        <% end %>
+
+                        <p>Status: <%= booking.status %></p>
+                        <%= link_to "See invoice", "#", class: "customer-button" %>
+                      </div>
+
+                    </div>
+                <% end %>
+              <% end %>
+
+              <% unless Booking.where(status:"ready for pickup").where(user_id: current_user.id).empty? %>
+                <h5 class="cust-subtitles">Ready for Pickup:</h5>
+              <% end %>
+
+              <% current_user.bookings.each do |booking| %>
+                <% if booking.status == "ready for pickup" %>
+                  <%= link_to product_path(booking.product) do %>
+                    <div class="col-sm-12 row card-company">
+
+                      <div class="col-4 card-booking-left">
+                        <%= link_to product_path(booking.product) do %>
+                          <img src="<%= booking.product.photo %>">
+                        <% end %>
+                      </div>
+
+                      <div class="col-4 card-booking-middle">
+                        <h3><%= booking.product.title %></h3>
+                        <p><%= booking.product.description.truncate(50) %></p>
+                      </div>
+
+                      <div class="col-4 card-booking-right">
+                        <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                        <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
+
+                        <% if booking.delivery_option == "Get delivered - 8€" %>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                        <% else %>
+                          <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
+                        <% end %>
+
+                        <p>Status: <%= booking.status %></p>
+                        <%= link_to "See invoice", "#", class: "customer-button" %>
+                      </div>
+
+                    </div>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+              <% unless Booking.where(status:"completed").where(user_id: current_user.id).empty? %>
+                <h5 class="cust-subtitles">Completed:</h5>
+              <% end %>
+
+              <% current_user.bookings.each do |booking| %>
+                <% if booking.status == "completed" %>
+                  <%= link_to product_path(booking.product) do %>
+                  <div class="col-sm-12 row card-company">
+
+                    <div class="col-4 card-booking-left">
+                      <%= link_to product_path(booking.product) do %>
+                        <img src="<%= booking.product.photo %>">
+                      <% end %>
+                    </div>
+
+                    <div class="col-4 card-booking-middle">
+                      <h3><%= booking.product.title %></h3>
+                      <p><%= booking.product.description.truncate(50) %></p>
+                    </div>
+
+                    <div class="col-4 card-booking-right">
+                      <p>Price per Kg: <%= booking.price_in_cents %>€</p>
+                      <p>Quant. ordered: <%= booking.quantity_in_kg %>€</p>
+
+                      <% if booking.delivery_option == "Get delivered - 8€" %>
+                        <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
+                      <% else %>
+                        <p>Total Price: <%= totalprice = booking.price_in_cents*booking.quantity_in_kg %>€</p>
+                      <% end %>
+
+                      <p>Status: <%= booking.status %></p>
+                      <%= link_to "See invoice", "#", class: "customer-button" %>
+                    </div>
+
+                  </div>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+
+          <% end %>
+
+
+      </div>
+
+      <div class="col-sm-4 metrics_column">
+
+        <div class="card-metrics2">
+          <i class="fas fa-euro-sign full-icon2"></i>
+          <div class="metric-num">
+            <p>538</p>
+          </div>
+          <div class="metric-text">
+            <p>Saved</p>
+          </div>
+        </div>
+
+        <div class="card-metrics2">
+          <i class="fas fa-seedling full-icon2"></i>
+          <div class="metric-num">
+            <p>100g</p>
+          </div>
+          <div class="metric-text">
+            <p>CO2 saved</p>
+          </div>
+        </div>
+
+        <div class="card-metrics2">
+          <i class="fas fa-shopping-bag full-icon2"></i>
+          <div class="metric-num">
+            <p><%= totalbookings %></p>
+          </div>
+          <div class="metric-text">
+            <p>Orders</p>
+          </div>
+        </div>
+
+        <div class="card-metrics2">
+          <i class="fas fa-carrot full-icon2"></i>
+          <div class="metric-num">
+            <p>63kg</p>
+          </div>
+          <div class="metric-text">
+            <p>Food saved</p>
+          </div>
         </div>
       </div>
+
     </div>
 
-    <div class="col-sm-6" >
-      <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563536321/uglicious/icons/food_processor_p2hm3v.jpg" width="300px">
-       <h3><%= current_user.companies.first.name%></h3>
-      <p><%= current_user.companies.first.address%></p>
-      <%= link_to "Edit", "#", class: "product-links" %>
-      <%= link_to "Delete", "#", method: :delete, class: "product-links" %>
-      </div>
   </div>
-  <br>
-  <br>
-  <h3>My orders</h3>
-  <% if current_user.bookings.empty? %>
-    <p>Book your first product!</p>
-  <% else %>
-    <% current_user.bookings.each do |booking| %>
-    <%= link_to product_path(booking.product) do %>
-    <div class="card-request">
-      <img src="<%= booking.product.photo %>">
-      <div class="card-request-infos">
-        <h2><%= booking.product.title %></h2>
-        <p><%= booking.product.description.truncate(100) %></p>
-        <p><%= booking.product.price_in_cents %>€</p>
-        <% if booking.delivery_option == "Get delivered - 8€" %>
-          <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg + 8 %>€</p>
-        <% else %>
-            <p>Total Price: <%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</p>
-        <% end %>
-        <%= link_to "See my invoice", class: "product-links" %>
-      </div>
-      <div class="status-box">
-        <p><%= booking.status %></p>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
-  <% end %>
-</div>

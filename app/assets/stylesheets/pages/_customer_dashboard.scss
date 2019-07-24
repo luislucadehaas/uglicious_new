@@ -1,0 +1,153 @@
+.sidebar2 {
+  background-color: $orange;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  text-align: left;
+  width: 180px;
+  flex-shrink: 0;
+  margin-top: -100px;
+  padding-top: 100px;
+  min-height: 150vh;
+}
+
+.sidebar2 a {
+  color: white;
+}
+
+.sidebar2 p :hover {
+  opacity: 1;
+  color: $green;
+}
+
+.headers-customer {
+  margin-left: 20px;
+}
+
+.sidebar2.active {
+  opacity: 1;
+  background-color: $green;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.card-metrics2 {
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: white;
+  box-shadow: 0 2px 9px 0 rgba(139, 159, 196, 0.2);
+  padding-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 18px 19px 18px;
+}
+
+.card-company img {
+  width: 100%;
+  padding: 8px;
+}
+
+
+.card-company {
+  margin: 20px;
+  box-shadow: 0 2px 9px 0 rgba(139, 159, 196, 0.2);
+  padding: 18px;
+}
+
+.card-company-left {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-company-right {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.card-company-middle {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-booking-left {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-booking-middle {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-booking-right {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bookings_column h3 {
+  margin-top: 12px;
+}
+
+.fa-euro-sign full-icon2 {
+  color: $blue;
+  text-align: center;
+  font-size: 25px;
+}
+
+ .fa-shopping-bag full-icon2{
+  color: $red;
+  text-align: center;
+  font-size: 25px;
+ }
+
+.fa-carrot full-icon2{
+  color: $orange;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fa-seedling full-icon2 {
+  color: #82C91E;
+  text-align: center;
+  font-size: 25px;
+}
+
+.full-icon2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.content-container h2 {
+  margin-left: 20px;
+}
+
+.customer-button {
+
+}
+
+
+.customer-button:hover {
+
+}
+
+.cust-subtitles {
+  margin-left: 20px;
+}
+
+

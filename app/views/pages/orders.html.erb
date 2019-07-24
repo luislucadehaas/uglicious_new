@@ -15,6 +15,7 @@
     <table style="width:100%">
       <tr>
         <th>Order</th>
+
         <th>Date</th>
         <th>Product</th>
         <th>Buyer</th>
@@ -23,6 +24,7 @@
         <th>Invoice</th>
         <th>Status</th>
       </tr>
+
 
       <% current_user.farm.products.map(&:bookings).flatten.sort_by{|b| b.created_at}.reverse.each do |booking| %>
 
@@ -53,19 +55,5 @@
 
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

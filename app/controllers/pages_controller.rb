@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 
   def dashboard_customer
     @role = current_user&.role
+    @company = current_user.companies
   end
 
   def farmer_orders

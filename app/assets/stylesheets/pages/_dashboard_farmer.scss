@@ -18,7 +18,6 @@
 .sidebar p :hover {
   opacity: 1;
   color: $orange;
-
 }
 
 .sidebar.active {
@@ -84,7 +83,7 @@
   padding-top: 20px;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 19px;
+  margin: 0 18px 19px 18px;
 }
 
 .metric-num {
@@ -112,28 +111,24 @@ color: grey;
   color: $blue;
   text-align: center;
   font-size: 25px;
-  position: absolute;
 }
 
  .fa-shopping-bag {
   color: $red;
   text-align: center;
   font-size: 25px;
-  position: absolute;
  }
 
 .fa-carrot{
   color: $orange;
   text-align: center;
   font-size: 25px;
-  position: absolute;
 }
 
 .fa-seedling {
   color: #82C91E;
   text-align: center;
   font-size: 25px;
-  position: absolute;
 }
 
 #h-margin {
