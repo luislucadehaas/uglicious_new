@@ -12,50 +12,47 @@
       <div class="number-notification"> <%= totalbookings %> </div>
     </div>
 
-<table style="width:100%">
-  <tr>
-    <th>Order</th>
-    <th>Product</th>
-    <th>Buyer</th>
-    <th>Price(Kg)</th>
-    <th>Quantity</th>
-    <th>Total price</th>
-    <th>Invoice</th>
-    <th>Status</th>
-  </tr>
+    <table style="width:100%">
+      <tr>
+        <th>Order</th>
+        <th>Date</th>
+        <th>Product</th>
+        <th>Buyer</th>
+        <th>Quantity</th>
+        <th>Total price</th>
+        <th>Invoice</th>
+        <th>Status</th>
+      </tr>
 
-<tr>
-    <% current_user.farm.products.each do |p| %>
-    <% p.bookings.each do |booking| %>
+      <% current_user.farm.products.map(&:bookings).flatten.sort_by{|b| b.created_at}.reverse.each do |booking| %>
 
-    <%= link_to product_path(booking.product) do %>
+      <%= link_to product_path(booking.product) do %>
 
+      <% if booking.created_at > 20.minutes.ago %>
+      <tr class='rowhighlight'>
+        <% else %>
+        <tr>
+          <% end %>
+          <td>#<%= booking.product.id%><%= booking.product.farm.id %><%= booking.id %></td>
+          <td><%= booking.created_at&.strftime("%d-%m-%y")%></td>
+          <td><%= booking.product.title.truncate(20) %></td>
+          <td><%= booking.user.first_name %> <%= booking.user.last_name.first(1) %></td>
+          <td><%= booking.quantity_in_kg %></td>
+          <td><%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</td>
+          <td><%= link_to "Pdf", class: "fas fa-file-alt" %></td>
+          <td> <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
+            <%= f.input :status, collection: ["pending", "ready for pickup", "completed"], label: false %> <%= f.button :submit, "Update", class: "request-button",  id: "sweet-alert-update"%></td>
+          </tr>
 
-    <td>#<%= booking.product.id%><%= booking.product.farm.id %><%= booking.id %></td>
-    <td><%= booking.product.title.truncate(20) %></td>
-    <td><%= booking.user.first_name %> <%= booking.user.last_name.first(1) %></td>
-    <td><%= booking.product.price_in_cents %>€</td>
-    <td><%= booking.quantity_in_kg %></td>
-    <td><%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</td>
-    <td><%= link_to "See", class: "fas fa-file-alt" %></td>
-    <td> <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
-          <%= f.input :status, collection: ["pending", "ready for pickup", "completed"] %>
-          <%= f.button :submit, "Update", class: "request-button", id:"sweet-alert-update"%></td>
-  </tr>
+          <% end %>
+          <% end %>
 
-
-<% end %>
-   <% end %>
-
-<% end %>
-<% end %>
-</table>
-
-
-</div>
-</div>
+          <% end %>
+        </table>
 
 
+      </div>
+    </div>
 
 
 

@@ -1,10 +1,27 @@
-<div class="sidebar">
-      <div class="input">
-       <p><%= link_to "uglicious", root_path, class: "text-logo" %></p>
-       <p><i class="fas fa-home"></i><%= link_to "Dashboard", dashboard_farmer_path %></p>
-       <p><i class="fas fa-plus-circle"></i><%= link_to "New product", new_product_path %></p>
-       <p><i class="fas fa-shopping-basket"></i><%= link_to "Orders", farmer_orders_path %></p>
-       <p><i class="fas fa-chart-bar"></i>Reports</p>
-       <p><i class="fas fa-envelope"></i></i>Inbox</p>
-     </div>
-   </div>
+ <% newbookings = 0 %>
+ <% current_user.farm.products.each do |p| %>
+   <% p.bookings.each do |booking| %>
+    <% newbookings += 1 if booking.created_at > 20.minutes.ago %>
+ <% end %>
+  <% end %>
+
+ <div class="sidebar">
+  <div class="input">
+   <p><%= link_to "uglicious", root_path, class: "text-logo" %></p>
+   <p><i class="fas fa-home"></i><%= link_to "Dashboard", dashboard_farmer_path %></p>
+   <p><i class="fas fa-plus-circle"></i><%= link_to "New product", new_product_path %></p>
+
+   <div class="notification">
+   <p><i class="fas fa-shopping-basket"></i><%= link_to "Orders", farmer_orders_path %>
+    <% if newbookings > 0 %>
+    <div class="order-notification"><%= newbookings%>  </div>
+    <% end %>
+    </div>
+  </p>
+  <p><i class="fas fa-chart-bar"></i>Reports</p>
+  <p><i class="fas fa-envelope"></i></i>Inbox</p>
+
+  </div>
+</div>
+
+

@@ -26,13 +26,18 @@
   <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <% if controller.controller_name == "pages" && controller.action_name == "dashboard_farmer" || controller.action_name == "farmer_orders" %>
+  <% if controller.controller_name == "pages" && (controller.action_name == "dashboard_farmer" || controller.action_name == "orders") %>
+
   <%= render 'shared/navbar2' %>
+
+  <% elsif controller.controller_name == "products" && (controller.action_name == "create"  || controller.action_name == "new")%>
+  <%= render 'shared/navbar2' %>
+
   <% else %>
   <%= render 'shared/navbar' %>
   <% end %>
 
-    <%= render 'shared/flashes' %>
+  <%= render 'shared/flashes' %>
 
   <%= yield %>
 
