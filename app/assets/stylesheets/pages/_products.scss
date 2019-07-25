@@ -164,6 +164,9 @@ h6 {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(139, 159, 196, 0.2);
+  border-width: 1px;
 }
 
 .card-trip h2 {
