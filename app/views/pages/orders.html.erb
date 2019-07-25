@@ -30,7 +30,7 @@
 
       <%= link_to product_path(booking.product) do %>
 
-      <% if booking.created_at > 20.minutes.ago %>
+      <% if booking.created_at > 20.minutes.ago && booking.status =="pending" %>
       <tr class='rowhighlight'>
         <% else %>
         <tr>
