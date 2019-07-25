@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def update
+    sleep(1)
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to farmer_orders_path

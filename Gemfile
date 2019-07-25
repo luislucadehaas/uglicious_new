@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'faker'
 gem 'geocoder'
+gem 'sorbet', :group => :development
+gem 'sorbet-runtime'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
