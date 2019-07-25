@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @role = current_user&.role
     products = Product.all
-    @products = products.sample(4)
+    @products = products.last(4)
   end
 
   def dashboard_farmer

@@ -75,7 +75,7 @@
 
 <div class="aboverow-home">
   <div class="row margin-1">
-    <% @products.each do |product| %>
+    <% @products.sort_by{|b| b.created_at}.reverse.each do|product| %>
     <div class="col-sm-6 col-xs-6 col-md-3 column" >
      <%= link_to product_path(product) do %>
      <div class="card-trip">

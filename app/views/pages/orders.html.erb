@@ -21,10 +21,9 @@
         <th>Buyer</th>
         <th>Quantity</th>
         <th>Total price</th>
-        <th>Invoice</th>
-        <th>Status</th>
+        <th><i class="fas fa-file-alt"></i></th>
+        <th class="status">Status</th>
       </tr>
-
 
       <% current_user.farm.products.map(&:bookings).flatten.sort_by{|b| b.created_at}.reverse.each do |booking| %>
 
@@ -42,18 +41,32 @@
           <td><%= booking.quantity_in_kg %></td>
           <td><%= totalprice = booking.product.price_in_cents*booking.quantity_in_kg %>€</td>
           <td><%= link_to "Pdf", class: "fas fa-file-alt" %></td>
-          <td> <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
-            <%= f.input :status, collection: ["pending", "ready for pickup", "completed"], label: false %> <%= f.button :submit, "Update", class: "request-button",  id: "sweet-alert-update"%></td>
-          </tr>
+          <td>
+            <div class="form-row">
+              <div class="col">
 
-          <% end %>
-          <% end %>
+                <%= simple_form_for [booking.product, booking], method: "patch" do |f| %>
+                <%= f.input :status, collection: ["pending", "ready for pickup", "completed"], label: false %>
+              </div>
 
-          <% end %>
-        </table>
+              <div class="col">
+
+                <%= f.button :submit, "Ok", class: "request-button",  id: "sweet-alert-update" %>
+              </div>
 
 
-      </div>
+            </td>
+          </div>
+        </tr>
+
+        <% end %>
+        <% end %>
+
+        <% end %>
+      </table>
+
+
     </div>
+  </div>
 
 
