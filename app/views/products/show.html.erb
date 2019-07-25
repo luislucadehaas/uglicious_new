@@ -75,7 +75,7 @@
                 <% end %>
             <% elsif current_user.id == @product.farm.user_id%>
               <div class="form-row">
-                <p>This Product is offered by you</p>
+                <p class="farmer-show-backlink"><%= link_to "Back to Dashboard", dashboard_farmer_path, id:"farmer-show-backlink" %> </p>
               </div>
             <% else %>
               <div class="form-row">
