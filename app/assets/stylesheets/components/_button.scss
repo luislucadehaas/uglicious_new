@@ -11,7 +11,21 @@
  border: 1px solid transparent;
  display: inline-block;
 }
-
+.button-light {
+   background-color: $green;
+ color: #ffffff;
+ margin:10px 5px 5px 5px;
+ border-radius: 2px;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ font-weight: 400;
+ padding: 7px 20px;
+ line-height: 1.5;
+ vertical-align: middle;
+ border: 0.5px;
+ border-style: solid;
+ border-color: $green;
+ display: inline-block;
+}
 
 .banner-button:hover {
  color: #ffffff;
