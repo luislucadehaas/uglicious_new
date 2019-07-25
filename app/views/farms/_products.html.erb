@@ -1,8 +1,8 @@
 <% products.each do |prod| %>
 <div class="col-sm-6 col-xs-6 col-md-12 column" >
   <%= link_to product_path(prod) do %>
-  <div class="card-request">
-    <img style="height:130px;"src="<%= prod.photo %>">
+  <div class="card-request" style="height:122px;">
+    <img style="height:122px;"src="<%= prod.photo %>">
     <div class="card-request-infos">
       <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
       <p><%= prod.description.truncate(100) %></p>

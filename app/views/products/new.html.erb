@@ -11,6 +11,9 @@
               <h2>Sell a new product</h2> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563363976/uglicious/icons/tomato_e3hkgr.svg" class="img-create">
             </div>
             <br>
+
+            <div id="exchange-call">
+
             <%= simple_form_for(@product) do |f| %>
 
             <div class="form-row">
@@ -19,12 +22,13 @@
 
                 <%= f.label :title, 'Product name' %>
                 <%= f.input :title, as: :string, label: false %>
-
+            <p id="something" style="font-size: 12px; text-decoration: underline;">Type a Product name and use our autocomplete feature</p>
               </div>
+
 
               <div class="col">
 
-                <%= f.input :subgroup_id, collection: Subgroup.all %>
+                <%= f.input :subgroup_id, as: :string, collection: Subgroup.all %>
               </div>
             </div>
 
@@ -60,9 +64,14 @@
 
             <%= f.button :submit, "Save product", class: "banner-button" %>
             <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
