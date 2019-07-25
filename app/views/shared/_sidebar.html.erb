@@ -2,7 +2,7 @@
  <% newbookings = 0 %>
  <% current_user.farm.products.each do |p| %>
    <% p.bookings.each do |booking| %>
-    <% newbookings += 1 if booking.created_at > 20.minutes.ago %>
+    <% newbookings += 1 if booking.created_at > 20.minutes.ago && booking.status =="pending" %>
  <% end %>
   <% end %>
 

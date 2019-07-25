@@ -2,42 +2,67 @@
   <%= render 'shared/sidebar' %>
   <div class="content-container">
 
-<div class="container-2">
-  <div class="form-wrapper back-form">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-      <br>
-      <div class="row justify-content-center">
-      <h2>Sell a new product</h2> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563363976/uglicious/icons/tomato_e3hkgr.svg" class="img-create">
-      </div>
-      <br>
-        <%= simple_form_for(@product) do |f| %>
-        <%= f.label :title, 'Product name' %>
-        <%= f.input :title, as: :string, label: false %>
-        <%= f.input :description %>
-        <%= f.input :price_in_cents, label: 'Price per kg in €'%>
-        <%= f.input :quantity_in_kg %>
-        <%= f.input :min_quantity_to_order %>
-        <%= f.input :subgroup_id, collection: Subgroup.all %>
-        <div class="form-row">
-          <div class="col">
-            <%= f.label :available_from, 'Start date' %>
-            <%= f.input :available_from, as: :string, required: true,  input_html: {class: "datepicker"}, placeholder: "click me..."%>
-          </div>
-          <div class="col">
-            <%= f.label :available_until, 'End date' %>
-            <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
+    <div class="container-2">
+      <div class="form-wrapper back-form">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <br>
+            <div class="row justify-content-center">
+              <h2>Sell a new product</h2> <img src="https://res.cloudinary.com/dc875ky15/image/upload/v1563363976/uglicious/icons/tomato_e3hkgr.svg" class="img-create">
+            </div>
+            <br>
+            <%= simple_form_for(@product) do |f| %>
+
+            <div class="form-row">
+
+              <div class="col">
+
+                <%= f.label :title, 'Product name' %>
+                <%= f.input :title, as: :string, label: false %>
+
+              </div>
+
+              <div class="col">
+
+                <%= f.input :subgroup_id, collection: Subgroup.all %>
+              </div>
+            </div>
+
+
+            <%= f.input :description %>
+            <div class="form-row">
+              <div class="col">
+                <%= f.input :price_in_cents, label: 'Price per kg in €'%>
+              </div>
+              <div class="col">
+                <%= f.input :quantity_in_kg %>
+              </div>
+
+              <div class="col">
+                <%= f.input :min_quantity_to_order %>
+              </div>
+
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <%= f.label :available_from, 'Start date' %>
+                <%= f.input :available_from, as: :string, required: true,  input_html: {class: "datepicker"}, placeholder: "click me..."%>
+              </div>
+              <div class="col">
+                <%= f.label :available_until, 'End date' %>
+                <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
+              </div>
+            </div>
+           <%= f.label :photo, 'Upload a photo' %>
+            <%= f.input :photo, label: false%>
+            <%= f.input :photo_cache, as: :hidden %>
+
+            <%= f.button :submit, "Save product", class: "banner-button" %>
+            <% end %>
           </div>
         </div>
-
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-
-        <%= f.button :submit, "Save product", class: "banner-button" %>
-        <% end %>
       </div>
     </div>
   </div>
-</div>
-</div>
 </div>
