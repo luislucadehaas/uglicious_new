@@ -15,10 +15,6 @@
   color: white;
 }
 
-.sidebar p :hover {
-  opacity: 1;
-  color: $orange;
-}
 
 .sidebar.active {
   opacity: 1;
@@ -32,6 +28,14 @@
   top: 4px;
   margin-top: -32px;
 }
+
+.input a :hover {
+  opacity: 1;
+  color: $orange;
+
+}
+
+
 .content-container {
   flex-grow: 1;
   padding: 16px;
@@ -235,11 +239,16 @@ margin-right: 8px;
 margin-right: 8px;
 }
 
+.fa-store{
+margin-right: 8px;
+}
+
 .img-create {
 margin-left: 24px;
 width: 70px;
 margin-top: -23px;
 }
+
 
 table, th, td {
     border: 1px solid rgba(239, 240, 241, .5);
@@ -268,7 +277,6 @@ tr.rowhighlight {
 
 .notification {
  display: flex;
- margin-bottom: -15px;
 }
 
 
