@@ -37,7 +37,7 @@ initSweetalert('#sweet-alert-update', {
 // });
 // }
 
-var productTitleField = document.getElementById("something");
+var productTitleField = document.getElementById("somethingnew");
 if (productTitleField){
   productTitleField. addEventListener("click", () => {
 
