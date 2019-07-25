@@ -1,15 +1,18 @@
-    <%= link_to 'go back', products_path %>
-    <div class="mantel" style="display:flex;">
-      <div
-      id="map"
-      style="width: 60%; height: 100vh; position:sticky; top:0; "
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-      >
 
-    </div>
-    <div id="list-of-items">
-<%= render partial: 'products', locals: { products: @products} %>
-    </div>
+<div style="padding:5px;">
+  <a href="/products"><button class="banner-button-2-orange"><i class="fas fa-chevron-left"></i> Back </button></a>
+</div>
+<div class="mantel" style="display:flex;">
+  <div
+  id="map"
+  style="width: 60%; height: 100vh; position:sticky; top:0; "
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  >
+
+</div>
+<div id="list-of-items">
+  <%= render partial: 'products', locals: { products: @products} %>
+</div>
 </div>
 <br>
