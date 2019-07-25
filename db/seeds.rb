@@ -135,39 +135,6 @@ puts "categories subgroups"
 
 puts 'Creating 62 vegetables...'
 
-
-p1 = Product.create!(
-  title: "Organic Persian Cucumbers",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: cucumber.id,
-  description: "Soft-skinned Persian Cucumbers are delicious and versatile. Their soft skin makes them sweet and crunchy. Slice them up for salads and sandwiches, or blend them up into a gazpacho.
-  When none of the local farms we work with have Organic Persian Cucumbers, we source them from trusted distributors.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.number(1)
-  )
-p1.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/i8NXRuZ1SGGo2ZnKRajP_2018_0830_PaduaVV_PersianCucumbers_1lbclamshell%20%289e0fec43389142256f5ed177220ebe4d53a5d717%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-p1.save
-
-p2 = Product.create!(
-  title: "Organic Slicer Cucumber",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: cucumber.id,
-  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. When none of the local farms we work with have Organic Persian Cucumbers, we source them from trusted distributors.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p2.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/tHSLOWi6RNCCkJp1ay0y_2018_0416_GoodEggsProduce_Cucumber_1ct%20%28a275ebe926d6697d228d339fdbc6750ff1478f39%29%20%286%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p2.save
-
 p3 =Product.create!(
   title: "Organic Pickling Cucumbers",
   farm_id: bauer1.id,
@@ -326,21 +293,6 @@ printf '.'
 
 p12.save
 
-p13 =Product.create!(
-  title: "Nantes Carrots",
-  farm_id: bauer2.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: carrots.id,
-  description: "Who doesn't love carrots? These sweet, crunchy root veggies can be harvested all year round, and they can be prepared in an endless number of ways. Invaluable for stock, soup, stuffing your turkey, roasting, baking, juicing, mashing, slicing raw, and shredding for carrot cake.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p13.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/qQ9xv7MRJSdeqo8WRXnl_2018_0307_GoodEggsProduce_BunchedCarrots_2bu_1%20%28ed68d6b45987ed887282fc7f29f6f1552553a170%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p13.save
 p14 =Product.create!(
   title: "Fennel",
   farm_id: bauer2.id,
@@ -371,21 +323,7 @@ p15.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/q6sG1pSNK
 printf '.'
 
 p15.save
-p16 =Product.create!(
-  title: "Red Bell Pepper",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: peppers.id,
-  description: "Red Bell Peppers are a great addition to any kitchen, as they're versatile and can be added to any dish, cooked or raw. Try charring them on top of the stove and adding to a simple fresh tomato sauce to add sweetness and depth of flavor.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p16.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/GEQAfF9ETdWHOT3M6IvO_2018_0124_GenericRedBellPeppers_1ct%20%28cba4cbd3932f7b80a0d51ddf0e002cd59c48d965%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
 
-p16.save
 p17 =Product.create!(
   title: "Orange Bell Pepper",
   farm_id: bauer2.id,
@@ -401,21 +339,6 @@ p17.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/v9WZB7tgS
 printf '.'
 
 p17.save
-p18 =Product.create!(
-  title: "Shishito Peppers",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: peppers.id,
-  description: "The thinner, glossier, less-spicey cousin of the Pimiento de Padron Pepper, the Shishito is a Japanese frying pepper variety well-suited for a high-heat pan and a pinch of sea salt.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p18.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/F06p4B9RuqY8szjgf45A_2018_0309_DelCabo_ShishitoPeppers%20%28b7f88472b4638fb199a29b97cd321aa771058b16%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p18.save
 
 p19 =Product.create!(
   title: "Green Bell Pepper",
@@ -447,36 +370,6 @@ p20.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/MnyAggicR
 printf '.'
 
 p20.save
-p21 =Product.create!(
-  title: "Globe Eggplant",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: corn.id,
-  description: "Slice 'em and grill 'em, or soak 'em and roast 'em, there's no wrong way to enjoy this delicious summertime treat.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p21.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/pvU1hDfTFqy05pQB6H3o_2019_0123_WholesumHarvest_GlobeEggplant_1count%20%28c6b5f3fd92e0bedabc111e6a1b2f2e6dcc20292b%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p21.save
-p22 =Product.create!(
-  title: "Listada Eggplant",
-  farm_id: bauer1.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: corn.id,
-  description: "These Spanish heirlooms are great all purpose eggplants with a creamy, rich taste and a texture that holds up well to grilling.  Firm and dry, there is no need to salt these beauties to extract excess liquid or bitterness. The best fryers around. Eggplant parm anyone?",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p22.remote_photo_url =     "https://goodeggs1.imgix.net/product_photos/I6O24op4QLKjfYlUfREI_2017_0720_GenericProduce_ListadaEggplant1%23%20%28cb75f2c092e0866de611bf7a791efccde1544c57%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p22.save
 
 p23 =Product.create!(
   title: "Zucchini",
@@ -493,36 +386,6 @@ p23.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/1Gw3uAlMS
 printf '.'
 
 p23.save
-p24 =Product.create!(
-  title: "Yellow Crookneck Squash",
-  farm_id: bauer2.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: squash.id,
-  description: "Yellow Crookneck is a delicately flavored early variety of summer squash. Chopped up roughly and sautéed with garlic and oil, then topped with some ripped basil, this squash side dish will remind you that summer is just around the corner.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p24.remote_photo_url =      "https://goodeggs2.imgix.net/product_photos/DASTpf24QUWLna1iEmxJ_2018_0522_GoodEggsProduct_YellowCrookneckSquash_1lb%20%28a0ae259fefb1dfb3e807141c878e399536f1ff8d%29%20%281%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p24.save
-p25 =Product.create!(
-  title: "Butternut Squash",
-  farm_id: bauer2.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: squash.id,
-  description: "Butternut Squash has a nutty flavor and is sweet like a pumpkin. When ripe, the flesh turns increasingly deep orange and becomes sweeter and richer. It has a long shelf life and is a great countertop kitchen staple. Butternut squash pairs well with sage. Caramelize a few sage leaves in butter and drizzle upon roasted, grilled or even baked and mashed squash for an incredible treat.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p25.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/h8BAAHGTVu2cHAQuRIQU_butternut_squash_01%20copy%20%2808818c2c321d2f542cf48d06dfd1eff21f7c46b9%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
-
-p25.save
 
 p26 =Product.create!(
   title: "Garnet Sweet Potatoes",
@@ -1099,21 +962,97 @@ p62.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/14a5CDpSTAKZE
 printf '.'
 p62.save
 
-p63 =Product.create!(
-  title: "Organic Tegel Cucumbers",
-  farm_id: bauer3.id,
+p2 = Product.create!(
+  title: "Slicer Cucumber",
+  farm_id: bauer1.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: cucumber.id,
-  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. These cucumbers are freshly sourced in the beautiful Berlin Tegel right at your footstep.",
+  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. When none of the local farms we work with have Organic Persian Cucumbers, we source them from trusted distributors.",
   price_in_cents: Faker::Number.between(1, 6),
   quantity_in_kg:Faker::Number.number(2),
   min_quantity_to_order: Faker::Number.between(6, 10),
-
   )
-p63.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/Screenshot_2019-07-25_at_10.52.50_yopwua.jpg"
+p2.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062367/Screenshot_2019-07-25_at_10.59.02_i21tsa.jpg"
 printf '.'
-p63.save
+p2.save
+
+p21 =Product.create!(
+  title: "Globe Eggplant",
+  farm_id: bauer1.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: corn.id,
+  description: "Slice 'em and grill 'em, or soak 'em and roast 'em, there's no wrong way to enjoy this delicious summertime treat.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p21.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/Screenshot_2019-07-25_at_10.53.03_k3etze.jpg"
+printf '.'
+p21.save
+
+p24 =Product.create!(
+  title: "Yellow Crookneck Squash",
+  farm_id: bauer2.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: squash.id,
+  description: "Yellow Crookneck is a delicately flavored early variety of summer squash. Chopped up roughly and sautéed with garlic and oil, then topped with some ripped basil, this squash side dish will remind you that summer is just around the corner.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p24.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/squash-variety_rmxyde.jpg"
+printf '.'
+
+p24.save
+
+p25 =Product.create!(
+  title: "Butternut Squash",
+  farm_id: bauer2.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: squash.id,
+  description: "Butternut Squash has a nutty flavor and is sweet like a pumpkin. When ripe, the flesh turns increasingly deep orange and becomes sweeter and richer. It has a long shelf life and is a great countertop kitchen staple. Butternut squash pairs well with sage. Caramelize a few sage leaves in butter and drizzle upon roasted, grilled or even baked and mashed squash for an incredible treat.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p25.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_10.57.54_vn4xjx.jpg"
+printf '.'
+p25.save
+
+p1 = Product.create!(
+  title: "Organic Persian Cucumbers",
+  farm_id: bauer1.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: cucumber.id,
+  description: "Soft-skinned Persian Cucumbers are delicious and versatile. Their soft skin makes them sweet and crunchy. Slice them up for salads and sandwiches, or blend them up into a gazpacho.
+  When none of the local farms we work with have Organic Persian Cucumbers, we source them from trusted distributors.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.number(1)
+  )
+p1.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062367/The-imperfect-produce-programs-website-currently-lists-11-available-items-_mac3am.jpg"
+printf '.'
+p1.save
+
+p43 =Product.create!(
+  title: "Granny Smith Apple",
+  farm_id: bauer3.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: apple.id,
+  description: "Granny Smith Apples are the most classic tart apple. Smooth green skin, crunchy flesh, and balanced tartness make this apple perfect for snacking or baking.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p43.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_09.55.34_hslewn.jpg"
+printf '.'
+p43.save
 
 p64 =Product.create!(
   title: "Mighty Mushrooms",
@@ -1131,37 +1070,83 @@ p64.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v15640
 printf '.'
 p64.save
 
-p43 =Product.create!(
-  title: "Granny Smith Apple",
-  farm_id: bauer2.id,
+p16 =Product.create!(
+  title: "Red Bell Pepper",
+  farm_id: bauer1.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
-  subgroup_id: apple.id,
-  description: "Granny Smith Apples are the most classic tart apple. Smooth green skin, crunchy flesh, and balanced tartness make this apple perfect for snacking or baking.",
+  subgroup_id: peppers.id,
+  description: "Red Bell Peppers are a great addition to any kitchen, as they're versatile and can be added to any dish, cooked or raw. Try charring them on top of the stove and adding to a simple fresh tomato sauce to add sweetness and depth of flavor.",
   price_in_cents: Faker::Number.between(1, 6),
   quantity_in_kg:Faker::Number.number(2),
   min_quantity_to_order: Faker::Number.between(6, 10),
   )
-p43.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_09.55.34_hslewn.jpg"
+p16.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/Screenshot_2019-07-25_at_10.56.11_ebkjrn.jpg"
 printf '.'
 
-p43.save
+p16.save
 
-p65 =Product.create!(
-  title: "Granny Smith Apple",
+p63 =Product.create!(
+  title: "Organic Tegel Cucumbers",
   farm_id: bauer3.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
-  subgroup_id: apple.id,
+  subgroup_id: cucumber.id,
   description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. These cucumbers are freshly sourced in the beautiful Berlin Tegel right at your footstep.",
   price_in_cents: Faker::Number.between(1, 6),
   quantity_in_kg:Faker::Number.number(2),
   min_quantity_to_order: Faker::Number.between(6, 10),
 
   )
-p65.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_09.55.34_hslewn.jpg"
+p63.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/Screenshot_2019-07-25_at_10.52.50_yopwua.jpg"
 printf '.'
-p65.save
+p63.save
+
+p18 =Product.create!(
+  title: "Shishito Peppers",
+  farm_id: bauer1.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: peppers.id,
+  description: "The thinner, glossier, less-spicey cousin of the Pimiento de Padron Pepper, the Shishito is a Japanese frying pepper variety well-suited for a high-heat pan and a pinch of sea salt.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p18.remote_photo_url =  "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_10.59.08_jpvseg.jpg"
+printf '.'
+p18.save
+
+p22 =Product.create!(
+  title: "Listada Eggplant",
+  farm_id: bauer1.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: corn.id,
+  description: "These Spanish heirlooms are great all purpose eggplants with a creamy, rich taste and a texture that holds up well to grilling.  Firm and dry, there is no need to salt these beauties to extract excess liquid or bitterness. The best fryers around. Eggplant parm anyone?",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p22.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_10.58.04_hszgpe.jpg"
+printf '.'
+p22.save
+
+p13 =Product.create!(
+  title: "Nantes Carrots",
+  farm_id: bauer2.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: carrots.id,
+  description: "Who doesn't love carrots? These sweet, crunchy root veggies can be harvested all year round, and they can be prepared in an endless number of ways. Invaluable for stock, soup, stuffing your turkey, roasting, baking, juicing, mashing, slicing raw, and shredding for carrot cake.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p13.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_10.56.34_y9sly1.jpg"
+printf '.'
+p13.save
+
 
 
 puts 'Finished!'
