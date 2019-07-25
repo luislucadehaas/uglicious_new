@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.farm = current_user.farm
     if @product.save
-     redirect_to dashboard_farmer_path
+     redirect_to product_path(@product)
    else
     render 'new'
   end
