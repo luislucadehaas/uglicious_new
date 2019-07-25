@@ -5,61 +5,61 @@
 <% end %>
 <% end %>
 
-  <div class="dash-container d-flex">
-    <%= render 'shared/sidebar' %>
-    <div class="content-container">
-      <h2>Farm overview</h2>
+<div class="dash-container d-flex">
+  <%= render 'shared/sidebar' %>
+  <div class="content-container">
+    <h2>Farm overview</h2>
 
-      <div class="row">
-       <div class="col-sm-3 col-xs-3 col-md-3 column">
-        <div class="card-metrics">
-          <i class="fas fa-euro-sign full-icon"></i>
-          <div class="metric-num">
-            <p>637€</p>
-          </div>
-          <div class="metric-text">
-            <p>Gross sales</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-3 col-xs-3 col-md-3 column">
-        <div class="card-metrics">
-          <i class="fas fa-shopping-bag full-icon"></i>
-          <div class="metric-num">
-            <p><%= totalbookings %></p>
-          </div>
-          <div class="metric-text">
-            <p>Orders</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-3 col-xs-3 col-md-3 column">
-       <div class="card-metrics">
-        <i class="fas fa-carrot full-icon"></i>
+    <div class="row">
+     <div class="col-sm-3 col-xs-3 col-md-3 column">
+      <div class="card-metrics">
+        <i class="fas fa-euro-sign full-icon"></i>
         <div class="metric-num">
-          <p>255kg</p>
+          <p>637</p>
         </div>
         <div class="metric-text">
-          <p>Products sold</p>
+          <p>Gross sales (€)</p>
         </div>
       </div>
     </div>
 
+    <div class="col-sm-3 col-xs-3 col-md-3 column">
+      <div class="card-metrics">
+        <i class="fas fa-shopping-bag full-icon"></i>
+        <div class="metric-num">
+          <p><%= totalbookings %></p>
+        </div>
+        <div class="metric-text">
+          <p>Orders</p>
+        </div>
+      </div>
+    </div>
 
     <div class="col-sm-3 col-xs-3 col-md-3 column">
      <div class="card-metrics">
-      <i class="fas fa-seedling full-icon"></i>
+      <i class="fas fa-carrot full-icon"></i>
       <div class="metric-num">
-        <p>52.3Kg</p>
+        <p>255</p>
       </div>
       <div class="metric-text">
-        <p>CO2 saved</p>
-
+        <p>Products sold (Kg)</p>
       </div>
     </div>
   </div>
+
+
+  <div class="col-sm-3 col-xs-3 col-md-3 column">
+   <div class="card-metrics">
+    <i class="fas fa-seedling full-icon"></i>
+    <div class="metric-num">
+      <p>52.3</p>
+    </div>
+    <div class="metric-text">
+      <p>CO2 saved (Kg)</p>
+
+    </div>
+  </div>
+</div>
 </div>
 
 <div class="row">
@@ -92,7 +92,10 @@
       <h3><%= @farm.name %></h3>
       <p><%= @farm.address %></p>
       <p><%= @farm.description.truncate(200) %></p>
-      <%= link_to "Edit my farm", "#", class: "product-links" %>
+      <%= link_to dashboard_farmer_path do %>
+      <div class="product-links"><i class="fas fa-edit"></i>Edit</div>
+      <% end %>
+
     </div>
   </div>
 </div>
@@ -118,8 +121,15 @@
     <div class="card-request-infos">
       <h2><%= prod.title %> - <%= prod.price_in_cents %>€ per Kg</h2>
       <p><%= prod.description.truncate(100) %></p>
-      <%= link_to "Edit", edit_product_path(prod), class: "product-links" %>
-      <%= link_to "Delete", product_path(prod), method: :delete, class: "product-links" %>
+
+      <div class="modify-product">
+        <%= link_to edit_product_path(prod) do %>
+        <div class="product-links"><i class="fas fa-edit"></i>Edit</div>
+        <% end %><%= link_to product_path(prod), method: :delete do %>
+        <div class="product-links"><i class="fas fa-trash-alt"></i>Delete</div>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </div>

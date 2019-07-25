@@ -94,6 +94,8 @@ color: $gray;
 text-align: center;
 font-weight: 600;
 margin-top: 45px;
+display: flex;
+justify-content: center;
 }
 
 .metric-text {
@@ -243,6 +245,15 @@ margin-right: 8px;
 margin-right: 8px;
 }
 
+.fa-edit{
+margin-right: 4px;
+}
+
+
+.fa-trash-alt{
+margin-right: 3px;
+}
+
 .img-create {
 margin-left: 24px;
 width: 70px;
@@ -280,7 +291,17 @@ tr.rowhighlight {
 }
 
 
+.modify-product {
+  display:flex;
+}
 
+
+
+.unit {
+  font-size: 23px;
+  color: grey;
+  align-items: center;
+}
 
 
 

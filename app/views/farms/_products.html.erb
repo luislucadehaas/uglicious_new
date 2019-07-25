@@ -1,4 +1,4 @@
-<% products.each do |prod| %>
+<% products.sort_by{|b| b.created_at}.reverse.each do |prod| %>
 <div class="col-sm-6 col-xs-6 col-md-12 column" >
   <%= link_to product_path(prod) do %>
   <div class="card-request">
