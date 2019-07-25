@@ -14,56 +14,59 @@
 
             <div id="exchange-call">
 
-            <%= simple_form_for(@product) do |f| %>
+              <%= simple_form_for(@product) do |f| %>
 
-            <div class="form-row">
+              <div class="form-row">
 
-              <div class="col">
+                <div class="col">
 
-                <%= f.label :title, 'Product name' %>
-                <%= f.input :title, as: :string, label: false %>
-            <p id="something" style="font-size: 12px; text-decoration: underline;">Type a Product name and use our autocomplete feature</p>
+                  <div class="autocomplete">
+                    <%= f.label :title, 'Product name'%><p style="font-size: 12px; color: #377A5E; padding:4px; border:solid; border-width:0.1px; border-color:#377A5E;    position: absolute;
+    right: 173px;">autocomplete</p>
+                  </div>
+                  <%= f.input :title, label: false %>
+
+                </div>
+
+
+                <div class="col">
+
+                  <%= f.input :subgroup_id, collection: Subgroup.all %>
+                </div>
               </div>
 
 
-              <div class="col">
+              <%= f.input :description %>
+              <div class="form-row">
+                <div class="col">
+                  <%= f.input :price_in_cents, label: 'Price per kg in €'%>
+                </div>
+                <div class="col">
+                  <%= f.input :quantity_in_kg%>
+                </div>
 
-                <%= f.input :subgroup_id, as: :string, collection: Subgroup.all %>
-              </div>
-            </div>
+                <div class="col">
+                  <%= f.input :min_quantity_to_order %>
+                </div>
 
-
-            <%= f.input :description %>
-            <div class="form-row">
-              <div class="col">
-                <%= f.input :price_in_cents, label: 'Price per kg in €'%>
-              </div>
-              <div class="col">
-                <%= f.input :quantity_in_kg %>
-              </div>
-
-              <div class="col">
-                <%= f.input :min_quantity_to_order %>
               </div>
 
-            </div>
-
-            <div class="form-row">
-              <div class="col">
-                <%= f.label :available_from, 'Start date' %>
-                <%= f.input :available_from, as: :string, required: true,  input_html: {class: "datepicker"}, placeholder: "click me..."%>
+              <div class="form-row">
+                <div class="col">
+                  <%= f.label :available_from, 'Start date' %>
+                  <%= f.input :available_from, as: :string, required: true,  input_html: {class: "datepicker"}, placeholder: "click me..."%>
+                </div>
+                <div class="col">
+                  <%= f.label :available_until, 'End date' %>
+                  <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
+                </div>
               </div>
-              <div class="col">
-                <%= f.label :available_until, 'End date' %>
-                <%= f.input :available_until, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "click me..." %>
-              </div>
-            </div>
-           <%= f.label :photo, 'Upload a photo' %>
-            <%= f.input :photo, label: false%>
-            <%= f.input :photo_cache, as: :hidden %>
+              <%= f.label :photo, 'Upload a photo' %>
+              <%= f.input :photo, label: false%>
+              <%= f.input :photo_cache, as: :hidden %>
 
-            <%= f.button :submit, "Save product", class: "banner-button" %>
-            <% end %>
+              <%= f.button :submit, "Save product", class: "banner-button" %>
+              <% end %>
             </div>
           </div>
         </div>

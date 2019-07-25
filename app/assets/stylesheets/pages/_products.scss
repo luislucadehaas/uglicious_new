@@ -20,6 +20,7 @@
 
 }
 
+
 .search {
     padding-top: 7px;
 }
@@ -258,3 +259,13 @@ transform: scale(1.03);
     background-position-y: center;
 }
 
+.autocomplete {
+  display: flex;
+
+}
+
+.autocomplete p {
+  margin: 0;
+  margin-left: 16px;
+
+}
