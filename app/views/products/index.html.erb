@@ -95,7 +95,7 @@
 
      </div>
      <div class="new-button">
-      <%= link_to "Map", farms_path, class: "btn-farm"%>
+      <a href="/farms"><button class="btn-farm"><i class="fas fa-map-marked-alt"></i> Map</button></a>
     </div>
   </div>
   <div class="aboverow">
@@ -109,7 +109,7 @@
         <div class="card-trip-infos">
           <div>
             <h2 class="wig-title"><%=product.title.truncate(30)%></h2>
-            <p><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
+            <p style="font-size: 11px;"><%=product.farm.name.truncate(30)%><br> <%=product.quantity_in_kg%> Kg available</p>
           </div>
           <h2 class="card-trip-pricing"><%=product.price_in_cents%>€ per kg</h2>
         </div>

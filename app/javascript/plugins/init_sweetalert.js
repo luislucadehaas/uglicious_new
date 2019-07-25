@@ -8,6 +8,7 @@ const initSweetalert = (selector, options = {}) => {
     swalButton.addEventListener('click', () => {
 
       Swal.fire(options);
+
     });
   }
 };

@@ -26,4 +26,5 @@ initSweetalert('#sweet-alert-update', {
   title: 'Updated successfully',
   showConfirmButton: false,
   timer: 1500,
+
 });
