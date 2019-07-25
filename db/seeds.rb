@@ -297,7 +297,7 @@ printf '.'
 p10.save
 p11 =Product.create!(
   title: "Small Romanesco",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: broccoli.id,
@@ -343,7 +343,7 @@ printf '.'
 p13.save
 p14 =Product.create!(
   title: "Fennel",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: carrots.id,
@@ -388,7 +388,7 @@ printf '.'
 p16.save
 p17 =Product.create!(
   title: "Orange Bell Pepper",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: peppers.id,
@@ -495,7 +495,7 @@ printf '.'
 p23.save
 p24 =Product.create!(
   title: "Yellow Crookneck Squash",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: squash.id,
@@ -541,7 +541,7 @@ printf '.'
 p26.save
 p27 =Product.create!(
   title: "Baby Red Potatoes",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: potatoes.id,
@@ -794,21 +794,7 @@ p42.remote_photo_url =      "https://goodeggs1.imgix.net/product_photos/usAyH2kC
 printf '.'
 p42.save
 
-p43 =Product.create!(
-  title: "Granny Smith Apple",
-  farm_id: bauer2.id,
-  available_from: "2019-07-23",
-  available_until: "2019-07-30",
-  subgroup_id: apple.id,
-  description: "Granny Smith Apples are the most classic tart apple. Smooth green skin, crunchy flesh, and balanced tartness make this apple perfect for snacking or baking.",
-  price_in_cents: Faker::Number.between(1, 6),
-  quantity_in_kg:Faker::Number.number(2),
-  min_quantity_to_order: Faker::Number.between(6, 10),
-  )
-p43.remote_photo_url =     "https://goodeggs2.imgix.net/product_photos/eSGumgVZRfm25XGrO8wu_granny%20smith.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
-printf '.'
 
-p43.save
 
 p44 =Product.create!(
   title: "Cripps Pink Apple",
@@ -860,7 +846,7 @@ p46.save
 
 p47 =Product.create!(
   title: "Lacinato Kale",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: kale.id,
@@ -876,7 +862,7 @@ p47.save
 
 p48 =Product.create!(
   title: "Baby Spinach",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: kale.id,
@@ -892,7 +878,7 @@ p48.save
 
 p49 =Product.create!(
   title: "Baby Dino Kale",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: kale.id,
@@ -908,7 +894,7 @@ p49.save
 
 p50 =Product.create!(
   title: "Redbor Kale",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: kale.id,
@@ -924,7 +910,7 @@ p50.save
 
 p51 =Product.create!(
   title: "Romaine Lettuce",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: lettuce.id,
@@ -940,7 +926,7 @@ p51.save
 
 p52 =Product.create!(
   title: "Belgian Endives",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: lettuce.id,
@@ -956,7 +942,7 @@ p52.save
 
 p53 =Product.create!(
   title: "Little Gem",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: lettuce.id,
@@ -972,7 +958,7 @@ p53.save
 
 p54 =Product.create!(
   title: "Rainbow Chard",
-  farm_id: bauer3.id,
+  farm_id: bauer2.id,
   available_from: "2019-07-23",
   available_until: "2019-07-30",
   subgroup_id: green.id,
@@ -1095,7 +1081,6 @@ p61 =Product.create!(
   )
 p61.remote_photo_url = "https://goodeggs2.imgix.net/product_photos/4Emz1DViRpOdBw8tSFDx_2017_1016_ChristopherRanch_Pre-PackedGarlic_3oz%20%28981865c293d7d06bc6571c44eeab1c0e69a320b0%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
 printf '.'
-
 p61.save
 
 p62 =Product.create!(
@@ -1113,6 +1098,72 @@ p62 =Product.create!(
 p62.remote_photo_url = "https://goodeggs1.imgix.net/product_photos/14a5CDpSTAKZE7VDEwVz_2019_0624_CokeFarm_SpringShallots_0.5lb%20%28696aa33a9ced5beef9fafd4ef2acb36718037731%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
 printf '.'
 p62.save
+
+p63 =Product.create!(
+  title: "Organic Tegel Cucumbers",
+  farm_id: bauer3.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: cucumber.id,
+  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. These cucumbers are freshly sourced in the beautiful Berlin Tegel right at your footstep.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+
+  )
+p63.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062368/Screenshot_2019-07-25_at_10.52.50_yopwua.jpg"
+printf '.'
+p63.save
+
+p64 =Product.create!(
+  title: "Mighty Mushrooms",
+  farm_id: bauer3.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: potatoes.id,
+  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. These cucumbers are freshly sourced in the beautiful Berlin Tegel right at your footstep.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+
+  )
+p64.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_10.56.58_rn1scy.jpg"
+printf '.'
+p64.save
+
+p43 =Product.create!(
+  title: "Granny Smith Apple",
+  farm_id: bauer2.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: apple.id,
+  description: "Granny Smith Apples are the most classic tart apple. Smooth green skin, crunchy flesh, and balanced tartness make this apple perfect for snacking or baking.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+  )
+p43.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_09.55.34_hslewn.jpg"
+printf '.'
+
+p43.save
+
+p65 =Product.create!(
+  title: "Granny Smith Apple",
+  farm_id: bauer3.id,
+  available_from: "2019-07-23",
+  available_until: "2019-07-30",
+  subgroup_id: apple.id,
+  description: "Your standard cucumber, great for salads or sandwiches.Slice them up for salads and sandwiches, or blend them up into a gazpacho. These cucumbers are freshly sourced in the beautiful Berlin Tegel right at your footstep.",
+  price_in_cents: Faker::Number.between(1, 6),
+  quantity_in_kg:Faker::Number.number(2),
+  min_quantity_to_order: Faker::Number.between(6, 10),
+
+  )
+p65.remote_photo_url = "https://res.cloudinary.com/dc875ky15/image/upload/v1564062369/Screenshot_2019-07-25_at_09.55.34_hslewn.jpg"
+printf '.'
+p65.save
+
+
 puts 'Finished!'
 # puts 'Creating 100 vegetables...'
 # 100.times do
