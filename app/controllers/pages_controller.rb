@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :show, :index]
 
@@ -10,6 +13,8 @@ class PagesController < ApplicationController
   def dashboard_farmer
     @role = current_user&.role
     @farm = current_user.farm
+    weather
+    # raise
   end
 
   def dashboard_customer
@@ -30,6 +35,17 @@ class PagesController < ApplicationController
 
   def after_sign_in_path_for(resource_or_scope)
     stored_location_for(resource_or_scope) || super
+  end
+
+  private
+
+  def weather
+    json = JSON.parse(open("http://api.openweathermap.org/data/2.5/weather?q=Berlin&APPID=9ce23fc11d4098888ae79f02a4e12ab0").read)
+    @temp = json["main"]["temp"].round / 10
+    @humidity = json["main"]["humidity"]
+    @description = json["weather"][0]["description"]
+    @speed = json["wind"]["speed"]
+    # for the future you can use this (https://openweathermap.org/weather-conditions) to change the icon of the weather
   end
 
 end
