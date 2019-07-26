@@ -73,7 +73,7 @@ stan_cust = User.create!(
   email:'stancust@test.com',
   password:'testword',
   role: "customer",
-  first_name: "Stanislaus",
+  first_name: "Stan",
   last_name:"Levavasseur",
   remote_photo_url: "https://res.cloudinary.com/dc875ky15/image/upload/v1563354700/uglicious/famer/max_zjcznz.jpg"
 )
